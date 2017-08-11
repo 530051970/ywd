@@ -5,7 +5,7 @@ npm install cnpm -g --registry=https://registry.npm.taobao.org
 ng set --global packageManager=cnpm
 
 cnpm install -g @angular/cli
-ng new XXXX
+ng new XXXX  --routing
 cd XXXX
 cnpm install jquery --save
 cnpm install --save bootstrap@3.3.6
