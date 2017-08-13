@@ -1,0 +1,9 @@
+{
+	"hello":"hello",
+  "email":"email",
+  "password":"password",
+  "inputEmail":"please input email address",
+  "inputPassword":"please input password",
+  "login":"Sign in",
+  "welcome":"Y.W.D. Recrument Platform"
+}
