@@ -5,5 +5,12 @@
   "inputEmail":"please input email address",
   "inputPassword":"please input password",
   "login":"Sign in",
-  "welcome":"Y.W.D. Recrument Platform"
+  "welcome":"Y.W.D. Recrument Platform",
+  "forgetPassword":"忘记密码",
+  "publish":"发布招聘信息?请点击",
+  "here":"这里",
+  "copyRight":"依沃黛 | 京ICP备11008151号",
+  "404":"404 Error",
+  "pageNotExist":"Sorry, that page doesn't exist.",
+  "returnBack":"Go to Home Page."
 }

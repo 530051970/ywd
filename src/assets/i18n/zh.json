@@ -1,16 +1,22 @@
 {
-  "comment":"以下是总体",
-  "title":"依沃黛-无处不在，行而必果！",
+  "comment":"====================================以下是总体",
+  "common-title":"依沃黛-无处不在，行而必果！",
 
-  "comment":"以下是登录页",
-	"email":"邮  箱",
-	"password":"密  码",
-	"inputEmail":"请输入邮箱地址",
-	"inputPassword":"请输入密码",
-	"login":"登录",
-  "welcome":"依沃黛招聘管理平台",
-  "forgetPassword":"忘记密码",
-  "publish":"发布招聘信息?请点击",
-  "here":"这里",
-  "copyRight":"依沃黛 | 京ICP备11008151号"
+  "comment":"====================================以下是登录页",
+	"login-email":"邮  箱",
+	"login-password":"密  码",
+	"login-inputEmail":"请输入邮箱地址",
+	"login-inputPassword":"请输入密码",
+	"login-login":"登录",
+  "login-welcome":"依沃黛招聘管理平台",
+  "login-forgetPassword":"忘记密码",
+  "login-publish":"发布招聘信息?请点击",
+  "login-here":"这里",
+  "login-copyRight":"依沃黛 | 京ICP备11008151号",
+
+  "comment":"====================================以下是404页",
+  "404-404":"404 错误",
+  "404-pageNotExist":"对不起，您访问的页面不见了。",
+  "404-returnBack":"返回主页",
+  "404-copyRight":"依沃黛 | 京ICP备11008151号"
 }
