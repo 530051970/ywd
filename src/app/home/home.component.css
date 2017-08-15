@@ -1,0 +1,88 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+@import '../../assets/css/bootstrap-reset.css';
+@import '../../assets/css/custom-ico-fonts.css';
+@import '../../assets/css/font-awesome.min.css';
+@import '../../assets/css/jquery-ui-1.10.3.css';
+.homeContainer {
+  background: #075090;
+  font-family: 'Open Sans', sans-serif;
+  color: #7a7676;
+  line-height: 20px;
+  overflow-x: hidden;
+  font-size: 14px;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+
+input, select, textarea {
+  font-family: 'Open Sans', sans-serif;
+  color: #767676;
+}
+
+a {
+  color: #65CEA7;
+}
+
+a:focus, a:active, a:hover {
+  outline: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #353F4F;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.mtop10 {
+  margin-top: 10px;
+}
+
+hr {
+  border-color: #ddd;
+}
+/* ------------------------------
+        STICKY HEADER
+---------------------------------*/
+
+/*.sticky-header .logo {*/
+/*position: fixed;*/
+/*top: 0;*/
+/*left: 0;*/
+/*width: 240px;*/
+/*z-index: 1200;*/
+/*background: #424f63;*/
+
+/*}*/
+
+/*.sticky-header .left-side {*/
+/*top: 50px;*/
+/*}*/
+@import "../../assets/css/font-awesome.min.css";
+
+.sticky-header .header-section {
+  position: fixed;
+  top: 0;
+  left: 240px;
+  width: 100%;
+  z-index: 100;
+}
+
+.sticky-header .main-content {
+  padding-top: 50px;
+}
+
+.sticky-header .menu-right {
+  margin-right: 255px;
+}
+
+.sticky-header.left-side-collapsed .header-section {
+  left: 52px;
+}
+
+.sticky-header.left-side-collapsed .menu-right {
+  margin-right: 67px;
+}
+

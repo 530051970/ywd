@@ -19,12 +19,36 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css",
         "../node_modules/_bootstrap@3.3.6@bootstrap/dist/css/bootstrap.css"
       ],
       "scripts": [
         "../node_modules/_jquery@2.2.3@jquery/dist/jquery.js",
-        "../node_modules/_bootstrap@3.3.6@bootstrap/dist/js/bootstrap.js"
+        "../node_modules/_bootstrap@3.3.6@bootstrap/dist/js/bootstrap.js",
+        "assets/js/jquery-1.10.2.min.js",
+        "assets/js/jquery-ui-1.9.2.custom.min.js",
+        "assets/js/jquery-migrate-1.2.1.min.js",
+        "assets/js/bootstrap.min.js",
+        "assets/js/modernizr.min.js",
+
+        "assets/js/easypiechart/jquery.easypiechart.js",
+        "assets/js/easypiechart/easypiechart-init.js",
+
+        "assets/js/sparkline/jquery.sparkline.js",
+        "assets/js/sparkline/sparkline-init.js",
+
+        "assets/js/iCheck/jquery.icheck.js",
+        "assets/js/icheck-init.js",
+
+        "assets/js/flot-chart/jquery.flot.js",
+        "assets/js/flot-chart/jquery.flot.tooltip.js",
+        "assets/js/flot-chart/jquery.flot.resize.js",
+        "assets/js/flot-chart/jquery.flot.pie.resize.js",
+        "assets/js/flot-chart/jquery.flot.selection.js",
+        "assets/js/flot-chart/jquery.flot.stack.js",
+        "assets/js/flot-chart/jquery.flot.time.js",
+        "assets/js/jquery.nicescroll.js",
+        "assets/js/main-chart.js"
+
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

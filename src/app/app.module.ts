@@ -9,6 +9,10 @@ import { HomeComponent } from './home/home.component';
 import {AppRoutingModule} from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { Code404Component } from './code404/code404.component';
+import { Code500Component } from './code500/code500.component';
+import { HomeRightHeadComponent } from './home-right-head/home-right-head.component';
+import { HomeLeftComponent } from './home-left/home-left.component';
+import { HomeRightComponent } from './home-right/home-right.component';
 
 export function createTranslateHttpLoader(http: HttpClient) {
  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -19,7 +23,11 @@ export function createTranslateHttpLoader(http: HttpClient) {
     AppComponent,
     HomeComponent,
     LoginComponent,
-    Code404Component
+    Code404Component,
+    Code500Component,
+    HomeRightHeadComponent,
+    HomeLeftComponent,
+    HomeRightComponent
   ],
   imports: [
     BrowserModule,
