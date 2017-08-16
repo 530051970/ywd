@@ -13,6 +13,7 @@ import { Code500Component } from './code500/code500.component';
 import { HomeRightHeadComponent } from './home-right-head/home-right-head.component';
 import { HomeLeftComponent } from './home-left/home-left.component';
 import { HomeRightComponent } from './home-right/home-right.component';
+import { HomeRightBodyComponent } from './home-right-body/home-right-body.component';
 
 export function createTranslateHttpLoader(http: HttpClient) {
  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -27,7 +28,8 @@ export function createTranslateHttpLoader(http: HttpClient) {
     Code500Component,
     HomeRightHeadComponent,
     HomeLeftComponent,
-    HomeRightComponent
+    HomeRightComponent,
+    HomeRightBodyComponent
   ],
   imports: [
     BrowserModule,

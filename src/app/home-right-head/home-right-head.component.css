@@ -1,9 +1,11 @@
 .sticky-header .header-section {
-  position: fixed;
+  /*position: fixed;*/
   top: 0;
   left: 240px;
   width: 100%;
   z-index: 100;
+  height: 51px;
+  background-color: #fff;
 }
 
 .sticky-header .main-content {
@@ -46,6 +48,7 @@
 .header-section {
   background: #fff;
   border-bottom: 1px solid #eff0f4;
+  height: 51px;
 }
 
 .header-section::after {
@@ -293,7 +296,6 @@
   margin-bottom: 0;
 }
 
-
 .normal-list li a .label i {
   margin-right: 0;
 }
@@ -312,7 +314,7 @@
 
 .normal-list li .name {
   font-size: 13px;
-  font-family: 'Arial' , sans-serif;
+  font-family: 'Arial', sans-serif;
   line-height: 21px;
 }
 
@@ -334,32 +336,6 @@
   position: absolute;
   right: 4px;
   top: 10px;
-}
-
-/* ------------------------------
-        STICKY HEADER
----------------------------------*/
-
-/*.sticky-header .logo {*/
-/*position: fixed;*/
-/*top: 0;*/
-/*left: 0;*/
-/*width: 240px;*/
-/*z-index: 1200;*/
-/*background: #424f63;*/
-
-/*}*/
-
-/*.sticky-header .left-side {*/
-/*top: 50px;*/
-/*}*/
-
-.sticky-header .header-section {
-  position: fixed;
-  top: 0;
-  left: 240px;
-  width: 100%;
-  z-index: 100;
 }
 
 .sticky-header .main-content {
@@ -395,17 +371,14 @@
   margin: 0;
 }
 
-
-
-
 /*.fa {*/
-  /*display: inline-block;*/
-  /*font-family: FontAwesome;*/
-  /*font-style: normal;*/
-  /*font-weight: normal;*/
-  /*line-height: 1;*/
-  /*-webkit-font-smoothing: antialiased;*/
-  /*-moz-osx-font-smoothing: grayscale;*/
+/*display: inline-block;*/
+/*font-family: FontAwesome;*/
+/*font-style: normal;*/
+/*font-weight: normal;*/
+/*line-height: 1;*/
+/*-webkit-font-smoothing: antialiased;*/
+/*-moz-osx-font-smoothing: grayscale;*/
 /*}*/
 /*bootstrap.min.css:5*/
 * {
@@ -413,40 +386,43 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 user agent stylesheet
 i, cite, em, var, address, dfn {
   font-style: italic;
 }
-Inherited from a.toggle-btn.menu-collapsed
-/*style.css:561*/
-.toggle-btn {
-  width: 52px;
-  height: 50px;
-  font-size: 20px;
-  padding: 15px;
-  cursor: pointer;
-  float: left;
-  color: #212121;
-  border-right: 1px solid #e7e7e7;
-  -moz-transition: all 0.2s ease-out 0s;
-  -webkit-transition: all 0.2s ease-out 0s;
-  transition: all 0.2s ease-out 0s;
-}
+
+/*Inherited from a.toggle-btn.menu-collapsed*/
+  /*!*style.css:561*!*/
+/*.toggle-btn {*/
+  /*width: 52px;*/
+  /*height: 50px;*/
+  /*font-size: 20px;*/
+  /*padding: 15px;*/
+  /*cursor: pointer;*/
+  /*float: left;*/
+  /*color: #212121;*/
+  /*border-right: 1px solid #e7e7e7;*/
+  /*-moz-transition: all 0.2s ease-out 0s;*/
+  /*-webkit-transition: all 0.2s ease-out 0s;*/
+  /*transition: all 0.2s ease-out 0s;*/
+/*}*/
+
 /*style.css:30*/
 a {
   color: #65CEA7;
 }
+
 /*bootstrap.min.css:5*/
 a {
   color: #337ab7;
   text-decoration: none;
 }
 
-
 /*:after, .fa-bars:before {*/
-  /*-webkit-box-sizing: border-box;*/
-  /*-moz-box-sizing: border-box;*/
-  /*box-sizing: border-box;*/
+/*-webkit-box-sizing: border-box;*/
+/*-moz-box-sizing: border-box;*/
+/*box-sizing: border-box;*/
 /*}*/
 
 .toggle-btn {
@@ -463,3 +439,94 @@ a {
   transition: all 0.2s ease-out 0s;
 }
 
+#nt-title-container {
+  margin: 8px 0px 0px 20px !important;
+  background: #075090;
+  height: 35px;
+  /*z-index: 100;*/
+}
+#nt-title {
+  margin-top: 2px;
+}
+
+#nt-title li {
+  font-size: 12px;
+  color: #ffff;
+  padding-left: 40px;
+  white-space: nowrap;
+  list-style: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "微软雅黑", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+}
+
+#nt-title li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media (min-width: 1200px) {
+  .visible-lg {
+    display: block !important;
+  }
+
+  .visible-lg, tr.visible-lg, th.visible-lg, td.visible-lg {
+    display: block !important;
+
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-left {
+    float: left !important;
+  }
+
+  .running-text {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+    margin: 6px;
+    padding: 10px 45px 0 20px;
+    width: 50%;
+  }
+}
+
+/* CLOCK*/
+/*@font-face {*/
+  /*font-family:'BebasNeueRegular';*/
+  /*src: url('../font/bebasneue-webfont.eot');*/
+  /*src: url('../font/bebasneue-webfont.eot?#iefix') format('embedded-opentype'), url('../font/bebasneue-webfont.woff') format('woff'), url('../font/bebasneue-webfont.ttf') format('truetype'), url('../font/bebasneue-webfont.svg#bebas_neueregular') format('svg');*/
+  /*font-weight: normal;*/
+  /*font-style: normal;*/
+/*}*/
+.clock {
+  position: fixed;
+  top: 15px;
+  right: 10px;
+}
+.date-top {
+  border-right: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1);
+  float: left;
+  margin-left: -30px;
+  padding-right: 15px;
+}
+.date-top > li {
+  display:inline;
+}
+.digital {
+  border-right: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.1);
+  float: left;
+  margin-left: -25px;
+  margin-right: -25px;
+  padding-right: 15px;
+}
+.digital li {
+  display:inline;
+}
+.meridiem {
+  font-size:10px;
+}

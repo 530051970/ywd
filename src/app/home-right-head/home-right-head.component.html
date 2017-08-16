@@ -1,4 +1,4 @@
-<div class=".sticky-header .header-section">
+<div class="sticky-header header-section">
 
   <!--toggle button start-->
   <a class="toggle-btn"><i class="fa fa-bars"></i></a>
@@ -6,12 +6,52 @@
 
   <!--search start-->
   <form class="searchform" action="index.html" method="post">
-    <input type="text" class="form-control" name="keyword" placeholder="Search here..."/>
+    <!--<div style="width:100px;height: 41px;float:left">-->
+    <input type="text" class="form-control" name="keyword" placeholder="Search here..." style="margin-left: 30px;"/>
+<!--</div>-->
   </form>
   <!--search end-->
 
+  <div id="nt-title-container" class="navbar-left running-text visible-lg" style="padding-top: 7px;">
+    <div style="float:left">
+    <ul class="date-top">
+      <li class="fa fa-calendar-o" style="margin-right:5px"></li>
+      <li id="Date"></li>
+    </ul>
+    </div>
+    <div style="float:left">
+    <ul id="digital-clock" class="digital">
+      <li class="fa fa-clock-o" style="margin-right:5px"></li>
+      <li class="hour"></li>
+      <li>:</li>
+      <li class="min"></li>
+      <li>:</li>
+      <li class="sec"></li>
+      <li class="meridiem"></li>
+    </ul>
+    </div>
+    <ul id="nt-title">
+      <li><i class="fa fa-rss"></i>  <a href="#">测试用的，暂时没有消息！</a></li>
+      <!--<li><i class="wi-day-lightning"></i>&#160;&#160;Yogyakarta&#160;-->
+        <!--<b>85</b><i class="wi-fahrenheit"></i>&#160;; Tonight- 72 °F (22.2 °C)-->
+      <!--</li>-->
+      <!--<li><i class="wi-day-lightning"></i>&#160;&#160;Sttugart&#160;-->
+        <!--<b>85</b><i class="wi-fahrenheit"></i>&#160;; 15km/h-->
+      <!--</li>-->
+
+      <!--<li><i class="wi-day-lightning"></i>&#160;&#160;Muchen&#160;-->
+        <!--<b>85</b><i class="wi-fahrenheit"></i>&#160;; 15km/h-->
+      <!--</li>-->
+
+      <!--<li><i class="wi-day-lightning"></i>&#160;&#160;Frankurt&#160;-->
+        <!--<b>85</b><i class="wi-fahrenheit"></i>&#160;; 15km/h-->
+      <!--</li>-->
+
+    </ul>
+  </div>
+
   <!--notification menu start -->
-  <div class="menu-right">
+  <div class="menu-right" style="margin-right: 0px;">
     <ul class="notification-menu">
       <li>
         <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
