@@ -14,6 +14,7 @@ import { HomeRightHeadComponent } from './home-right-head/home-right-head.compon
 import { HomeLeftComponent } from './home-left/home-left.component';
 import { HomeRightComponent } from './home-right/home-right.component';
 import { HomeRightBodyComponent } from './home-right-body/home-right-body.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 export function createTranslateHttpLoader(http: HttpClient) {
  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -29,7 +30,8 @@ export function createTranslateHttpLoader(http: HttpClient) {
     HomeRightHeadComponent,
     HomeLeftComponent,
     HomeRightComponent,
-    HomeRightBodyComponent
+    HomeRightBodyComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

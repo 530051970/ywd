@@ -292,8 +292,14 @@ $(function () {
   newDate.setDate(newDate.getDate() + 1);
   $('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
 
-
-
-  // });
-
+  // Home页面头部实现消息上下滚动
+  function autoScroll(obj) {
+    var n = jQuery(obj).find("li").height();
+    jQuery(obj).find("ul").animate({
+      marginTop: -n
+    }, 500, function () {
+      $(this).css({marginTop: "0px"}).find("li:first").appendTo(this);
+    })
+  }
 });
+

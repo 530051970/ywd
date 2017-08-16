@@ -443,6 +443,8 @@ a {
   margin: 8px 0px 0px 20px !important;
   background: #075090;
   height: 35px;
+  width: 667px;
+  font-family: "微软雅黑", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
   /*z-index: 100;*/
 }
 #nt-title {
@@ -457,13 +459,24 @@ a {
   list-style: none;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: "微软雅黑", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+
 }
 
-#nt-title li a {
+#Lang a,#nt-title li a {
   text-decoration: none;
   color: #fff;
 }
+#Lang a:hover,#nt-title li a:hover {
+  text-decoration: none;
+  color: yellow;
+  font-weight: bold;
+}
+
+#Lang a:hover{
+
+}
+
+
 
 @media (min-width: 1200px) {
   .visible-lg {
@@ -530,3 +543,5 @@ a {
 .meridiem {
   font-size:10px;
 }
+
+
