@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HashLocationStrategy , LocationStrategy} from '@angular/common';
 import { HttpClientModule, HttpClient} from '@angular/common/http';
 import { TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -15,6 +16,8 @@ import { HomeLeftComponent } from './home-left/home-left.component';
 import { HomeRightComponent } from './home-right/home-right.component';
 import { HomeRightBodyComponent } from './home-right-body/home-right-body.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import {CommonService} from './service/common.service';
+import { FooterComponent } from './footer/footer.component';
 
 export function createTranslateHttpLoader(http: HttpClient) {
  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -31,7 +34,8 @@ export function createTranslateHttpLoader(http: HttpClient) {
     HomeLeftComponent,
     HomeRightComponent,
     HomeRightBodyComponent,
-    DashboardComponent
+    DashboardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,8 @@ export function createTranslateHttpLoader(http: HttpClient) {
  }),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CommonService
+  , {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

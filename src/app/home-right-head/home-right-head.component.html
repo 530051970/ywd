@@ -1,8 +1,9 @@
 <div class="sticky-header header-section">
 
   <!--toggle button start-->
-  <a class="toggle-btn"><i class="fa fa-bars"></i></a>
+  <a class="toggle-btn" (click)="onClickToggleBtn()"><i class="fa fa-bars"></i></a>
   <!--toggle button end-->
+  <!--<a class="toggle-btn"><i class="fa fa-bars"></i></a>-->
 
   <!--search start-->
   <!--<form class="searchform" action="index.html" method="post">-->
@@ -27,18 +28,22 @@
     <div style="float:left">
     <ul id="digital-clock" class="digital">
       <li class="fa fa-clock-o" style="margin-right:5px"></li>
-      <li class="hour"></li>
-      <li>:</li>
+      <li >{{showDate| date:'HH:mm:ss'}}</li>
+      <!-- <li>:</li>
       <li class="min"></li>
-      <li>:</li>
-      <li class="sec"></li>
-      <li class="meridiem"></li>
+      <li>:</li> -->
+      <!-- <li class="sec">{{sec}}</li> -->
+      <!-- <li class="meridiem"></li> -->
     </ul>
     </div>
-    <ul id="nt-title">
-      <li><i class="fa fa-rss"></i>  <a href="#">测试用的1，暂时没有消息！</a></li>
-      <li><i class="fa fa-rss"></i>  <a href="#">测试用的2，暂时没有消息！</a></li>
-      <li><i class="fa fa-rss"></i>  <a href="#">测试用的3，暂时没有消息！</a></li>
+    <div style="float:left"><ul  style="padding-left: 40px;list-style:none;">
+      <li><a id="player" style="color:#fff" (click)='onClickPlayer(msgList,play,stop)'><i class="fa fa-play-circle" #play></i>
+        <i class="fa fa-pause-circle" style="display:none" #stop></i>
+      </a></li></ul></div>
+    <ul id="nt-title" #msgList>
+      <li><a href="#">测试用的1，暂时时没有消时没有消时没有消时没有消时没有消时没有消时没有消没有消息！</a></li>
+      <li><a href="#">测试用的2，暂时没有消时没有消时没有消时没有消时没有消时没有消时没有消息！</a></li>
+      <li><a href="#">测试用的3，暂时没有消息！</a></li>
       <!--<li><i class="wi-day-lightning"></i>&#160;&#160;Yogyakarta&#160;-->
         <!--<b>85</b><i class="wi-fahrenheit"></i>&#160;; Tonight- 72 °F (22.2 °C)-->
       <!--</li>-->
@@ -234,6 +239,12 @@
             <li class="new"><a href="">See All Notifications</a></li>
           </ul>
         </div>
+      </li>
+      <li>
+        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+          <i class="fa fa-wrench"></i>
+          <!--<span class="badge">4</span>-->
+        </a>
       </li>
       <li>
         <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">

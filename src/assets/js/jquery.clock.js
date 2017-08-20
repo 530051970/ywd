@@ -28,7 +28,9 @@
       }
       else
       {
-        jQuery(_this).find(".sec").html(seconds);
+        // jQuery(_this).find(".sec").html(seconds);
+        var showSec =(seconds<10)?('0'+seconds):seconds;
+        jQuery(_this).find(".sec").html(showSec);
       }
     }, 1000 );
 
@@ -43,10 +45,13 @@
       }
       else
       {
-        jQuery(_this).find(".hour").html(hours);
+        // jQuery(_this).find(".hour").html(hours);
+        var showHour = (hours<10)?('0'+hours):hours;
+        jQuery(_this).find(".hour").html(showHour);
       }
       var meridiem = hours<12?'AM':'PM';
       jQuery(_this).find('.meridiem').html(meridiem);
+
     }, 1000 );
 
     setInterval( function() {
@@ -54,13 +59,16 @@
       if(opts.type=='analog')
       {
         var mdegree = mins * 6;
-        var mrotate = "rotate(" + mdegree + "deg)";        
-        jQuery(_this).find(".min").css({"-moz-transform" : mrotate, "-webkit-transform" : mrotate});                
+        var mrotate = "rotate(" + mdegree + "deg)";
+        jQuery(_this).find(".min").css({"-moz-transform" : mrotate, "-webkit-transform" : mrotate});
       }
       else
       {
-        jQuery(_this).find(".min").html(mins);
+        // jQuery(_this).find(".min").html(mins);
+        var showMin = (mins<10)?('0'+mins):mins;
+        jQuery(_this).find(".min").html(showMin);
       }
+
     }, 1000 );
   }
 })(jQuery);

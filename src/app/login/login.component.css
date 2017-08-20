@@ -25,9 +25,6 @@ div#login-div {
   z-index: 0;
 }
 
-footer {
-  margin-bottom: 20px;
-}
 
 @-webkit-keyframes cloud {
   0% {
@@ -2027,14 +2024,6 @@ a.forgot-pass {
   color: #ffffff !important;
 }
 
-footer navbar-fixed-bottom a:link {
-  text-decoration: none;
 
-}
-
-footer navbar-fixed-bottom a:hover{
-  text-decoration: none;
-  cursor: pointer;
-}
 
 

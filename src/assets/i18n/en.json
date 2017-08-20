@@ -1,16 +1,30 @@
 {
-	"hello":"hello",
-  "email":"email",
-  "password":"password",
-  "inputEmail":"please input email address",
-  "inputPassword":"please input password",
-  "login":"Sign in",
-  "welcome":"Y.W.D. Recrument Platform",
-  "forgetPassword":"忘记密码",
-  "publish":"发布招聘信息?请点击",
-  "here":"这里",
-  "copyRight":"依沃黛 | 京ICP备11008151号",
-  "404":"404 Error",
-  "pageNotExist":"Sorry, that page doesn't exist.",
-  "returnBack":"Go to Home Page."
+  "comment":"====================================以下是总体",
+  "common-title":"Y.W.D - Successed Everywhere,Being Everywhere",
+
+  "comment":"====================================以下是登录页",
+  "login-email":"email",
+  "login-password":"password",
+  "login-inputEmail":"please input email address",
+  "login-inputPassword":"please input password",
+  "login-login":"Sign in",
+  "login-welcome":"Y.W.D. Recrument Platform",
+  "login-forgetPassword":"forgot password",
+  "login-publish":"Issue recruitment information the first time? Click",
+  "login-here":"here",
+  "login-click":"",
+  "login-copyRight":"Y.W.D | all right reserved",
+
+  "comment":"====================================以下是404页",
+  "404-404":"404 Error",
+  "404-pageNotExist":"Sorry，this page is not found.",
+  "404-returnBack":"return home page",
+  "404-copyRight":"Y.W.D | all right reserved",
+
+  "comment":"====================================以下是500页",
+  "500-500":"500 Error",
+  "500-serverProblem":"Sorry，The server is out of order and working hard to fix it。",
+  "500-returnBack":"return home page",
+  "500-copyRight":"Y.W.D | All Rights Reserved."
+
 }

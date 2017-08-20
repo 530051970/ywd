@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {CommonService} from '../service/common.service';
+
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,15 @@ import {Component, OnInit} from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() {
+  constructor(private commonService: CommonService) {
   }
 
-  ngOnInit() {}
-
+  ngOnInit() {
+  }
 }
+
+  export class Login {
+  constructor(public email: string, public password: string) {
+  }
+}
+

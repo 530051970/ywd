@@ -10,6 +10,7 @@ const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'home', component: HomeComponent},
+  {path: 'code404', component: Code404Component},
   {path: '**', component: Code404Component}
 ];
 

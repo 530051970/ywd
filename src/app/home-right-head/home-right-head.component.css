@@ -454,11 +454,13 @@ a {
 #nt-title li {
   font-size: 12px;
   color: #ffff;
-  padding-left: 40px;
+  padding-left: 10px;
   white-space: nowrap;
   list-style: none;
   overflow: hidden;
   text-overflow: ellipsis;
+  margin-bottom: 5px;
+  margin-top: 2px;;
 
 }
 
@@ -542,6 +544,13 @@ a {
 }
 .meridiem {
   font-size:10px;
+}
+
+a#player:hover {
+   text-decoration: none;
+   color: yellow;
+   font-weight: bold;
+   cursor: pointer;   
 }
 
 

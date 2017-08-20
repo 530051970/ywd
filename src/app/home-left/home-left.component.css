@@ -8,6 +8,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  
 }
 
 .sticky-left-side {
@@ -360,4 +361,9 @@ h5.left-nav-title {
 
 .left-side-collapsed .left-side{
   overflow: visible !important;
+}
+
+#player {
+  color: #fff;
+  text-decoration: none;
 }

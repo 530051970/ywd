@@ -39,4 +39,8 @@ ng g service XXXXX
 ng serve --open
 npm start
 
-#075090
+
+生成d.ts文件用
+安装dtsmake命令  npm install -g dtsmake（根目录下安装）
+安装tern命令  npm install -g tern
+进入该文件目录下，dtsmake -s xxxxxx.js

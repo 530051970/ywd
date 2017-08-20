@@ -1,0 +1,13 @@
+footer {
+  margin-bottom: 20px;
+}
+
+footer navbar-fixed-bottom a:link {
+  text-decoration: none;
+
+}
+
+footer navbar-fixed-bottom a:hover{
+  text-decoration: none;
+  cursor: pointer;
+}

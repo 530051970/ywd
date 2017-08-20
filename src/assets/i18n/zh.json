@@ -10,8 +10,9 @@
 	"login-login":"登录",
   "login-welcome":"依沃黛招聘管理平台",
   "login-forgetPassword":"忘记密码",
-  "login-publish":"发布招聘信息?请点击",
+  "login-publish":"首次发布招聘信息?请点击",
   "login-here":"这里",
+  "login-click":"",
   "login-copyRight":"依沃黛 | 沪ICP备11008151号",
 
   "comment":"====================================以下是404页",

@@ -5,7 +5,7 @@
     <a href="index.html"><img src="../../assets/img/logo.png" alt=""></a>
   </div>
 
-  <div class="logo-icon text-center">
+  <div class="logo-icon text-center" style="padding-top:10px">
     <a href="index.html"><img src="../../assets/img/logo_icon.png" alt=""></a>
   </div>
   <!--logo and iconic logo end-->
@@ -32,14 +32,14 @@
 
     <!--sidebar nav start-->
     <ul class="nav nav-pills nav-stacked custom-nav">
-      <li class="menu-list nav-active"><a href="index.html"><i class="fa fa-home"></i> <span>Dashboard</span></a>
+      <li class="menu-list nav-active"><a href="index.html" (click)='onMenuListClick(listDash)' #listDash><i class="fa fa-home"></i> <span>Dashboard</span></a>
         <ul class="sub-menu-list">
           <li><a href="index_alt.html"> Dashboard 1</a></li>
           <li class="active"><a href="index.html"> Dashboard 2</a></li>
         </ul>
       </li>
 
-      <li class="menu-list"><a href=""><i class="fa fa-laptop"></i> <span>Layouts</span></a>
+      <li class="menu-list"><a href=""  (click)='onMenuListClick(listLay)' #listLay><i class="fa fa-laptop"></i> <span>Layouts</span></a>
         <ul class="sub-menu-list">
           <li><a href="blank_page.html"> Blank Page</a></li>
           <li><a href="boxed_view.html"> Boxed Page</a></li>
@@ -48,7 +48,7 @@
 
         </ul>
       </li>
-      <li class="menu-list"><a href=""><i class="fa fa-book"></i> <span>UI Elements</span></a>
+      <li class="menu-list"><a href="" (click)='onMenuListClick(listUI)' #listUI><i class="fa fa-book"></i> <span>UI Elements</span></a>
         <ul class="sub-menu-list">
           <li><a href="general.html"> General</a></li>
           <li><a href="buttons.html"> Buttons</a></li>
@@ -59,7 +59,7 @@
           <li><a href="widgets.html"> Widgets</a></li>
         </ul>
       </li>
-      <li class="menu-list"><a href=""><i class="fa fa-cogs"></i> <span>Components</span></a>
+      <li class="menu-list"><a href="" (click)='onMenuListClick(ListCom)' #ListCom><i class="fa fa-cogs"></i> <span>Components</span></a>
         <ul class="sub-menu-list">
           <li><a href="grids.html"> Grids</a></li>
           <li><a href="gallery.html"> Media Gallery</a></li>
@@ -72,7 +72,7 @@
 
       <li><a href="fontawesome.html"><i class="fa fa-bullhorn"></i> <span>Fontawesome</span></a></li>
 
-      <li class="menu-list"><a href=""><i class="fa fa-envelope"></i> <span>Mail</span></a>
+      <li class="menu-list" ><a href="" (click)='onMenuListClick(listMail)' #listMail><i class="fa fa-envelope"></i> <span>Mail</span></a>
         <ul class="sub-menu-list">
           <li><a href="mail.html"> Inbox</a></li>
           <li><a href="mail_compose.html"> Compose Mail</a></li>
@@ -80,7 +80,7 @@
         </ul>
       </li>
 
-      <li class="menu-list"><a href=""><i class="fa fa-tasks"></i> <span>Forms</span></a>
+      <li class="menu-list" ><a href="" (click)='onMenuListClick(listForm)' #listForm><i class="fa fa-tasks"></i> <span>Forms</span></a>
         <ul class="sub-menu-list">
           <li><a href="form_layouts.html"> Form Layouts</a></li>
           <li><a href="form_advanced_components.html"> Advanced Components</a></li>
@@ -92,7 +92,7 @@
           <li><a href="dropzone.html"> Dropzone</a></li>
         </ul>
       </li>
-      <li class="menu-list"><a href=""><i class="fa fa-bar-chart-o"></i> <span>Charts</span></a>
+      <li class="menu-list"><a href="" (click)='onMenuListClick(listChart)' #listChart><i class="fa fa-bar-chart-o"></i> <span>Charts</span></a>
         <ul class="sub-menu-list">
           <li><a href="flot_chart.html"> Flot Charts</a></li>
           <li><a href="morris.html"> Morris Charts</a></li>
@@ -100,7 +100,7 @@
           <li><a href="c3chart.html"> C3 Charts</a></li>
         </ul>
       </li>
-      <li class="menu-list"><a href="#"><i class="fa fa-th-list"></i> <span>Data Tables</span></a>
+      <li class="menu-list"><a href="#"  (click)='onMenuListClick(listData)' #listData><i class="fa fa-th-list"></i> <span>Data Tables</span></a>
         <ul class="sub-menu-list">
           <li><a href="basic_table.html"> Basic Table</a></li>
           <li><a href="dynamic_table.html"> Advanced Table</a></li>
@@ -109,13 +109,13 @@
         </ul>
       </li>
 
-      <li class="menu-list"><a href="#"><i class="fa fa-map-marker"></i> <span>Maps</span></a>
+      <li class="menu-list"><a href="#" (click)='onMenuListClick(list0)' #list0><i class="fa fa-map-marker"></i> <span>Maps</span></a>
         <ul class="sub-menu-list">
           <li><a href="google_map.html"> Google Map</a></li>
           <li><a href="vector_map.html"> Vector Map</a></li>
         </ul>
       </li>
-      <li class="menu-list"><a href=""><i class="fa fa-file-text"></i> <span>Extra Pages</span></a>
+      <li class="menu-list"><a href="" (click)='onMenuListClick(list1)' #list1><i class="fa fa-file-text"></i> <span>Extra Pages</span></a>
         <ul class="sub-menu-list">
           <li><a href="profile.html"> Profile</a></li>
           <li><a href="invoice.html"> Invoice</a></li>
