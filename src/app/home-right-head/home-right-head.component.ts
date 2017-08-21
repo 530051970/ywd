@@ -12,6 +12,7 @@ import * as Rx from "rxjs";
 export class HomeRightHeadComponent implements OnInit {
 
  showDate:Date;
+ private timer;
 
   constructor(private commonService:CommonService) { }
 
@@ -97,17 +98,16 @@ export class HomeRightHeadComponent implements OnInit {
     }
 
   }
-
+ 
+  // 点击播放与停止按钮，控制ul的跳动
   onClickPlayer(obj,play,stop){
     let playEle =jQuery(play);
     let stopEle =jQuery(stop);
-    let interval = 0;
-
     if (playEle.is(':visible')) {
     jQuery(play).hide();
     jQuery(stop).show();
     // ul开始滚动
-    let interval = setInterval(() => {
+    this.timer = setInterval(() => {
       let n=$(obj).find("li").height();
       $(obj).animate({
              marginTop:-n
@@ -115,18 +115,42 @@ export class HomeRightHeadComponent implements OnInit {
        $(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
   })
     },3000)
+
+  //   $(obj).find("li").hover(function(){
+  //     $("#mark-info").show();
+  // },function(){
+  //     $("#mark-info").hide();
+  // })
    } else {
     jQuery(play).show();
     jQuery(stop).hide();
     // ul停止滚动
-    clearInterval(setInterval(() => {
-      let n=$(obj).find("li").height();
-      $(obj).animate({
-             marginTop:-n
-  },500,function(){
-       $(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
-  })
-    },3000));
+    if(this.timer){
+      clearInterval(this.timer);
+      }
   }
 }
+
+// 点击ul里面的li标题，弹出窗口
+onClickTitle(){
+  jQuery('.remodal-overlay').add('.remodal-wrapper').add('#modal').show();
+  // jQuery('.remodal-overlay').show();
+  document.body.style.overflow='hidden';
+  document.body.style.height='100%';
+  document.documentElement.style.overflow='hidden'
+  return false;
 }
+
+onClickLay(){
+  jQuery('.remodal-overlay').add('.remodal-wrapper').add('#modal').hide();
+  document.body.style.overflow='auto';
+  document.body.style.height='100%';
+  document.documentElement.style.overflow='auto'
+  // return false;
+}
+
+onHoverTitle(){
+  alert('LLL');
+}
+}
+

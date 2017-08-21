@@ -6,36 +6,36 @@ $(function () {
 
   // 定制滚动条
 
-  $("html").niceScroll({
-    styler: "fb",
-    cursorcolor: "#65cea7",
-    cursorwidth: '6',
-    cursorborderradius: '0px',
-    background: '#424f63',
-    spacebarenabled: false,
-    cursorborder: '0',
-    zindex: '1000'
-  });
-  //
-  $(".left-side").niceScroll({
-    styler: "fb",
-    cursorcolor: "#65cea7",
-    cursorwidth: '3',
-    cursorborderradius: '0px',
-    background: '#424f63',
-    spacebarenabled: false,
-    cursorborder: '0'
-  });
-  //
-  $('body').niceScroll({
-    styler: "fb",
-    cursorcolor: "#65cea7",
-    cursorwidth: '3',
-    cursorborderradius: '0px',
-    background: '#424f63',
-    spacebarenabled: false,
-    cursorborder: '0'
-  });
+  // $("html").niceScroll({
+  //   styler: "fb",
+  //   cursorcolor: "#65cea7",
+  //   cursorwidth: '6',
+  //   cursorborderradius: '0px',
+  //   background: '#424f63',
+  //   spacebarenabled: false,
+  //   cursorborder: '0',
+  //   zindex: '1000'
+  // });
+  // //
+  // $(".left-side").niceScroll({
+  //   styler: "fb",
+  //   cursorcolor: "#65cea7",
+  //   cursorwidth: '3',
+  //   cursorborderradius: '0px',
+  //   background: '#424f63',
+  //   spacebarenabled: false,
+  //   cursorborder: '0'
+  // });
+  // //
+  // $('body').niceScroll({
+  //   styler: "fb",
+  //   cursorcolor: "#65cea7",
+  //   cursorwidth: '3',
+  //   cursorborderradius: '0px',
+  //   background: '#424f63',
+  //   spacebarenabled: false,
+  //   cursorborder: '0'
+  // });
   //
   // $('.sticky-left-side').add('.left-side-inner').niceScroll({
   //   styler: "fb",

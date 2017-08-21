@@ -19,7 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/_bootstrap@3.3.6@bootstrap/dist/css/bootstrap.css"
+        "../node_modules/_bootstrap@3.3.6@bootstrap/dist/css/bootstrap.css",
+        "assets/css/remodal.css",
+        "assets/css/remodal-default-theme.css"
       ],
       "scripts": [
         "../node_modules/_jquery@2.2.3@jquery/dist/jquery.js",
@@ -49,7 +51,10 @@
         "assets/js/jquery.nicescroll.js",
         "assets/js/main-chart.js",
         "assets/js/jquery.clock.js",
-        "assets/js/moment.min.js"
+        "assets/js/moment.min.js",
+        "assets/js/remodal.min.js",
+        "assets/js/jquery-loader.js",
+        "assets/js/zepto.js"
 
       ],
       "environmentSource": "environments/environment.ts",

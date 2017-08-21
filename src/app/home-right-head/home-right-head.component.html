@@ -40,24 +40,10 @@
       <li><a id="player" style="color:#fff" (click)='onClickPlayer(msgList,play,stop)'><i class="fa fa-play-circle" #play></i>
         <i class="fa fa-pause-circle" style="display:none" #stop></i>
       </a></li></ul></div>
-    <ul id="nt-title" #msgList>
-      <li><a href="#">测试用的1，暂时时没有消时没有消时没有消时没有消时没有消时没有消时没有消没有消息！</a></li>
-      <li><a href="#">测试用的2，暂时没有消时没有消时没有消时没有消时没有消时没有消时没有消息！</a></li>
-      <li><a href="#">测试用的3，暂时没有消息！</a></li>
-      <!--<li><i class="wi-day-lightning"></i>&#160;&#160;Yogyakarta&#160;-->
-        <!--<b>85</b><i class="wi-fahrenheit"></i>&#160;; Tonight- 72 °F (22.2 °C)-->
-      <!--</li>-->
-      <!--<li><i class="wi-day-lightning"></i>&#160;&#160;Sttugart&#160;-->
-        <!--<b>85</b><i class="wi-fahrenheit"></i>&#160;; 15km/h-->
-      <!--</li>-->
-
-      <!--<li><i class="wi-day-lightning"></i>&#160;&#160;Muchen&#160;-->
-        <!--<b>85</b><i class="wi-fahrenheit"></i>&#160;; 15km/h-->
-      <!--</li>-->
-
-      <!--<li><i class="wi-day-lightning"></i>&#160;&#160;Frankurt&#160;-->
-        <!--<b>85</b><i class="wi-fahrenheit"></i>&#160;; 15km/h-->
-      <!--</li>-->
+    <ul id="nt-title" #msgList class="remodal-bg">
+      <li><a href="#" (click)='onClickTitle()' (hover)='onHoverTitle()'>测试用的1，暂时时没有消时没有消时没有消时没有消时没有消时没有消时没有消没有消息！</a></li>
+      <li><a href="#" (click)='onClickTitle()' (hover)='onHoverTitle()'>测试用的2，暂时没有消时没有消时没有消时没有消时没有消时没有消时没有消息！</a></li>
+      <li><a href="#" (click)='onClickTitle()' (hover)='onHoverTitle()'>测试用的3，暂时没有消息！</a></li>
 
     </ul>
   </div>
@@ -264,3 +250,20 @@
   <!--notification menu end -->
 
 </div>
+<div class="remodal-overlay" style="display: none;overflow:hidden" ></div>
+
+<div class="remodal-wrapper" style="display: none;overflow:hidden" (click)='onClickLay()'>
+  <div class="remodal" id="modal" style="display:none" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" tabindex="-1" style="display:block">
+  <button data-remodal-action="close" class="remodal-close" aria-label="Close" (click)='onClickLay()'></button>
+  <div>
+    <h2 id="modal1Title">Remodal</h2>
+    <p id="modal1Desc" style="max-height:400px;overflow-y:auto">
+      Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin
+      with declarative state notation and hash tracking.
+    </p>
+  </div>
+  <br>
+  <button data-remodal-action="cancel" class="remodal-cancel" (click)='onClickLay()'>Cancel</button>
+  <button data-remodal-action="confirm" class="remodal-confirm" (click)='onClickLay()'>OK</button>
+</div></div>
+
