@@ -1,13 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HashLocationStrategy , LocationStrategy} from '@angular/common';
-import { HttpClientModule, HttpClient} from '@angular/common/http';
-import { TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import {AppRoutingModule} from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
 import { Code404Component } from './code404/code404.component';
 import { Code500Component } from './code500/code500.component';
@@ -16,11 +18,14 @@ import { HomeLeftComponent } from './home-left/home-left.component';
 import { HomeRightComponent } from './home-right/home-right.component';
 import { HomeRightBodyComponent } from './home-right-body/home-right-body.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import {CommonService} from './service/common.service';
+import { CommonService } from './service/common.service';
+import { MockService } from './service/mock.service';
 import { FooterComponent } from './footer/footer.component';
+import { User} from './model/user.model';
+import './utils/debug.util';
 
 export function createTranslateHttpLoader(http: HttpClient) {
- return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
@@ -38,19 +43,30 @@ export function createTranslateHttpLoader(http: HttpClient) {
     FooterComponent
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
     TranslateModule.forRoot({
-    loader: {
-      provide: TranslateLoader,
-      useFactory: (createTranslateHttpLoader),
-      deps: [HttpClient]
-    }
- }),
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateHttpLoader),
+        deps: [HttpClient]
+      }
+    }),
     AppRoutingModule
   ],
-  providers: [CommonService
-  , {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [
+    User,
+    CommonService,
+    MockService,
+    {
+      provide: LocationStrategy, useClass: HashLocationStrategy
+    },{
+      provide:'BASE_CONFIG',useValue:{
+        'json_server_uri':'http://localhost:3000'
+      }
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

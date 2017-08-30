@@ -2,7 +2,7 @@
   "comment":"====================================以下是总体",
   "common-title":"Y.W.D - Successed Everywhere,Being Everywhere",
 
-  "comment":"====================================以下是登录页",
+  "comment1":"====================================以下是登录页",
   "login-email":"email",
   "login-password":"password",
   "login-inputEmail":"please input email address",
@@ -15,16 +15,23 @@
   "login-click":"",
   "login-copyRight":"Y.W.D | all right reserved",
 
-  "comment":"====================================以下是404页",
+  "comment2":"====================================以下是404页",
   "404-404":"404 Error",
   "404-pageNotExist":"Sorry，this page is not found.",
   "404-returnBack":"return home page",
   "404-copyRight":"Y.W.D | all right reserved",
 
-  "comment":"====================================以下是500页",
+  "comment3":"====================================以下是500页",
   "500-500":"500 Error",
   "500-serverProblem":"Sorry，The server is out of order and working hard to fix it。",
   "500-returnBack":"return home page",
-  "500-copyRight":"Y.W.D | All Rights Reserved."
+  "500-copyRight":"Y.W.D | All Rights Reserved.",
 
+  "comment4":"====================================以下是Error信息",
+  "errMsg0001":"please input email!",
+  "errMsg0002":"please input correct email!(for example:bowen@gmail.com)",
+  "errMsg0003":"the email has not been registered in Y.W.D System, please input again！",
+  "errMsg0004":"please input password!",
+  "errMsg0005":"please input password of more than 6 characters and less then 12 characters",
+  "errMsg0006":"the password is not correct. Please confirm and enter again！"  
 }

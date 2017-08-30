@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "00001",
+      "email": "admin@eworlder.com",
+      "password": "888888",
+      "type": "01",
+      "role": "0101"
+    },
+    {
+      "id": "00002",
+      "email": "mmc@e-worlder.com",
+      "password": "888888",
+      "type": "01",
+      "role": "0102"
+    },
+    {
+      "id": "00003",
+      "email": "dlm@e-worlder.com",
+      "password": "888888",
+      "type": "01",
+      "role": "0103"
+    }
+  ]
+}

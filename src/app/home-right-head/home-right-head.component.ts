@@ -17,19 +17,16 @@ export class HomeRightHeadComponent implements OnInit {
   constructor(private commonService:CommonService) { }
 
   ngOnInit() {
-    this.commonService.showDate();
-    // let timer = Observable.timer('some time', 2000);
-    // timer.subscribe(t => this.theValue += 1);
-    // alert('2q321');
+    this.commonService.showEnDate();
     Rx.Observable.interval(1000).map(()=>{ return new Date()}).subscribe(
       t => {this.showDate = t;}
     );
-   
 
-    
+
+
   }
   ngOnChanges(){
-   
+
   }
 
   ngAfterContentInit() {
@@ -98,7 +95,7 @@ export class HomeRightHeadComponent implements OnInit {
     }
 
   }
- 
+
   // 点击播放与停止按钮，控制ul的跳动
   onClickPlayer(obj,play,stop){
     let playEle =jQuery(play);

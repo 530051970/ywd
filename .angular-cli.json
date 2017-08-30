@@ -54,7 +54,8 @@
         "assets/js/moment.min.js",
         "assets/js/remodal.min.js",
         "assets/js/jquery-loader.js",
-        "assets/js/zepto.js"
+        "assets/js/zepto.js",
+        "assets/js/showTip.js"
 
       ],
       "environmentSource": "environments/environment.ts",

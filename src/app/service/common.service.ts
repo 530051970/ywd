@@ -1,12 +1,20 @@
-import {Injectable} from '@angular/core';
-import {TranslateService} from '@ngx-translate/core';
+import { Injectable } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import * as jQuery from 'jquery';
+import { Http } from '@angular/http';
+import {FormControl} from '@angular/forms'
+// import { Http } from '@angular/http';
 
 
 @Injectable()
 export class CommonService {
 
-  constructor(public translateService: TranslateService) {
+  private lang: string;
+  public json2: any;
+  // private subscription:Observable;
+
+  constructor(public translateService: TranslateService, private http: Http) {
+    this.http.get('assets/i18n/zh.json').map(res => { this.json2 = res.json });
   }
 
   // 实现语言切换
@@ -19,9 +27,6 @@ export class CommonService {
       this.translateService.use('jp');
       this.translateService.setDefaultLang('jp');
       this.translateService.set('lang', 'jp');
-      // alert(this.translateService.getDefaultLang());
-      // alert(this.translateService.get('lang').subscribe(lang=>th));
-      // alert(this.lang);
     } else {
       this.translateService.use('en');
       this.translateService.setDefaultLang('en');
@@ -29,8 +34,8 @@ export class CommonService {
     }
   }
 
-  // 生成日期和时间
-  showDate() {
+  // 生成英语日期和时间
+  showEnDate() {
     const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
       'July', 'August', 'September', 'October', 'November', 'December'
     ];
@@ -41,13 +46,6 @@ export class CommonService {
     // alert(newDate.getDay());
     jQuery('#Date').html(dayNames[newDate.getDay()] + ' ' + newDate.getDate() +
       ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
-    // const hours: number = newDate.getHours();
-    // const mins: number = newDate.getMinutes();
-    // const sec: number = newDate.getSeconds();
-    // jQuery('.hour').html((hours < 10) ? ('0' + hours) : hours.toString());
-    // jQuery('.min').html((mins < 10) ? ('0' + mins) : mins.toString());
-    // jQuery('.sec').html((sec < 10) ? ('0' + sec) : sec.toString());
-    // jQuery('.meridiem').html((hours < 12) ? 'AM' : 'PM');
   }
 
   showTime() {
@@ -60,5 +58,33 @@ export class CommonService {
     jQuery('.sec').html((sec < 10) ? ('0' + sec) : sec.toString());
     jQuery('.meridiem').html((hours < 12) ? 'AM' : 'PM');
   }
+  // 弹出弹窗,2s后消失
+  // obj:Jquery对象
+  // content:弹窗内容
+  // type:弹窗类型  'info' 'success' 'danger' 'warning'
+  showTip(obj: any, type: string) {
+    //  this.json2 = this.getI18nJsonFile();
+
+    if (obj.length == 0) {
+      obj = $('<span id="tip" style="font-weight:bold;position:absolute;top:50px;left: 50%;z-index:9999"></span>');
+      jQuery('body').append(obj);
+    }
+    // obj.stop(true).attr('class', 'alert alert-' + type).text(content).css('margin-left', -obj.outerWidth() / 2).fadeIn(500).delay(2000).fadeOut(500);
+    obj.stop(true).attr('class', 'alert alert-' + type).css('margin-left', -obj.outerWidth() / 2).fadeIn(500).delay(2000).fadeOut(500);
+  }
+  
+    // 获取当前语言
+    getCurrentLang():any {
+    return this.translateService.currentLang;
+  }
+
+  // 自定义校验器
+  // 判断是不是email格式
+  // emailValidatorByJquery(obj):any{
+  //   const myreg = /^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/;
+  //   let valid=myreg.test(control.value);
+  //   return valid?null:{email:true}
+  // }
+
 
 }
