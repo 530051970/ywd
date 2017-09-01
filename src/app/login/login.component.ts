@@ -5,9 +5,10 @@ import {
   ValidationErrors
 } from "@angular/forms";
 import {MockService} from '../service/mock.service';
-import {User} from "../model/user.model"
+import {User} from "../model/user.model";
 import {Observable} from "rxjs/Observable";
-// import Timer = NodeJS.Timer;
+import {Router} from "@angular/router";
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -19,8 +20,7 @@ export class LoginComponent implements OnInit {
   validationTimeout:any;
   notRegister: boolean;
   // 使用FormBuilder比传统的FormGroup代码更简洁
-  constructor(private commonService: CommonService, private fb: FormBuilder, private mockService$: MockService) {
-
+  constructor(private commonService: CommonService, private fb: FormBuilder, private mockService$: MockService,private router: Router) {
   }
 
   asyncValidator(): AsyncValidatorFn {
@@ -65,7 +65,7 @@ export class LoginComponent implements OnInit {
     } else if (this.formModel.hasError('minlength', ['password']) || this.formModel.hasError('maxlength', ['password'])) {
       this.commonService.showTip(jQuery('#tip5'), 'danger');
     } else {
-
+　　　　this.router.navigate(['home']);　　
     }
 
   }

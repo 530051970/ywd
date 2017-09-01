@@ -31,7 +31,7 @@
 }
 
 .daterangepicker .calendar th, .daterangepicker .calendar td {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Microsoft YaHei","segoe ui", meiryo, "yu gothic", "hiragino kaku gothic pron", sans-serif,"Helvetica Neue", Helvetica, Arial, sans-serif;
   white-space: nowrap;
   text-align: center;
 }

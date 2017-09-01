@@ -4,6 +4,9 @@
 
 .left-side {
   background: #075090;
+  background-image:url("../../assets/img/sky.png"),url('../../assets/img/cloud.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position-y:top, bottom;
   width: 240px;
   position: absolute;
   top: 0;

@@ -13,7 +13,7 @@ Author: ThemeBucket
 body {
     background: #424f63;
     background-image: url('../img/cloud.png');
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif, 'segoe ui',meiryo,'yu gothic','hiragino kaku gothic pron',sans-serif;;
     color: #7a7676;
     line-height: 20px;
     overflow-x: hidden;
