@@ -55,6 +55,15 @@
   "headhunters":" Headhunters",
   "financial statements":"Financial Statements",
   "clearingSystem":"Settlement System",
+  "internal":"Internal",
+  "external":"External",
   "generalsettings":"General Settings",
-  "logout":"Log out"
+  "logout":"Log out",
+  
+  "comment":"====================================以下是Dashboard页面",
+  "Interview Success Number Of Yesterday":"Interview Success Yesterday",
+  "Interviewers Today":"Interviewers Today",
+  "Candidates Of This Month":"Candidates This Month",
+  "Dimissions Of This Month":"Dimissions This Month",
+  "Performance trend":"Performance Trend"
 }

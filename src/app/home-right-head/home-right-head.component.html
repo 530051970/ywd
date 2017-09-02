@@ -12,13 +12,12 @@
 <!--&lt;!&ndash;</div>&ndash;&gt;-->
   <!--</form>-->
   <!--search end-->
-
   <div id="nt-title-container" class="navbar-left running-text visible-lg" style="padding-top: 7px;">
     <div style="float:left">
-      <ul class="date-top">
+      <ul class="date-top" style="width:176px;">
         <li class="fa fa-language" style="margin-right:5px"></li>
-        <li id="Lang"><a href="#">中文</a></li>
-        <!--&nbsp;<i class="fa fa-wrench"></i>-->
+        <li id="Lang" style="background-color:#075090;margin-left: 7px;"><a (click)='onClickLang()' id='langLink'>中文</a></li>
+        <li class="fa fa-angle-down" style="margin-left:15px"></li>        
       </ul>
     <ul class="date-top">
       <li class="fa fa-calendar-o" style="margin-right:5px"></li>
@@ -29,11 +28,6 @@
     <ul id="digital-clock" class="digital">
       <li class="fa fa-clock-o" style="margin-right:5px"></li>
       <li >{{showDate| date:'HH:mm:ss'}}</li>
-      <!-- <li>:</li>
-      <li class="min"></li>
-      <li>:</li> -->
-      <!-- <li class="sec">{{sec}}</li> -->
-      <!-- <li class="meridiem"></li> -->
     </ul>
     </div>
     <div style="float:left"><ul  style="padding-left: 40px;list-style:none;">
@@ -44,10 +38,8 @@
       <li><a href="#" (click)='onClickTitle()' (hover)='onHoverTitle()'>测试用的1，暂时时没有消时没有消时没有消时没有消时没有消时没有消时没有消没有消息！</a></li>
       <li><a href="#" (click)='onClickTitle()' (hover)='onHoverTitle()'>测试用的2，暂时没有消时没有消时没有消时没有消时没有消时没有消时没有消息！</a></li>
       <li><a href="#" (click)='onClickTitle()' (hover)='onHoverTitle()'>测试用的3，暂时没有消息！</a></li>
-
     </ul>
   </div>
-
   <!--notification menu start -->
   <div class="menu-right" style="margin-right: 0px;">
     <ul class="notification-menu">
@@ -235,7 +227,7 @@
       <li>
         <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
           <img src="../../assets/img/photos/user-avatar.png" alt=""/>
-          John Doe
+          Hubin Cui
           <span class="caret"></span>
         </a>
         <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
@@ -248,12 +240,18 @@
     </ul>
   </div>
   <!--notification menu end -->
+  
 
 </div>
+<div class="div-body" style="float:none;display:none" >  
+    <div class="div-zh" (click)='onChangeLang("chinese")'>中文</div>  
+    <div class="div-jp" (click)='onChangeLang("japanese")'>日本語</div>  
+    <div class="div-en" (click)='onChangeLang("english")'>English</div>  
+</div> 
 <div class="remodal-overlay" style="display: none;overflow:hidden" ></div>
 
 <div class="remodal-wrapper" style="display: none;overflow:hidden" (click)='onClickLay()'>
-  <div class="remodal" id="modal" style="display:none" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" tabindex="-1" style="display:block">
+  <div class="remodal" id="modal" style="display:none;overflow:hidden" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" tabindex="-1" style="display:block;margin-top: 0px;">
   <button data-remodal-action="close" class="remodal-close" aria-label="Close" (click)='onClickLay()'></button>
   <div>
     <h2 id="modal1Title">Remodal</h2>

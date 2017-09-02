@@ -72,7 +72,12 @@
       <li><a href="fontawesome.html"><i class="fa fa-bullhorn"></i> <span>{{'partner'| translate}}</span></a></li>
       <li><a href="fontawesome.html"><i class="fa fa-envelope"></i> <span>{{'headhunters'| translate}}</span></a></li>
       <li><a href="fontawesome.html"><i class="fa fa-bar-chart-o"></i> <span>{{'financial statements'| translate}}</span></a></li>
-      <li><a href="fontawesome.html"><i class="fa fa-cc-paypal"></i> <span>{{'clearingSystem'| translate}}</span></a></li>
+      <li class="menu-list"><a href="" (click)='onMenuListClick(Pay)' #Pay><i class="fa fa-cc-paypal"></i> <span>{{'clearingSystem'| translate}}</span></a>
+        <ul class="sub-menu-list">
+          <li><a href="grids.html"> {{'internal'| translate}}</a></li>
+          <li><a href="gallery.html">{{'external'| translate}}</a></li>         
+        </ul>
+      </li>
       <li><a href="fontawesome.html"><i class="fa fa-wrench"></i> <span>{{'generalsettings'| translate}}</span></a></li>
       <li><a href="fontawesome.html"><i class="fa fa-sign-out"></i> <span>{{'logout'| translate}}</span></a></li>
 

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import * as jQuery from 'jquery';
 import { Http } from '@angular/http';
-import {FormControl} from '@angular/forms'
+import { FormControl } from '@angular/forms'
 // import { Http } from '@angular/http';
 
 
@@ -35,17 +35,24 @@ export class CommonService {
   }
 
   // 生成英语日期和时间
-  showEnDate() {
+  showDate(currentLang: string) {
     const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
       'July', 'August', 'September', 'October', 'November', 'December'
     ];
     const dayNames = ['Sun, ', 'Mon, ', 'Tue, ', 'Wed, ', 'Thu, ', 'Fri, ', 'Sat, '];
-
+    const dayNamesZh = ['星期日 ', '星期一 ', '星期二 ', '星期三 ', '星期四 ', '星期五 ', '星期六 '];
+    const dayNamesJp = ['日曜日 ', '月曜日 ', '火曜日 ', '水曜日 ', '木曜日 ', '金曜日 ', '土曜日 '];
     const newDate = new Date();
-    newDate.setDate(newDate.getDate() + 1);
-    // alert(newDate.getDay());
-    jQuery('#Date').html(dayNames[newDate.getDay()] + ' ' + newDate.getDate() +
-      ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
+    newDate.setDate(newDate.getDate());
+    if (currentLang == 'zh') {
+      jQuery('#Date').html(newDate.getFullYear() + '年' + (newDate.getMonth() + 1) + '月' + newDate.getDay() + '日 ' + dayNamesZh[newDate.getDay()]);
+    } else if (currentLang == 'jp') {
+      jQuery('#Date').html(newDate.getFullYear() + '年' + (newDate.getMonth() + 1) + '月' + newDate.getDay() + '日 ' + dayNamesJp[newDate.getDay()]);
+    } else {
+      jQuery('#Date').html(dayNames[newDate.getDay()] + ' ' + newDate.getDate() +
+        ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
+
+    }
   }
 
   showTime() {
@@ -72,9 +79,10 @@ export class CommonService {
     // obj.stop(true).attr('class', 'alert alert-' + type).text(content).css('margin-left', -obj.outerWidth() / 2).fadeIn(500).delay(2000).fadeOut(500);
     obj.stop(true).attr('class', 'alert alert-' + type).css('margin-left', -obj.outerWidth() / 2).fadeIn(500).delay(2000).fadeOut(500);
   }
-  
-    // 获取当前语言
-    getCurrentLang():any {
+
+  // 获取当前语言
+  getCurrentLang(): any {
+    // alert(this.translateService.currentLang);
     return this.translateService.currentLang;
   }
 

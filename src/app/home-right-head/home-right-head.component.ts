@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as jQuery from 'jquery';
-import {CommonService} from "../service/common.service";
+import { CommonService } from "../service/common.service";
 import * as Rx from "rxjs";
 
 
@@ -11,30 +11,36 @@ import * as Rx from "rxjs";
 })
 export class HomeRightHeadComponent implements OnInit {
 
- showDate:Date;
- private timer;
+  showDate: Date;
+  private timer;
+  private LangDivStatus:string;
 
-  constructor(private commonService:CommonService) { }
+  constructor(private commonService: CommonService) { }
 
   ngOnInit() {
-    this.commonService.showEnDate();
-    Rx.Observable.interval(1000).map(()=>{ return new Date()}).subscribe(
-      t => {this.showDate = t;}
+    // 当前语言的设置
+    let currentLang:string = this.commonService.getCurrentLang();
+    if(currentLang=='zh'){
+      jQuery('#langLink').text("中文");
+    } else if(currentLang=='jp'){
+      jQuery('#langLink').text("日本語");
+    } else {
+      jQuery('#langLink').text("English");
+    }
+    // 日期的设置
+    this.commonService.showDate(currentLang);
+    // 时间的设置
+    Rx.Observable.interval(1000).map(() => { return new Date() }).subscribe(
+      t => { this.showDate = t; }
     );
-
-
-
-  }
-  ngOnChanges(){
-
   }
 
   ngAfterContentInit() {
-     setInterval(this.commonService.showTime(),1000);
+    setInterval(this.commonService.showTime(), 1000);
   }
 
   // 点击三明治切换按钮
-  onClickToggleBtn(){
+  onClickToggleBtn() {
     const body = jQuery('body');
     const bodyposition = body.css('position');
 
@@ -54,7 +60,7 @@ export class HomeRightHeadComponent implements OnInit {
         logo.hide();
         logoIcon.removeClass('logo-icon');
         logoIcon.show();
-        jQuery('.text-center').attr('style','height:48px')
+        jQuery('.text-center').attr('style', 'height:48px')
         // 对于每一个一级菜单，如果是选中状态，收缩的时候不显示子菜单。
         jQuery.each(jQuery('.menu-list'), function (i, item) {
           if (jQuery(item).hasClass('nav-active')) {
@@ -79,7 +85,7 @@ export class HomeRightHeadComponent implements OnInit {
         })
 
         body.removeClass('left-side-collapsed');
-        jQuery('.custom-nav li.active ul').css({display: 'block'});
+        jQuery('.custom-nav li.active ul').css({ display: 'block' });
 
         jQuery(this).removeClass('menu-collapsed');
 
@@ -97,57 +103,76 @@ export class HomeRightHeadComponent implements OnInit {
   }
 
   // 点击播放与停止按钮，控制ul的跳动
-  onClickPlayer(obj,play,stop){
-    let playEle =jQuery(play);
-    let stopEle =jQuery(stop);
+  onClickPlayer(obj, play, stop) {
+    let playEle = jQuery(play);
+    let stopEle = jQuery(stop);
     if (playEle.is(':visible')) {
-    jQuery(play).hide();
-    jQuery(stop).show();
-    // ul开始滚动
-    this.timer = setInterval(() => {
-      let n=$(obj).find("li").height();
-      $(obj).animate({
-             marginTop:-n
-  },500,function(){
-       $(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
-  })
-    },3000)
+      jQuery(play).hide();
+      jQuery(stop).show();
+      // ul开始滚动
+      this.timer = setInterval(() => {
+        let n = $(obj).find("li").height();
+        $(obj).animate({
+          marginTop: -n
+        }, 500, function () {
+          $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+        })
+      }, 3000)
 
-  //   $(obj).find("li").hover(function(){
-  //     $("#mark-info").show();
-  // },function(){
-  //     $("#mark-info").hide();
-  // })
-   } else {
-    jQuery(play).show();
-    jQuery(stop).hide();
-    // ul停止滚动
-    if(this.timer){
-      clearInterval(this.timer);
+      //   $(obj).find("li").hover(function(){
+      //     $("#mark-info").show();
+      // },function(){
+      //     $("#mark-info").hide();
+      // })
+    } else {
+      jQuery(play).show();
+      jQuery(stop).hide();
+      // ul停止滚动
+      if (this.timer) {
+        clearInterval(this.timer);
       }
+    }
   }
-}
 
-// 点击ul里面的li标题，弹出窗口
-onClickTitle(){
-  jQuery('.remodal-overlay').add('.remodal-wrapper').add('#modal').show();
-  // jQuery('.remodal-overlay').show();
-  document.body.style.overflow='hidden';
-  document.body.style.height='100%';
-  document.documentElement.style.overflow='hidden'
-  return false;
-}
+  // 点击ul里面的li标题，弹出窗口
+  onClickTitle() {
+    jQuery('.remodal-overlay').add('.remodal-wrapper').add('#modal').show();
+    // jQuery('.remodal-overlay').show();
+    document.body.style.overflow = 'hidden';
+    document.body.style.height = '100%';
+    document.documentElement.style.overflow = 'hidden'
+    return false;
+  }
 
-onClickLay(){
-  jQuery('.remodal-overlay').add('.remodal-wrapper').add('#modal').hide();
-  document.body.style.overflow='auto';
-  document.body.style.height='100%';
-  document.documentElement.style.overflow='auto'
-  // return false;
-}
+  onClickLay() {
+    jQuery('.remodal-overlay').add('.remodal-wrapper').add('#modal').hide();
+    // document.body.style.overflow='auto';
+    document.body.style.height = '100%';
+    // document.documentElement.style.overflow='auto'
 
-onHoverTitle(){
-  alert('LLL');
-}
+
+    // return false;
+  }
+  // 显示语言切换窗口
+  onClickLang() {
+    jQuery('.div-body').slideToggle();
+   }
+
+   onChangeLang(obj){
+     this.commonService.onChangeLang(obj);
+     if(obj=='chinese'){
+      jQuery('#langLink').text("中文");
+      this.commonService.showDate("zh");
+     } else if(obj=='japanese'){
+      jQuery('#langLink').text("日本語");
+      this.commonService.showDate("jp");
+    } else {
+      jQuery('#langLink').text("English");
+      this.commonService.showDate("en");
+    }
+    
+    jQuery('.div-body').slideToggle();
+    //  alert(obj);
+   }
 }
 

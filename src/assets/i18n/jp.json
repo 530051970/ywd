@@ -44,9 +44,18 @@
   "plattform5":"拉勾网",
   "plattform6":"その他",
   "partner":"パートナ",
-  "headhunters":" ヘッドハンター",
+  "headhunters":" 派遣会社",
   "financial statements":"財務諸表",
   "clearingSystem":"決済システム",
+  "internal":"社内精算",
+  "external":"社外決済",
   "generalsettings":"通用設定",
-  "logout":"ログアウト"
+  "logout":"ログアウト",
+
+  "comment":"====================================以下是Dashboard页面",
+  "Interview Success Number Of Yesterday":"昨日面接成功人数",
+  "Interviewers Today":"今日面接人数",
+  "Candidates Of This Month":"今月入職人数",
+  "Dimissions Of This Month":"今月意外離職人数",
+  "Performance trend":"売上動向"
 }

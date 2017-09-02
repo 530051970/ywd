@@ -55,6 +55,15 @@
   "headhunters":"猎头管理",
   "financial statements":"财务报表",
   "clearingSystem":"结算系统",
+  "internal":"内部结算",
+  "external":"外部结算",
   "generalsettings":"通用配置",
-  "logout":"退出系统"
+  "logout":"退出系统",
+  
+  "comment":"====================================以下是Dashboard页面",
+  "Interview Success Number Of Yesterday":"昨天面试通过人数",
+  "Interviewers Today":"今天参加面试人数",
+  "Candidates Of This Month":"本月入职人数",
+  "Dimissions Of This Month":"本月保证期内离职人数",
+  "Performance trend":"业绩走势"
 }
