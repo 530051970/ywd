@@ -36,7 +36,7 @@ ng g component stars     #星级评价组件
 #新建服务
 ng g service XXXXX
 
-npm i -g json-server (Mock Rest API)
+cnpm i -g json-server (Mock Rest API)
 
 ng serve --open
 npm start

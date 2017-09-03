@@ -45,9 +45,9 @@ export class CommonService {
     const newDate = new Date();
     newDate.setDate(newDate.getDate());
     if (currentLang == 'zh') {
-      jQuery('#Date').html(newDate.getFullYear() + '年' + (newDate.getMonth() + 1) + '月' + newDate.getDay() + '日 ' + dayNamesZh[newDate.getDay()]);
+      jQuery('#Date').html(newDate.getFullYear() + '年' + (newDate.getMonth() + 1) + '月' + newDate.getDate() + '日 ' + dayNamesZh[newDate.getDay()]);
     } else if (currentLang == 'jp') {
-      jQuery('#Date').html(newDate.getFullYear() + '年' + (newDate.getMonth() + 1) + '月' + newDate.getDay() + '日 ' + dayNamesJp[newDate.getDay()]);
+      jQuery('#Date').html(newDate.getFullYear() + '年' + (newDate.getMonth() + 1) + '月' + newDate.getDate() + '日 ' + dayNamesJp[newDate.getDay()]);
     } else {
       jQuery('#Date').html(dayNames[newDate.getDay()] + ' ' + newDate.getDate() +
         ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());

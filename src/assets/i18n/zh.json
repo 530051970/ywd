@@ -65,5 +65,7 @@
   "Interviewers Today":"今天参加面试人数",
   "Candidates Of This Month":"本月入职人数",
   "Dimissions Of This Month":"本月保证期内离职人数",
-  "Performance trend":"业绩走势"
+  "Performance trend":"业绩走势",
+  "this month":"本月同期",
+  "last month":"上月同期"
 }
