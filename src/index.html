@@ -25,9 +25,72 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <meta name="keywords" content="依沃黛,e-worlder,人力资源外包,招聘服务提供商,RPO,猎头,企业招聘">
   <meta name="description" content="依沃黛，以具有专业禀赋的灵活性和高效率，为客户提供高端招聘解决方案，持续为国内客户带来超越期望的企业价值。目前在金融、地产、互联网、人工智能等领域，凭籍令人赞叹的寻访能力，或领跑业界，或业绩斐然；长期以深度聚焦 HRO 业务，一站式解决企业人才需求为使命，专业专注，口碑卓著。">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background: #F5FAFD
+    }
+
+    .mvBox {
+      height: 15px;
+      background: #F5FAFD url(../assets/img/loading2.jpg) no-repeat left center;
+      width: 471px;
+      position: relative;
+      padding: 0 30px;
+      margin: 0 auto;
+    }
+
+    .mvBtn {
+      position: absolute;
+      left: 50px;
+    }
+
+    .mvTxt {
+      line-height: 50px;
+      width: 531px;
+      text-align: center;
+      font-size: 30px;
+      color: #29B6FF;
+      font-family: Arial;
+      margin: 0 auto;
+      height: 50px;
+    }
+  </style>
 </head>
 <body style="height: 100%">
-  <app-root></app-root>
+  <app-root>
+    <div style="background:#F5FAFD; padding:50px;height:100%;text-align:center;padding-top:300px;">
+      <!--效果开始-->
+      <div class="mvTxt">Loading<span class="mvSq">.</span><span class="mvSq">.</span><span class="mvSq">.</span></div>
+      <div class="mvBox">
+        <img class="mvBtn" src="../assets/img/loading1.jpg" />
+      </div>
+      <script language="javascript">
+        var delVal = 50;
+        function autoMove() {
+          delVal = delVal + 8;
+          if (delVal > 400) {
+            delVal = 50;
+          }
+          //  $(".mvBtn").css("left",delVal);
+        }
+        setInterval(autoMove, 1);
+        var deNum = 0;
+        function autoTsq() {
+          $(".mvSq").css("color", "#F5FAFD");
+          setTimeout(function () { $(".mvSq").eq(0).css("color", "#29B6FF") }, 0);
+          setTimeout(function () { $(".mvSq").eq(1).css("color", "#29B6FF") }, 500);
+          setTimeout(function () { $(".mvSq").eq(2).css("color", "#29B6FF") }, 1000);
+        }
+        setInterval(autoTsq, 1500);
+      </script>
+      <!--End-->
+    </div>
+  </app-root>
   <script src="assets/js/jquery-1.10.2.min.js"></script>
   <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
   <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
@@ -47,6 +110,17 @@
   <script src="assets/js/icheck-init.js"></script>
 
   <!-- jQuery Flot Chart-->
+    <script src="assets/js/flot-chart/jquery.flot.js"></script>
+    <script src="assets/js/flot-chart/jquery.flot.tooltip.js"></script>
+    <script src="assets/js/flot-chart/jquery.flot.resize.js"></script>
+    <script src="assets/js/flot-chart/jquery.flot.pie.resize.js"></script>
+    <script src="assets/js/flot-chart/jquery.flot.selection.js"></script>
+    <script src="assets/js/flot-chart/jquery.flot.stack.js"></script>
+    <script src="assets/js/flot-chart/jquery.flot.time.js"></script>
+    <script src="assets/js/flot.chat.init.js"></script>
+    <script src="assets/js/main-chart.js"></script>
+
+  <!-- jQuery Flot Chart-->
   <script src="assets/js/flot-chart/jquery.flot.js"></script>
   <script src="assets/js/flot-chart/jquery.flot.tooltip.js"></script>
   <script src="assets/js/flot-chart/jquery.flot.resize.js"></script>
@@ -59,6 +133,11 @@
   <script src="assets/js/jquery-loader.js"></script>
   <script src="assets/js/zepto.js"></script>
   <script src="assets/js/showTip.js"></script>
+  <script src="assets/js/underscore.js"></script>
+  <script src="assets/js/calendar/clndr.js"></script>
+  <script src="assets/js/calendar/evnt.calendar.init.js"></script>
+  <script src="assets/js/calendar/moment-2.2.1.js"></script>
+
   <!--<script src="assets/js/jquery.clock.js"></script>-->
   <!--<script src="assets/js/moment.min.js"></script>-->
   <!--<script src="assets/js/lodash.min.js"></script>-->

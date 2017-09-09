@@ -1,13 +1,16 @@
-import { Injectable } from '@angular/core';
+import { Injectable,EventEmitter } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import * as jQuery from 'jquery';
 import { Http } from '@angular/http';
-import { FormControl } from '@angular/forms'
+import { FormControl } from '@angular/forms';
+// import { EventEmitter} 
 // import { Http } from '@angular/http';
 
 
 @Injectable()
-export class CommonService {
+export class CommonService  {
+  
+  fullScreen:EventEmitter<string> = new EventEmitter();
 
   private lang: string;
   public json2: any;
@@ -16,6 +19,8 @@ export class CommonService {
   constructor(public translateService: TranslateService, private http: Http) {
     this.http.get('assets/i18n/zh.json').map(res => { this.json2 = res.json });
   }
+
+    
 
   // 实现语言切换
   onChangeLang(lang: string) {

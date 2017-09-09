@@ -57,9 +57,14 @@
   "clearingSystem":"Settlement System",
   "internal":"Internal",
   "external":"External",
+  "template files":"Template Files",
+  "my schechudel":"My Schedule",
+  "email":"Email System",
   "generalsettings":"General Settings",
   "logout":"Log out",
-  
+  "comment":"====================================以下是right-head页面",
+  "inputUnlockPassword":"please input login password",
+
   "comment":"====================================以下是Dashboard页面",
   "Interview Success Number Of Yesterday":"Interview Success Yesterday",
   "Interviewers Today":"Interviewers Today",
@@ -67,5 +72,6 @@
   "Dimissions Of This Month":"Dimissions This Month",
   "Performance trend":"Performance Trend",
   "this month":"This Month",
-  "last month":"Last Month"
+  "last month":"Last Month",
+  "unlock":"please input correct unlock password"
 }

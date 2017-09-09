@@ -36,7 +36,7 @@ ng g component stars     #星级评价组件
 #新建服务
 ng g service XXXXX
 
-cnpm i -g json-server (Mock Rest API)
+npm i -g json-server (Mock Rest API)
 
 ng serve --open
 npm start
@@ -46,3 +46,5 @@ npm start
 安装dtsmake命令  npm install -g dtsmake（根目录下安装）
 安装tern命令  npm install -g tern
 进入该文件目录下，dtsmake -s xxxxxx.js
+
+替换 node_modules\_bootstrap@3.3.6@bootstrap\dist\css\bootstrap.css

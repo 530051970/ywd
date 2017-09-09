@@ -57,8 +57,14 @@
   "clearingSystem":"结算系统",
   "internal":"内部结算",
   "external":"外部结算",
+  "template files":"模板文件 ",
+  "my schechudel":"日程安排",
+  "email":"邮件系统",
   "generalsettings":"通用配置",
   "logout":"退出系统",
+
+  "comment":"====================================以下是right-head页面",
+  "inputUnlockPassword":"请输入登录密码",
   
   "comment":"====================================以下是Dashboard页面",
   "Interview Success Number Of Yesterday":"昨天面试通过人数",
@@ -67,5 +73,6 @@
   "Dimissions Of This Month":"本月保证期内离职人数",
   "Performance trend":"业绩走势",
   "this month":"本月同期",
-  "last month":"上月同期"
+  "last month":"上月同期",
+  "unlock":"请输入正确的解锁密码"
 }

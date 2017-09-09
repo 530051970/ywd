@@ -2587,8 +2587,8 @@ div.tagsinput span.tag a {
 --------------------------*/
 
 .lock-screen {
-    background: #6fc4a5 url("../img/lockscreen-bg.jpg") no-repeat fixed;
-    background-size: cover;
+    /* background: #6fc4a5 url("../img/lockscreen-bg.jpg") no-repeat fixed;
+    background-size: cover; */
     width: 100%;
     height: 100%;
 }
@@ -3527,12 +3527,14 @@ ul.activity-list .activity-desk h5 a {
     margin-bottom: 10px;
     text-align: center;
     background: #51d4cc;
-   margin-left: -15px;
-    margin-right: -15px;
-    margin-top: -15px;
     padding: 56px 20px;
     width: auto !important;
     color: #fff;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
 
 }
 

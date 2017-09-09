@@ -2,7 +2,30 @@ import { Component, OnInit } from '@angular/core';
 import * as jQuery from 'jquery';
 import { CommonService } from "../service/common.service";
 import * as Rx from "rxjs";
-
+import {
+  FormBuilder, FormGroup, FormControl, Validators, AsyncValidatorFn, AbstractControl,
+  ValidationErrors
+} from "@angular/forms";
+import {Observable} from "rxjs/Observable";
+import {MockService} from '../service/mock.service';
+declare global {
+  interface Document {
+      msExitFullscreen: any;
+      mozCancelFullScreen: any;
+      requestFullscreen:any;
+      webkitRequestFullscreen:any;
+      webkitRequestFullScreen:any;
+      mozRequestFullScreen:any;
+      msRequestFullscreen:any;
+      
+  }
+  interface HTMLElement {
+      msRequestFullscreen: any;
+      mozRequestFullScreen: any;
+  }
+}
+// declare const mozRequestFullScreen;
+// declare const jQuery:any;
 
 @Component({
   selector: 'app-home-right-head',
@@ -14,8 +37,12 @@ export class HomeRightHeadComponent implements OnInit {
   showDate: Date;
   private timer;
   private LangDivStatus:string;
+  validationTimeout:any;
+  validPassword:boolean=false;
 
-  constructor(private commonService: CommonService) { }
+  constructor(private commonService: CommonService,private mockService$:MockService) { 
+       
+  }
 
   ngOnInit() {
     // 当前语言的设置
@@ -33,28 +60,54 @@ export class HomeRightHeadComponent implements OnInit {
     Rx.Observable.interval(1000).map(() => { return new Date() }).subscribe(
       t => { this.showDate = t; }
     );
+
+  //   //打开全屏方法
+  //   function openFullscreen(element) {
+  //     if (element.requestFullscreen) {
+  //         element.requestFullscreen();
+  //     } else if (element.mozRequestFullScreen) {
+  //         element.mozRequestFullScreen();
+  //     } else if (element.msRequestFullscreen) {
+  //         element.msRequestFullscreen();
+  //     } else if (element.webkitRequestFullscreen) {
+  //         element.webkitRequestFullScreen();
+  //     }
+  // }
+
+  // //退出全屏方法
+  // function exitFullScreen() {
+  //     if (document.exitFullscreen) {
+  //         document.exitFullscreen();
+  //     } else if (document.mozCancelFullScreen) {
+  //         document.mozCancelFullScreen();
+  //     } else if (document.msExitFullscreen) {
+  //         document.msExitFullscreen();
+  //     } else if (document.webkitCancelFullScreen) {
+  //         document.webkitCancelFullScreen();
+
+  //     } else if (document.webkitExitFullscreen) {
+  //         document.webkitExitFullscreen();
+  //     }
+  // }
+
+
   }
 
   ngAfterContentInit() {
-    setInterval(this.commonService.showTime(), 1000);
+    setInterval(this.commonService.showTime(), 1000);    
   }
 
   // 点击三明治切换按钮
   onClickToggleBtn() {
     const body = jQuery('body');
     const bodyposition = body.css('position');
-
     const mainContent = jQuery('.main-content');
     const stickyLeftSide = jQuery('.sticky-left-side');
     const logo = jQuery('.logo');
     const logoIcon = jQuery('.text-center');
-
     if (bodyposition !== 'relative') {
-
       if (!body.hasClass('left-side-collapsed')) {
         body.addClass('left-side-collapsed');
-
-
         mainContent.attr('style', 'margin-left:52px');
         stickyLeftSide.attr('style', 'width:52px');
         logo.hide();
@@ -67,11 +120,8 @@ export class HomeRightHeadComponent implements OnInit {
             jQuery(item).children('.sub-menu-list').hide();
           }
         })
-
         jQuery(this).addClass('menu-collapsed');
-
       } else {
-
         mainContent.attr('style', 'margin-left:240px');
         stickyLeftSide.attr('style', 'width:240px');
         logoIcon.addClass('logo-icon');
@@ -83,21 +133,16 @@ export class HomeRightHeadComponent implements OnInit {
             jQuery(item).children('.sub-menu-list').show();
           }
         })
-
         body.removeClass('left-side-collapsed');
         jQuery('.custom-nav li.active ul').css({ display: 'block' });
-
         jQuery(this).removeClass('menu-collapsed');
 
       }
     } else {
-
       if (body.hasClass('left-side-show'))
         body.removeClass('left-side-show');
       else
         body.addClass('left-side-show');
-
-      // mainContentHeightAdjust();
     }
 
   }
@@ -118,12 +163,6 @@ export class HomeRightHeadComponent implements OnInit {
           $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
         })
       }, 3000)
-
-      //   $(obj).find("li").hover(function(){
-      //     $("#mark-info").show();
-      // },function(){
-      //     $("#mark-info").hide();
-      // })
     } else {
       jQuery(play).show();
       jQuery(stop).hide();
@@ -138,20 +177,24 @@ export class HomeRightHeadComponent implements OnInit {
   onClickTitle() {
     jQuery('.remodal-overlay').add('.remodal-wrapper').add('#modal').show();
     // jQuery('.remodal-overlay').show();
-    document.body.style.overflow = 'hidden';
+    // document.body.style.overflow = 'hidden';
     document.body.style.height = '100%';
-    document.documentElement.style.overflow = 'hidden'
+    // document.documentElement.style.overflow = 'hidden';
+    // jQuery(".left-side").add(".main-content").add(".sticky-header").add("html").niceScroll({
+    //   styler: "fb",
+    //   cursorcolor: "#65cea7",
+    //   cursorwidth: '3',
+    //   cursorborderradius: '0px',
+    //   background: '#424f63',
+    //   spacebarenabled: false,
+    //   cursorborder: '0'
+    // });
     return false;
   }
 
   onClickLay() {
     jQuery('.remodal-overlay').add('.remodal-wrapper').add('#modal').hide();
-    // document.body.style.overflow='auto';
     document.body.style.height = '100%';
-    // document.documentElement.style.overflow='auto'
-
-
-    // return false;
   }
   // 显示语言切换窗口
   onClickLang() {
@@ -172,7 +215,76 @@ export class HomeRightHeadComponent implements OnInit {
     }
     
     jQuery('.div-body').slideToggle();
-    //  alert(obj);
+   }
+
+   onClickLock(obj){
+    //  alert("PPPPPP");
+    jQuery(".lock-screen").add("#sky-lock").add("#cloud-lock").show();
+    obj.value="";
+   }
+
+   onConfirmPass(obj){
+    this.mockService$.getUsers("admin@eworlder.com").subscribe(res => {
+      if(obj.value===res[0].password){
+        this.validPassword = true;
+        if(this.validPassword){
+          jQuery(".lock-screen").add("#sky-lock").add("#cloud-lock").hide();
+        }
+      }else{
+        this.commonService.showTip(jQuery('#tip1'), 'danger');
+      }
+    });
+    
+   }
+
+   onClickExpend(obj){
+    
+      if(jQuery(obj).attr('class') == "fa fa-expand"){
+        jQuery(obj).attr('class',"fa fa-compress");
+        this.commonService.fullScreen.emit("1");
+      //   var element=document.body;
+      //   if (element.requestFullscreen) {
+      //     element.requestFullscreen();
+      // } else if (element.mozRequestFullScreen) {
+      //     element.mozRequestFullScreen();
+      // } else if (element.msRequestFullscreen) {
+      //     element.msRequestFullscreen();
+      // } else if (element.webkitRequestFullscreen) {
+      //     element.webkitRequestFullScreen();
+      // }
+      } else {
+        jQuery(obj).attr('class',"fa fa-expand");
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+      } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+      } else if (document.webkitCancelFullScreen) {
+          document.webkitCancelFullScreen();
+
+      } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+      }
+      }
+   }
+
+   onClickSearch(obj){
+
+   }
+
+   onMoveinSearch(obj){
+    jQuery(obj).stop().animate({"width":"153px"});
+   }
+
+   onMoveOutSearch(obj){
+     if(obj.value==null || obj.value==""){
+    jQuery(obj).stop().animate({"width":"0px"});
+    // jQuery(obj).css({"border":"none"});
+  } else {
+    jQuery(obj).css({"border-width":"0 0 1px 0","border-bottom-color":"gray"} 
+    );
+  }
    }
 }
 

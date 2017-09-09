@@ -49,8 +49,14 @@
   "clearingSystem":"決済システム",
   "internal":"社内精算",
   "external":"社外決済",
+  "template files":"テンプレート",
+  "my schechudel":"スケジュール",
+  "email":"メールシステム",
   "generalsettings":"通用設定",
   "logout":"ログアウト",
+  
+  "comment":"====================================以下是right-head页面",
+  "inputUnlockPassword":"ログインパスワードを入力してください",
 
   "comment":"====================================以下是Dashboard页面",
   "Interview Success Number Of Yesterday":"昨日面接成功人数",
@@ -59,5 +65,6 @@
   "Dimissions Of This Month":"今月意外離職人数",
   "Performance trend":"売上動向",
   "this month":"今月",
-  "last month":"前月"
+  "last month":"前月",
+  "unlock":"正しいアンロックパスワードを入力してください"
 }

@@ -17,7 +17,7 @@ $(function () {
   //   zindex: '0'
   // });
   //
-  $(".left-side").niceScroll({
+  $(".left-side").add(".main-content").add(".sticky-header").add("html").add("body").niceScroll({
     styler: "fb",
     cursorcolor: "#65cea7",
     cursorwidth: '3',
@@ -27,37 +27,7 @@ $(function () {
     cursorborder: '0'
   });
   //
-  $('body').niceScroll({
-    styler: "fb",
-    cursorcolor: "#65cea7",
-    cursorwidth: '3',
-    cursorborderradius: '0px',
-    background: '#424f63',
-    spacebarenabled: false,
-    cursorborder: '0'
-  });
-
-  // function onClickLay(){
-  //   jQuery('.remodal-overlay').add('.remodal-wrapper').add('#modal').hide();
-  //   document.body.style.overflow='auto';
-  //   document.body.style.height='100%';
-  //   document.documentElement.style.overflow='auto';
-  //   $('body').niceScroll({
-  //     styler: "fb",
-  //     cursorcolor: "#65cea7",
-  //     cursorwidth: '3',
-  //     cursorborderradius: '0px',
-  //     background: '#424f63',
-  //     spacebarenabled: false,
-  //     cursorborder: '0'
-  //   });
-  
-    
-  //   // return false;
-  // }
-  
-  
-  // $('.sticky-left-side').add('.left-side-inner').niceScroll({
+  // $('body').niceScroll({
   //   styler: "fb",
   //   cursorcolor: "#65cea7",
   //   cursorwidth: '3',
@@ -67,11 +37,23 @@ $(function () {
   //   cursorborder: '0'
   // });
 
-  // $(".left-side").getNiceScroll();
-  // if ($('body').hasClass('left-side-collapsed')) {
-  //   // if ($('#leftDiv').hasClass('left-side-collapsed')) {
-  //   $(".left-side").getNiceScroll().hide();
-  // }
+ 
+  
+  $('.sticky-left-side').add('.left-side-inner').niceScroll({
+    styler: "fb",
+    cursorcolor: "#65cea7",
+    cursorwidth: '3',
+    cursorborderradius: '0px',
+    background: '#424f63',
+    spacebarenabled: false,
+    cursorborder: '0'
+  });
+
+  $(".left-side").getNiceScroll();
+  if ($('body').hasClass('left-side-collapsed')) {
+    // if ($('#leftDiv').hasClass('left-side-collapsed')) {
+    $(".left-side").getNiceScroll().hide();
+  }
 
   // Toggle Left Menu
 

@@ -31,7 +31,7 @@ html[xmlns] .clearfix {
     display: inline-block;
     width: 190px;
   text-align: center;
-  color: #c1c1c1;
+  /* color: #c1c1c1; */
   font-size: 20px;
   text-transform: uppercase;
     font-family: 'Open Sans',sans-serif;
@@ -60,10 +60,10 @@ html[xmlns] .clearfix {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    color:#C1C1C1;
+    /* color:#C1C1C1; */
 }
 .cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button:hover {
-  background: #f4f4f4;
+  background:yellow;
     padding:5px 10px;
 }
 .cal1 .clndr .clndr-controls .clndr-control-button .clndr-next-button.inactive {
@@ -85,10 +85,10 @@ html[xmlns] .clearfix {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    color:#C1C1C1;
+    /* color:#C1C1C1; */
 }
 .cal1 .clndr .clndr-controls .clndr-control-button .clndr-previous-button:hover {
-  background: #f4f4f4;
+  background: yellow;
     padding:5px 10px;
 }
 .cal1 .clndr .clndr-controls .clndr-control-button .clndr-previous-button.inactive {
