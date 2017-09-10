@@ -1,5 +1,5 @@
-<div class="wrapper" id="right-body">
-  <div class="row states-info">
+<div class="wrapper" id="right-body" style="height:95%">
+  <div class="row states-info" style="height:9%">
     <div class="col-md-3">
       <div class="panel red-bg">
         <div class="panel-body">
@@ -62,9 +62,9 @@
     </div>
   </div>
 
-  <div class="row">
+  <div class="row" style="height:53%" id="middlerow">
     <div class="col-md-8">
-      <section class="panel">
+      <section class="panel" style="margin-bottom: 10px;height: 443px;">
         <header class="panel-heading">
           {{'Performance trend'|translate}}
           <span class="tools pull-right">
@@ -93,7 +93,7 @@
             <h5>李 大雷</h5>
             <span class="subtitle">之岸（上海）信息技术有限公司  高级营业顾问</span>
             <div style="height:167px;">
-              <div class="kpicard" style="float:left">
+              <div class="kpicard" style="float:left;margin-left: 8px;">
                 <div class="kpiheader" style="height:90px;">
                   <h1 style="font-weight:bolder;height: 90px;font-size:60px;">21</h1>
                 </div>
@@ -119,7 +119,7 @@
                   <p style="padding-top: 5px;">成功入职</p>
                 </div>
               </div>
-              <div class="kpicard" style="float:left;margin-top: -20px;">
+              <div class="kpicard" style="float:left;">
                 <div class="kpiheader" style="height:90px;">
                   <h1 style="font-weight:bolder;height: 90px;font-size:60px;">92</h1>
                 </div>
@@ -148,67 +148,68 @@
           </div>
         </div>
 
+        <div class="col-md-12" style="display:none" #todo>
+          <div class="panel" style="margin-bottom: 5px;margin-left: 0px;height: 350px;width: 100%;overflow-y: auto;padding-right: 15px;margin-right: 0px;padding-left: 20px;">
+            <header class="panel-heading" style="padding-bottom: 0px;">
+              今日日程
+            </header>
+            <div class="panel-body" style="padding-bottom: 0px;">
+              <ul class="to-do-list" id="sortable-todo">
+                <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
+                  <span class="drag-marker"><i></i></span>
+                  <div class="todo-check pull-left" style="width:30px;">
+                    12:05
+                  </div>
+                  <div class="todo-title">
+                    客户公司李总要过来，接待会议
+                  </div>
+                  <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
+                    <span class="label label-warning">重要</span>
+                    <!-- <a href="#" class="todo-remove"><i class="fa fa-times"></i></a> -->
+                  </div>
+                </li>
+                <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
+                  <span class="drag-marker"><i></i></span>
+                  <div class="todo-check pull-left" style="width:30px;">
+                    12:05
+                  </div>
+                  <div class="todo-title">
+                    客户公司李总要过来，接待会议
+                  </div>
+                  <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
+                    <span class="label label-danger">紧急</span>
+                    <!-- <a href="#" class="todo-remove"><i class="fa fa-times"></i></a> -->
+                  </div>
+                </li>
+                <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
+                  <span class="drag-marker"><i></i></span>
+                  <div class="todo-check pull-left" style="width:30px;">
+                    12:05
+                  </div>
+                  <div class="todo-title">
+                    客户公司李总要过来，接待会议
+                  </div>
+                  <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
+                    <span class="label label-danger">紧急</span>
+                    <!-- <a href="#" class="todo-remove"><i class="fa fa-times"></i></a> -->
+                  </div>
+                </li>
+                <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
+                  <span class="drag-marker"><i></i></span>
+                  <div class="todo-check pull-left" style="width:30px;">
+                    12:05
+                  </div>
+                  <div class="todo-title">
+                    客户公司李总要过来，接待会议
+                  </div>
+                  <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
+                    <span class="label label-info">一般</span>
+                    <!-- <a href="#" class="todo-remove"><i class="fa fa-times"></i></a> -->
+                  </div>
+                </li>
+              </ul>
 
-        <div class="panel" #todo style="margin-bottom: 5px; margin-left: 15px;height: 350px; display:none;width:530px;overflow-y:auto">
-          <header class="panel-heading" style="padding-bottom: 0px;">
-            今日日程
-          </header>
-          <div class="panel-body" style="padding-bottom: 0px;">
-            <ul class="to-do-list" id="sortable-todo">
-              <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
-                <span class="drag-marker"><i></i></span>
-                <div class="todo-check pull-left" style="width:30px;">
-                  12:05
-                </div>
-                <div class="todo-title">
-                  客户公司李总要过来，接待会议
-                </div>
-                <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
-                  <span class="label label-warning">重要</span>
-                  <!-- <a href="#" class="todo-remove"><i class="fa fa-times"></i></a> -->
-                </div>
-              </li>
-              <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
-                <span class="drag-marker"><i></i></span>
-                <div class="todo-check pull-left" style="width:30px;">
-                  12:05
-                </div>
-                <div class="todo-title">
-                  客户公司李总要过来，接待会议
-                </div>
-                <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
-                  <span class="label label-danger">紧急</span>
-                  <!-- <a href="#" class="todo-remove"><i class="fa fa-times"></i></a> -->
-                </div>
-              </li>
-              <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
-                <span class="drag-marker"><i></i></span>
-                <div class="todo-check pull-left" style="width:30px;">
-                  12:05
-                </div>
-                <div class="todo-title">
-                  客户公司李总要过来，接待会议
-                </div>
-                <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
-                  <span class="label label-danger">紧急</span>
-                  <!-- <a href="#" class="todo-remove"><i class="fa fa-times"></i></a> -->
-                </div>
-              </li>
-              <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
-                <span class="drag-marker"><i></i></span>
-                <div class="todo-check pull-left" style="width:30px;">
-                  12:05
-                </div>
-                <div class="todo-title">
-                  客户公司李总要过来，接待会议
-                </div>
-                <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
-                  <span class="label label-info">一般</span>
-                  <!-- <a href="#" class="todo-remove"><i class="fa fa-times"></i></a> -->
-                </div>
-              </li>
-            </ul>
-
+            </div>
           </div>
         </div>
 
@@ -244,7 +245,7 @@
       </div>
     </div>
   </div>
-  <section class="panel">
+  <section class="panel" style="height:36%;margin-bottom: 0px;" id="tablesec">
     <header class="panel-heading custom-tab turquoise-tab">
       <ul class="nav nav-tabs">
         <li class="active">
@@ -265,7 +266,7 @@
                 </a>
         </li>
         <li class="">
-          <a data-toggle="tab" href="#contact3">
+          <a data-toggle="tab" href="#more3">
                   <i class="fa fa-envelope-o"></i>
                   面试-更多轮
               </a>
@@ -288,11 +289,11 @@
       <div class="tab-content">
         <div id="home3" class="tab-pane  active">
           <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12" style="height:286px;">
               <section class="panel" style="margin-bottom: 0px;">
                 <div class="panel-body" style="padding:0px;">
-                  <div class="adv-table">
-                    <table class="display table table-bordered table-striped">
+                  <div class="adv-table" style="height:240px;overflow:hidden;">
+                    <table class="display table table-bordered table-striped" style="margin-bottom: 0px;">
                       <thead>
                         <tr>
                           <th>项目名称</th>
@@ -356,19 +357,48 @@
                           <td>3</td>
                           <td>30000</td>
                         </tr>
-
-                        <tr style="border:none">
-                          <td colspan="8" style="text-align:center"><a>查看更多...</a></td>
-                          <!-- <td>Internet Explorer 7</td>
-                    <td>Win XP SP2+</td>
-                    <td class="center hidden-phone">7</td>
-                    <td class="center hidden-phone">A</td> -->
+                        <tr>
+                          <td>移动Java后端</td>
+                          <td>博士多（上海）科技有限公司</td>
+                          <td>30k/月</td>
+                          <td class="center hidden-phone">24</td>
+                          <td class="center hidden-phone">8</td>
+                          <td>4</td>
+                          <td>3</td>
+                          <td>30000</td>
                         </tr>
+                        <tr>
+                          <td>移动Java后端</td>
+                          <td>博士多（上海）科技有限公司</td>
+                          <td>30k/月</td>
+                          <td class="center hidden-phone">24</td>
+                          <td class="center hidden-phone">8</td>
+                          <td>4</td>
+                          <td>3</td>
+                          <td>30000</td>
+                        </tr>
+                        <tr>
+                          <td>移动Java后端</td>
+                          <td>博士多（上海）科技有限公司</td>
+                          <td>30k/月</td>
+                          <td class="center hidden-phone">24</td>
+                          <td class="center hidden-phone">8</td>
+                          <td>4</td>
+                          <td>3</td>
+                          <td>30000</td>
+                        </tr>                       
 
                       </tbody>
 
-                    </table>
-                  </div>
+                    </table></div>
+                    <!-- <tr style="border:none"> -->
+                        <div style="text-align:center;border:none;padding-top: 8px;"><a>查看更多...</a></div>
+                        <!-- <td>Internet Explorer 7</td>
+                  <td>Win XP SP2+</td>
+                  <td class="center hidden-phone">7</td>
+                  <td class="center hidden-phone">A</td> -->
+                      <!-- </tr> -->
+                  
                 </div>
               </section>
             </div>
@@ -376,7 +406,7 @@
         </div>
         <div id="about3" class="tab-pane">
           <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12" style="height:286px;">
               <section class="panel" style="margin-bottom: 0px;">
 
                 <div class="panel-body" style="padding:0px;">
@@ -453,7 +483,7 @@
                         </tr>
 
                         <tr style="border:none">
-                          <td colspan="8" style="text-align:center"><a>查看更多...</a></td>
+                          <td colspan="9" style="text-align:center"><a>查看更多...</a></td>
                           <!-- <td>Internet Explorer 7</td>
                         <td>Win XP SP2+</td>
                         <td class="center hidden-phone">7</td>
@@ -471,7 +501,7 @@
         </div>
         <div id="contact3" class="tab-pane ">
           <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12" style="height:286px;">
               <section class="panel" style="margin-bottom: 0px;">
 
                 <div class="panel-body" style="padding:0px;">
@@ -524,18 +554,72 @@
                           <td>-</td>
                           <td>以前从事过类似岗位</td>
                         </tr>
-                       
-                        <tr style="border:none">
-                          <td colspan="8" style="text-align:center"><a>查看更多...</a></td>
-                          <!-- <td>Internet Explorer 7</td>
-                        <td>Win XP SP2+</td>
-                        <td class="center hidden-phone">7</td>
-                        <td class="center hidden-phone">A</td> -->
-                        </tr>
-
                       </tbody>
-
                     </table>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div id="more3" class="tab-pane ">
+          <div class="row">
+            <div class="col-sm-12" style="height:286px;">
+              <section class="panel" style="margin-bottom: 0px;">
+
+                <div class="panel-body" style="padding:0px;">
+                  <div class="adv-table">
+                    无相关记录
+                    <!-- <table class="display table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th>姓名</th>
+                          <th>项目</th>
+                          <th>联系方式</th>
+                          <th>面试日期</th>
+                          <th>面试时间</th>
+                          <th>面试公司</th>
+                          <th>下一轮面试日期</th>
+                          <th>下一轮面试时间</th>
+                          <th>备注</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>张天爱</td>
+                          <td>资深前端工程师</td>
+                          <td>18956289635</td>
+                          <td class="center hidden-phone">2017/05/08</td>
+                          <td class="center hidden-phone">13:15</td>
+                          <td>辉瑞制药股份有限公司</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>以前从事过类似岗位</td>
+                        </tr>
+                        <tr>
+                          <td>张天爱</td>
+                          <td>资深前端工程师</td>
+                          <td>18956289635</td>
+                          <td class="center hidden-phone">2017/05/08</td>
+                          <td class="center hidden-phone">13:15</td>
+                          <td>辉瑞制药股份有限公司</td>
+                          <td>2017/05/12</td>
+                          <td>16:30</td>
+                          <td>以前从事过类似岗位</td>
+                        </tr>
+                        <tr>
+                          <td>张天爱</td>
+                          <td>资深前端工程师</td>
+                          <td>18956289635</td>
+                          <td class="center hidden-phone">2017/05/08</td>
+                          <td class="center hidden-phone">13:15</td>
+                          <td>辉瑞制药股份有限公司</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>以前从事过类似岗位</td>
+                        </tr> 
+                      </tbody>
+                    </table> -->
                   </div>
                 </div>
               </section>

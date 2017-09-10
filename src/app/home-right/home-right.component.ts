@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService} from '../service/common.service';
 
 @Component({
   selector: 'app-home-right',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeRightComponent implements OnInit {
 
-  constructor() { }
+  constructor(private commonService:CommonService) { }
 
   ngOnInit() {
   }
 
+  ngAfterViewInit() {
+    
+            this.commonService.toggleButton.subscribe(
+              res => {    
+            if(res == "open"){
+              jQuery(".main-content").css("width","86%");
+                // jQuery("#middlerow").css("height", "47%");
+                // jQuery(".adv-table").css("height", "350px");
+              }else{
+                jQuery(".main-content").css("width","97%");
+                // jQuery("#middlerow").css("height", "53%"); 
+                // jQuery(".adv-table").css("height", "250px");     
+              }}
+            );
+          }
 }

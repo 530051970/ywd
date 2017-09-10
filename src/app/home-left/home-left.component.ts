@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../service/common.service';
 
 @Component({
   selector: 'app-home-left',
@@ -7,13 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeLeftComponent implements OnInit {
 
-  constructor() { }
+  private toggleButton: string;
+  constructor(private commonService: CommonService) { }
 
   ngOnInit() {
-    jQuery('.menu-list > a').click(function () {
-
-
-    });
+    jQuery('.menu-list > a').click(function () { });
 
     jQuery('.custom-nav > li').hover(function () {
       jQuery(this).addClass('nav-hover');
@@ -32,7 +31,29 @@ export class HomeLeftComponent implements OnInit {
     });
   }
 
-  onMenuListClick(obj){
+  ngAfterViewInit() {
+
+    this.commonService.toggleButton.subscribe(
+      res => {
+      this.toggleButton = res;
+
+        if (this.toggleButton == "open") {
+          jQuery("#leftDiv").css({"width":"14%","float":"left"});
+
+          // jQuery("#middlerow").css("height", "47%");
+          // jQuery(".adv-table").css("height", "350px");
+        } else {
+          // alert("1");
+          jQuery("#leftDiv").css({"width":"3%","float":"left","display":"block"});
+          // jQuery("#middlerow").css("height", "53%"); 
+          // jQuery(".adv-table").css("height", "250px");     
+        }
+        // jQuery("#leftDiv").css("float", "left");
+      }
+    );
+  }
+
+  onMenuListClick(obj) {
     const parent = jQuery(obj).parent();
     const sub = parent.find('> ul');
 
@@ -40,7 +61,7 @@ export class HomeLeftComponent implements OnInit {
       if (sub.is(':visible')) {
         sub.slideUp(200, function () {
           parent.removeClass('nav-active');
-          jQuery('.main-content').css({height: ''});
+          jQuery('.main-content').css({ height: '' });
           var docHeight = jQuery(document).height();
           if (docHeight > jQuery('.main-content').height())
             jQuery('.main-content').height(docHeight);
@@ -64,24 +85,6 @@ export class HomeLeftComponent implements OnInit {
     }
     return false;
   }
-
-  // visibleSubMenuClose() {
-  //   jQuery('.menu-list').each(function () {
-  //     var t = jQuery(this);
-  //     if (t.hasClass('nav-active')) {
-  //       t.find('> ul').slideUp(200, function () {
-  //         t.removeClass('nav-active');
-  //       });
-  //     }
-  //   });
-  // }
-
-  // mainContentHeightAdjust() {
-  //   // Adjust main content height
-  //   var docHeight = jQuery(document).height();
-  //   if (docHeight > jQuery('.main-content').height())
-  //     jQuery('.main-content').height(docHeight);
-  // }
 
 
 }

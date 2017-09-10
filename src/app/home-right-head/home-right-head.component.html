@@ -1,4 +1,4 @@
-<div class="sticky-header header-section">
+<div class="sticky-header header-section" style="height:5%">
 
   <!--toggle button start-->
   <a class="toggle-btn" (click)="onClickToggleBtn()"><i class="fa fa-bars"></i></a>
@@ -20,7 +20,7 @@
         <div class="fa fa-angle-down" style="float:left;margin-top: 5px;"></div>        
       </div>
     <!-- </div> -->
-    <div class="date-top" style="margin-left: 10px;width:200px;">
+    <div class="date-top" style="margin-left: 10px;width:216px;">
       <li class="fa fa-calendar-o" style="margin-right:5px"></li>
       <li id="Date"></li>
     </div>
@@ -46,9 +46,9 @@
   <div class="menu-right" style="margin-right: 0px;">
     <ul class="notification-menu">
         
-        <li (mouseover)="onMoveinSearch(search)" (mouseout)="onMoveOutSearch(search)">        
-            <a class="btn btn-default dropdown-toggle info-number" (click)='onClickSearch(search)' >
-                <input type="text" name="text"  #search class="search-input" placeholder="请输入查询关键字"/><i class="fa fa-search" ></i>
+        <li (mouseover)="onMoveinSearch(search)" (mouseout)="onMoveOutSearch(search)" >        
+            <a class="btn btn-default dropdown-toggle info-number" (click)='onClickSearch(search)' style="border-radius:30px 0 0 30px">
+                <input type="text" name="text"  #search class="search-input"  style="border-radius:30px 0 0 30px" placeholder="请输入查询关键字"/><i class="fa fa-search" ></i>
               <!--<span class="badge">4</span>-->
             </a>
           </li>

@@ -264,8 +264,8 @@
 /* KPI 卡片 */
 div.kpicard {
   
-  width: 120px;
-  height: 120px;
+  width: 24%;
+  height: 115px;
   background-color: #6bc5a4;
   z-index: 200;
   /* box-shadow: 0 5px 5px 0; */
@@ -290,7 +290,7 @@ div.kpicard {
   }
 
   .todo-title {
-    width: 380px;          
+    width: 70%;          
     overflow:hidden;text-overflow:ellipsis; -o-text-overflow:ellipsis;padding-bottom: 10px;
     margin-bottom: 0px;
     white-space:nowrap;

@@ -107,9 +107,11 @@ export class HomeRightHeadComponent implements OnInit {
     const logoIcon = jQuery('.text-center');
     if (bodyposition !== 'relative') {
       if (!body.hasClass('left-side-collapsed')) {
+        // alert("11111111");
+        this.commonService.toggleButton.emit("close");
         body.addClass('left-side-collapsed');
-        mainContent.attr('style', 'margin-left:52px');
-        stickyLeftSide.attr('style', 'width:52px');
+        // mainContent.attr('style', 'margin-left:52px');
+        // stickyLeftSide.attr('style', 'width:52px');
         logo.hide();
         logoIcon.removeClass('logo-icon');
         logoIcon.show();
@@ -122,8 +124,9 @@ export class HomeRightHeadComponent implements OnInit {
         })
         jQuery(this).addClass('menu-collapsed');
       } else {
-        mainContent.attr('style', 'margin-left:240px');
-        stickyLeftSide.attr('style', 'width:240px');
+        this.commonService.toggleButton.emit("open");
+        // mainContent.attr('style', 'margin-left:240px');
+        // stickyLeftSide.attr('style', 'width:240px');
         logoIcon.addClass('logo-icon');
         logo.show();
         logoIcon.hide();
@@ -253,6 +256,7 @@ export class HomeRightHeadComponent implements OnInit {
       //     element.webkitRequestFullScreen();
       // }
       } else {
+        this.commonService.fullScreen.emit("0");
         jQuery(obj).attr('class',"fa fa-expand");
         if (document.exitFullscreen) {
           document.exitFullscreen();
@@ -274,7 +278,7 @@ export class HomeRightHeadComponent implements OnInit {
    }
 
    onMoveinSearch(obj){
-    jQuery(obj).stop().animate({"width":"153px"});
+    jQuery(obj).stop().animate({"width":"160px"});
    }
 
    onMoveOutSearch(obj){

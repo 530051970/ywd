@@ -11,7 +11,7 @@ import { FormControl } from '@angular/forms';
 export class CommonService  {
   
   fullScreen:EventEmitter<string> = new EventEmitter();
-
+  toggleButton:EventEmitter<string> = new EventEmitter();
   private lang: string;
   public json2: any;
   // private subscription:Observable;
@@ -90,14 +90,5 @@ export class CommonService  {
     // alert(this.translateService.currentLang);
     return this.translateService.currentLang;
   }
-
-  // 自定义校验器
-  // 判断是不是email格式
-  // emailValidatorByJquery(obj):any{
-  //   const myreg = /^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/;
-  //   let valid=myreg.test(control.value);
-  //   return valid?null:{email:true}
-  // }
-
 
 }

@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
     //Add 'implements AfterViewInit' to the class.
     this.commonService.fullScreen.subscribe(
       res => {this.fullscreen = res;
-        alert(this.fullscreen);
+        // alert(this.fullscreen);
          var element=document.body;
         if (element.requestFullscreen) {
           element.requestFullscreen();

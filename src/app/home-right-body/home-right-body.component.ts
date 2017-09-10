@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CommonService} from '../service/common.service';
 declare const jQuery:any;
 declare const moment:any;
 declare const calendars:any;
@@ -39,8 +40,9 @@ export class HomeRightBodyComponent implements OnInit {
         [1354596000000, 788],
         [1354597000000, 836]
     ];
+    private fullscreen:string;
 
-  constructor() { }
+  constructor(private commonService:CommonService) { }
 
   ngOnInit() { 
     jQuery.plot(jQuery("#visitors-chart #visitors-container"), [{
@@ -102,84 +104,28 @@ export class HomeRightBodyComponent implements OnInit {
                 position: "right" /* left or right */
             }]
         }
-    );
-    //   //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
-    //     //Add 'implements AfterViewInit' to the class.
-    //     var thisMonth = moment().format('YYYY-MM');   
-    //     var eventArray = [
-    //         { startDate: thisMonth + '-10', endDate: thisMonth + '-14', title: 'Multi-Day Event' },
-    //         { startDate: thisMonth + '-21', endDate: thisMonth + '-23', title: 'Another Multi-Day Event' }
-    //     ];
-   
-    //     calendars.clndr1 = jQuery('.cal1').clndr({
-    //         events: eventArray,
-    //         // constraints: {
-    //         //   startDate: '2013-11-01',
-    //         //   endDate: '2013-11-15'
-    //         // },
-    //         clickEvents: {
-    //             click: function(target) {
-    //                 console.log(target);
-    //                 // if you turn the `constraints` option on, try this out:
-    //                 // if(jQuery(target.element).hasClass('inactive')) {
-    //                 //   console.log('not a valid datepicker date.');
-    //                 // } else {
-    //                 //   console.log('VALID datepicker date.');
-    //                 // }
-    //             },
-    //             nextMonth: function() {
-    //                 console.log('next month.');
-    //             },
-    //             previousMonth: function() {
-    //                 console.log('previous month.');
-    //             },
-    //             onMonthChange: function() {
-    //                 console.log('month changed.');
-    //             },
-    //             nextYear: function() {
-    //                 console.log('next year.');
-    //             },
-    //             previousYear: function() {
-    //                 console.log('previous year.');
-    //             },
-    //             onYearChange: function() {
-    //                 console.log('year changed.');
-    //             }
-    //         },
-    //         multiDayEvents: {
-    //             startDate: 'startDate',
-    //             endDate: 'endDate'
-    //         },
-    //         showAdjacentMonths: true,
-    //         adjacentDaysChangeMonth: false
-    //     });
-    
-    //     calendars.clndr2 = jQuery('.cal2').clndr({
-    //         template: jQuery('#template-calendar').html(),
-    //         events: eventArray,
-    //         startWithMonth: moment().add('month', 1),
-    //         clickEvents: {
-    //             click: function(target) {
-    //                 console.log(target);
-    //             }
-    //         },
-    //         forceSixRows: true
-    //     });
-    
-    //     // bind both clndrs to the left and right arrow keys
-    //     jQuery(document).keydown( function(e) {
-    //         if(e.keyCode == 37) {
-    //             // left arrow
-    //             calendars.clndr1.back();
-    //             calendars.clndr2.back();
-    //         }
-    //         if(e.keyCode == 39) {
-    //             // right arrow
-    //             calendars.clndr1.forward();
-    //             calendars.clndr2.forward();
-    //         }
-    //     });
+    );    
     }
+
+    ngAfterViewInit() {
+
+        this.commonService.fullScreen.subscribe(
+          res => {this.fullscreen = res;
+
+        if(this.fullscreen == "1"){
+            jQuery("#middlerow").css("height", "47%");
+            jQuery(".adv-table").css("height", "350px"); 
+            jQuery("#tablesec").css("height", "45%");        
+            
+          }else{
+            jQuery("#middlerow").css("height", "53%"); 
+            jQuery(".adv-table").css("height", "240px");
+            jQuery("#tablesec").css("height", "36%");       
+          }}
+        );
+      }
+
+
 
   onClickHeart(obj1,obj2,obj3){
     jQuery(obj1).show();
@@ -189,7 +135,6 @@ export class HomeRightBodyComponent implements OnInit {
     }
     jQuery(obj2).add(obj3).removeClass("active");
 
-    // alert("PPP");
   }
 
   onClickRetro(obj1,obj2,obj3){
