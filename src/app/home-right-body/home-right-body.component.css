@@ -288,3 +288,11 @@ div.kpicard {
   color: gray;
   height: 30px;
   }
+
+  .todo-title {
+    width: 380px;          
+    overflow:hidden;text-overflow:ellipsis; -o-text-overflow:ellipsis;padding-bottom: 10px;
+    margin-bottom: 0px;
+    white-space:nowrap;
+    float:left;
+  }

@@ -201,29 +201,66 @@
   </div>
 
 
-  <div class="panel" #todo style="margin-bottom: 5px; margin-left: 15px;height: 350px; display:none;width:530px;">
+  <div class="panel" #todo style="margin-bottom: 5px; margin-left: 15px;height: 350px; display:none;width:530px;overflow-y:auto">
     <header class="panel-heading" style="padding-bottom: 0px;">
       今日日程
     </header>
     <div class="panel-body" style="padding-bottom: 0px;">
       <ul class="to-do-list" id="sortable-todo">
-        <li class="clearfix">
-          <span class="drag-marker">
-                      <i></i>
-                      </span>
-          <div class="todo-check pull-left">
-            <input type="checkbox" value="None" id="todo-check" />
-            <label for="todo-check"></label>
+        <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
+          <span class="drag-marker"><i></i></span>
+          <div class="todo-check pull-left" style="width:30px;">
+              12:05
           </div>
-          <p class="todo-title">
-            Dashboard Design & Wiget placement
-          </p>
-          <div class="todo-actionlist pull-right clearfix">
-
-            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
+          <div class="todo-title" >
+           客户公司李总要过来，接待会议
+          </div>
+          <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
+            <span class="label label-warning">重要</span>
+            <!-- <a href="#" class="todo-remove"><i class="fa fa-times"></i></a> -->
           </div>
         </li>
-        <li class="clearfix">
+        <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
+            <span class="drag-marker"><i></i></span>
+            <div class="todo-check pull-left" style="width:30px;">
+                12:05
+            </div>
+            <div class="todo-title" >
+             客户公司李总要过来，接待会议
+            </div>
+            <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
+              <span class="label label-danger">紧急</span>
+              <!-- <a href="#" class="todo-remove"><i class="fa fa-times"></i></a> -->
+            </div>
+          </li>
+          <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
+              <span class="drag-marker"><i></i></span>
+              <div class="todo-check pull-left" style="width:30px;">
+                  12:05
+              </div>
+              <div class="todo-title" >
+               客户公司李总要过来，接待会议
+              </div>
+              <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
+                <span class="label label-danger">紧急</span>
+                <!-- <a href="#" class="todo-remove"><i class="fa fa-times"></i></a> -->
+              </div>
+            </li>
+            <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
+                <span class="drag-marker"><i></i></span>
+                <div class="todo-check pull-left" style="width:30px;">
+                    12:05
+                </div>
+                <div class="todo-title" >
+                 客户公司李总要过来，接待会议
+                </div>
+                <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
+                  <span class="label label-info">一般</span>
+                  <!-- <a href="#" class="todo-remove"><i class="fa fa-times"></i></a> -->
+                </div>
+              </li>
+              
+        <!-- <li class="clearfix">
           <span class="drag-marker">
                       <i></i>
                       </span>
@@ -286,7 +323,7 @@
 
             <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
           </div>
-        </li>
+        </li> -->
 
       </ul>
       <!-- <div class="row">
