@@ -46,7 +46,7 @@
         "assets/js/flot-chart/jquery.flot.stack.js",
         "assets/js/flot-chart/jquery.flot.time.js",
         "assets/js/jquery.nicescroll.js",
-        "assets/js/main-chart.js",
+        "assets/js/flot.chart.init.js",
         "assets/js/jquery.clock.js",
         "assets/js/moment.min.js"
 

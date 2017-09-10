@@ -68,65 +68,13 @@
         <header class="panel-heading">
           {{'Performance trend'|translate}}
           <span class="tools pull-right">
-                            <a href="javascript:;" class="fa fa-chevron-down"></a>
-                            <a href="javascript:;" class="fa fa-times"></a>
-                         </span>
+                <a href="javascript:;" class="fa fa-chevron-down"></a>
+                <a href="javascript:;" class="fa fa-times"></a>
+             </span>
         </header>
         <div class="panel-body">
           <div id="visitors-chart">
-            <div id="visitors-container" style="width: 100%; height: 375px; text-align: center; margin: 0px auto; padding: 0px; position: relative;">
-              <canvas class="flot-base" width="1005" height="447" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 804px; height: 358px;"></canvas>
-              <div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);">
-                <div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
-                  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 100px; top: 337px; left: 42px; text-align: center;">20</div>
-                  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 100px; top: 337px; left: 164px; text-align: center;">21</div>
-                  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 100px; top: 337px; left: 286px; text-align: center;">22</div>
-                  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 100px; top: 337px; left: 408px; text-align: center;">23</div>
-                  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 100px; top: 337px; left: 530px; text-align: center;">24</div>
-                  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 100px; top: 337px; left: 640px; text-align: center;">25</div>
-                  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 100px; top: 337px; left: 286px; text-align: center;">26</div>
-                  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 100px; top: 337px; left: 408px; text-align: center;">27</div>
-                  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 100px; top: 337px; left: 530px; text-align: center;">28</div>
-                  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 100px; top: 337px; left: 652px; text-align: center;">29</div>
-                  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 100px; top: 337px; left: 286px; text-align: center;">30</div>
-                  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 100px; top: 337px; left: 760px; text-align: center;">31</div>
-                  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 100px; top: 337px; left: 880px; text-align: center;">24</div>
-                  <div class="flot-tick-label tickLabel" style="position: absolute; max-width: 100px; top: 337px; left: 1000px; text-align: center;">25</div>
-                </div>
-                <div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
-                  <div class="flot-tick-label tickLabel" style="position: absolute; top: 322px; left: 18px; text-align: right;">0</div>
-                  <div class="flot-tick-label tickLabel" style="position: absolute; top: 258px; left: 6px; text-align: right;">20</div>
-                  <div class="flot-tick-label tickLabel" style="position: absolute; top: 194px; left: 6px; text-align: right;">40</div>
-                  <div class="flot-tick-label tickLabel" style="position: absolute; top: 130px; left: 6px; text-align: right;">60</div>
-                  <div class="flot-tick-label tickLabel" style="position: absolute; top: 66px; left: 6px; text-align: right;">80</div>
-                  <div class="flot-tick-label tickLabel" style="position: absolute; top: 2px; left: 1px; text-align: right;">100</div>
-                </div>
-              </div>
-              <canvas class="flot-overlay" width="1005" height="447" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 804px; height: 358px;"></canvas>
-              <div class="legend">
-                <div style="position: absolute; width: 78px; height: 40px; top: 17px; right: 34px; background-color: rgb(255, 255, 255); opacity: 0.85;">
-                </div>
-                <table style="position:absolute;top:17px;right:34px;;font-size:smaller;color:#545454">
-                  <tbody>
-                    <tr>
-                      <td class="legendColorBox">
-                        <div style="border:1px solid #ccc;padding:1px">
-                          <div style="width:4px;height:0;border:5px solid rgb(101,206,167);overflow:hidden"></div>
-                        </div>
-                      </td>
-                      <td class="legendLabel"> {{'last month'|translate}}</td>
-                    </tr>
-                    <tr>
-                      <td class="legendColorBox">
-                        <div style="border:1px solid #ccc;padding:1px">
-                          <div style="width:4px;height:0;border:5px solid rgb(66,79,99);overflow:hidden"></div>
-                        </div>
-                      </td>
-                      <td class="legendLabel"> {{'this month'|translate}}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            <div id="visitors-container" style="width: 100%;height:358px; text-align: center; margin:0 auto;">
             </div>
           </div>
         </div>
@@ -187,318 +135,418 @@
                   <p style="padding-top: 5px;">达保证期</p>
                 </div>
               </div>​​ -->
-      </div>
-      <a class="btn btn-follow" href="#"><span><i></i>查看更多KPI</span></a>
-    </div>
-  </div>
-
-  <div class="panel" #cal style="width: 530px;margin-left: 15px;margin-bottom: 2px;display:none;">
-    <div class="panel-body" style="padding-bottom: 0px;height:351px;padding-top: 10px;">
-      <div class="calendar-block " style="height:342px;">
-        <div class="cal1"></div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="panel" #todo style="margin-bottom: 5px; margin-left: 15px;height: 350px; display:none;width:530px;overflow-y:auto">
-    <header class="panel-heading" style="padding-bottom: 0px;">
-      今日日程
-    </header>
-    <div class="panel-body" style="padding-bottom: 0px;">
-      <ul class="to-do-list" id="sortable-todo">
-        <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
-          <span class="drag-marker"><i></i></span>
-          <div class="todo-check pull-left" style="width:30px;">
-              12:05
-          </div>
-          <div class="todo-title" >
-           客户公司李总要过来，接待会议
-          </div>
-          <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
-            <span class="label label-warning">重要</span>
-            <!-- <a href="#" class="todo-remove"><i class="fa fa-times"></i></a> -->
-          </div>
-        </li>
-        <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
-            <span class="drag-marker"><i></i></span>
-            <div class="todo-check pull-left" style="width:30px;">
-                12:05
             </div>
-            <div class="todo-title" >
-             客户公司李总要过来，接待会议
+            <a class="btn btn-follow" href="#"><span><i></i>查看更多KPI</span></a>
+          </div>
+        </div>
+
+        <div class="panel" #cal style="width: 530px;margin-left: 15px;margin-bottom: 2px;display:none;">
+          <div class="panel-body" style="padding-bottom: 0px;height:351px;padding-top: 10px;">
+            <div class="calendar-block " style="height:342px;">
+              <div class="cal1"></div>
             </div>
-            <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
-              <span class="label label-danger">紧急</span>
-              <!-- <a href="#" class="todo-remove"><i class="fa fa-times"></i></a> -->
-            </div>
-          </li>
-          <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
-              <span class="drag-marker"><i></i></span>
-              <div class="todo-check pull-left" style="width:30px;">
-                  12:05
-              </div>
-              <div class="todo-title" >
-               客户公司李总要过来，接待会议
-              </div>
-              <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
-                <span class="label label-danger">紧急</span>
-                <!-- <a href="#" class="todo-remove"><i class="fa fa-times"></i></a> -->
-              </div>
-            </li>
-            <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
+          </div>
+        </div>
+
+
+        <div class="panel" #todo style="margin-bottom: 5px; margin-left: 15px;height: 350px; display:none;width:530px;overflow-y:auto">
+          <header class="panel-heading" style="padding-bottom: 0px;">
+            今日日程
+          </header>
+          <div class="panel-body" style="padding-bottom: 0px;">
+            <ul class="to-do-list" id="sortable-todo">
+              <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
                 <span class="drag-marker"><i></i></span>
                 <div class="todo-check pull-left" style="width:30px;">
-                    12:05
+                  12:05
                 </div>
-                <div class="todo-title" >
-                 客户公司李总要过来，接待会议
+                <div class="todo-title">
+                  客户公司李总要过来，接待会议
+                </div>
+                <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
+                  <span class="label label-warning">重要</span>
+                  <!-- <a href="#" class="todo-remove"><i class="fa fa-times"></i></a> -->
+                </div>
+              </li>
+              <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
+                <span class="drag-marker"><i></i></span>
+                <div class="todo-check pull-left" style="width:30px;">
+                  12:05
+                </div>
+                <div class="todo-title">
+                  客户公司李总要过来，接待会议
+                </div>
+                <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
+                  <span class="label label-danger">紧急</span>
+                  <!-- <a href="#" class="todo-remove"><i class="fa fa-times"></i></a> -->
+                </div>
+              </li>
+              <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
+                <span class="drag-marker"><i></i></span>
+                <div class="todo-check pull-left" style="width:30px;">
+                  12:05
+                </div>
+                <div class="todo-title">
+                  客户公司李总要过来，接待会议
+                </div>
+                <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
+                  <span class="label label-danger">紧急</span>
+                  <!-- <a href="#" class="todo-remove"><i class="fa fa-times"></i></a> -->
+                </div>
+              </li>
+              <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
+                <span class="drag-marker"><i></i></span>
+                <div class="todo-check pull-left" style="width:30px;">
+                  12:05
+                </div>
+                <div class="todo-title">
+                  客户公司李总要过来，接待会议
                 </div>
                 <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
                   <span class="label label-info">一般</span>
                   <!-- <a href="#" class="todo-remove"><i class="fa fa-times"></i></a> -->
                 </div>
               </li>
-              
-        <!-- <li class="clearfix">
-          <span class="drag-marker">
-                      <i></i>
-                      </span>
-          <div class="todo-check pull-left">
-            <input type="checkbox" value="None" id="todo-check1" />
-            <label for="todo-check1"></label>
-          </div>
-          <p class="todo-title">
-            Wireframe prepare for new design
-          </p>
-          <div class="todo-actionlist pull-right clearfix">
+            </ul>
 
-            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
           </div>
-        </li>
-        <li class="clearfix">
-          <span class="drag-marker">
-                      <i></i>
-                      </span>
-          <div class="todo-check pull-left">
-            <input type="checkbox" value="None" id="todo-check2" />
-            <label for="todo-check2"></label>
-          </div>
-          <p class="todo-title">
-            UI perfection testing for Mega Section
-          </p>
-          <div class="todo-actionlist pull-right clearfix">
-
-            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
-          </div>
-        </li>
-        <li class="clearfix">
-          <span class="drag-marker">
-                      <i></i>
-                      </span>
-          <div class="todo-check pull-left">
-            <input type="checkbox" value="None" id="todo-check3" />
-            <label for="todo-check3"></label>
-          </div>
-          <p class="todo-title">
-            Wiget & Design placement
-          </p>
-          <div class="todo-actionlist pull-right clearfix">
-
-            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
-          </div>
-        </li>
-        <li class="clearfix">
-          <span class="drag-marker">
-                      <i></i>
-                      </span>
-          <div class="todo-check pull-left">
-            <input type="checkbox" value="None" id="todo-check4" />
-            <label for="todo-check4"></label>
-          </div>
-          <p class="todo-title">
-            Development & Wiget placement
-          </p>
-          <div class="todo-actionlist pull-right clearfix">
-
-            <a href="#" class="todo-remove"><i class="fa fa-times"></i></a>
-          </div>
-        </li> -->
-
-      </ul>
-      <!-- <div class="row">
-                  <div class="col-md-12">
-                      <form role="form" class="form-inline">
-                          <div class="form-group todo-entry">
-                              <input type="text" placeholder="Enter your ToDo List" class="form-control" style="width: 100%">
-                          </div>
-                          <button class="btn btn-primary pull-right" type="submit">+</button>
-                      </form>
-                  </div>
-              </div> -->
-    </div>
-  </div>
+        </div>
 
 
 
-  <div class="col-md-12">
-    <div class="panel">
-      <ul class="iconic-list">
-        <li class="active" (click)="onClickHeart(heart,cal,todo)">
-          <a>
+        <div class="col-md-12">
+          <div class="panel">
+            <ul class="iconic-list">
+              <li class="active" (click)="onClickHeart(heart,cal,todo)">
+                <a>
                               <i class="fa fa-heart"></i>
                           </a>
-        </li>
-        <li (click)="onClickRetro(heart,cal,todo)">
-          <a>
+              </li>
+              <li (click)="onClickRetro(heart,cal,todo)">
+                <a>
                               <i class="fa fa-camera-retro"></i>
                           </a>
-        </li>
-        <li (click)="onClickTodo(heart,cal,todo)">
-          <a>
+              </li>
+              <li (click)="onClickTodo(heart,cal,todo)">
+                <a>
                               <i class="fa fa-calendar"></i>
                           </a>
-        </li>
-        <li>
-          <a class="last">
+              </li>
+              <li>
+                <a class="last">
                               <i class="fa fa-crosshairs"></i>
                           </a>
-        </li>
-      </ul>
-    </div>
+              </li>
+            </ul>
+          </div>
 
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
-</div>
-<section class="panel">
-  <header class="panel-heading custom-tab turquoise-tab">
-    <ul class="nav nav-tabs">
-      <li class="active">
-        <a data-toggle="tab" href="#home3">
+  <section class="panel">
+    <header class="panel-heading custom-tab turquoise-tab">
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <a data-toggle="tab" href="#home3">
                     <i class="fa fa-home">进展中的项目</i>
                 </a>
-      </li>
-      <li>
-        <a data-toggle="tab" href="#about3">
+        </li>
+        <li>
+          <a data-toggle="tab" href="#about3">
                     <i class="fa fa-user"></i>
                     面试-第一轮
                 </a>
-      </li>
-      <li class="">
-        <a data-toggle="tab" href="#contact3">
+        </li>
+        <li class="">
+          <a data-toggle="tab" href="#contact3">
                     <i class="fa fa-envelope-o"></i>
                     面试-第二轮
                 </a>
-      </li>
-      <li class="">
-        <a data-toggle="tab" href="#contact3">
+        </li>
+        <li class="">
+          <a data-toggle="tab" href="#contact3">
                   <i class="fa fa-envelope-o"></i>
                   面试-更多轮
               </a>
-      </li>
-      <li class="">
-        <a data-toggle="tab" href="#contact3">
+        </li>
+        <li class="">
+          <a data-toggle="tab" href="#contact3">
                 <i class="fa fa-envelope-o"></i>
                 签订offer
             </a>
-      </li>
-      <li class="">
-        <a data-toggle="tab" href="#contact3">
+        </li>
+        <li class="">
+          <a data-toggle="tab" href="#contact3">
               <i class="fa fa-envelope-o"></i>
               入职
           </a>
-      </li>
-    </ul>
-  </header>
-  <div class="panel-body">
-    <div class="tab-content">
-      <div id="home3" class="tab-pane  active">
-        <div class="row">
-          <div class="col-sm-12">
-            <section class="panel">
+        </li>
+      </ul>
+    </header>
+    <div class="panel-body" style="padding-bottom: 0px;">
+      <div class="tab-content">
+        <div id="home3" class="tab-pane  active">
+          <div class="row">
+            <div class="col-sm-12">
+              <section class="panel" style="margin-bottom: 0px;">
+                <div class="panel-body" style="padding:0px;">
+                  <div class="adv-table">
+                    <table class="display table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th>项目名称</th>
+                          <th>公司名称</th>
+                          <th>薪资待遇</th>
+                          <th>已经推荐</th>
+                          <th>面试人数</th>
+                          <th>入职人数</th>
+                          <th>达到保证期人数</th>
+                          <th>佣金收入(元)</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>移动Java后端</td>
+                          <td>博士多（上海）科技有限公司</td>
+                          <td>30k/月</td>
+                          <td class="center hidden-phone">24</td>
+                          <td class="center hidden-phone">8</td>
+                          <td>4</td>
+                          <td>3</td>
+                          <td>30000</td>
+                        </tr>
+                        <tr>
+                          <td>移动Java后端</td>
+                          <td>博士多（上海）科技有限公司</td>
+                          <td>30k/月</td>
+                          <td class="center hidden-phone">24</td>
+                          <td class="center hidden-phone">8</td>
+                          <td>4</td>
+                          <td>3</td>
+                          <td>30000</td>
+                        </tr>
+                        <tr>
+                          <td>移动Java后端</td>
+                          <td>博士多（上海）科技有限公司</td>
+                          <td>30k/月</td>
+                          <td class="center hidden-phone">24</td>
+                          <td class="center hidden-phone">8</td>
+                          <td>4</td>
+                          <td>3</td>
+                          <td>30000</td>
+                        </tr>
+                        <tr>
+                          <td>移动Java后端</td>
+                          <td>博士多（上海）科技有限公司</td>
+                          <td>30k/月</td>
+                          <td class="center hidden-phone">24</td>
+                          <td class="center hidden-phone">8</td>
+                          <td>4</td>
+                          <td>3</td>
+                          <td>30000</td>
+                        </tr>
+                        <tr>
+                          <td>移动Java后端</td>
+                          <td>博士多（上海）科技有限公司</td>
+                          <td>30k/月</td>
+                          <td class="center hidden-phone">24</td>
+                          <td class="center hidden-phone">8</td>
+                          <td>4</td>
+                          <td>3</td>
+                          <td>30000</td>
+                        </tr>
 
-              <div class="panel-body" style="padding:0px;">
-                <div class="adv-table">
-                  <table class="display table table-bordered table-striped">
-                    <thead>
-                      <tr>
-                        <th>项目名称</th>
-                        <th>公司名称</th>
-                        <th>薪资待遇</th>
-                        <th>已经推荐</th>
-                        <th>面试人数</th>
-                        <th>入职人数</th>
-                        <th>达到保证期人数</th>
-                        <th>佣金收入</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Trident</td>
-                        <td>Internet Explorer 4.0</td>
-                        <td>Win 95+</td>
-                        <td class="center hidden-phone">4</td>
-                        <td class="center hidden-phone">X</td>
-                        <td>Trident</td>
-                        <td>Internet Explorer 4.0</td>
-                        <td>Win 95+</td>
-                      </tr>
-                      <tr>
-                        <td>Trident</td>
-                        <td>Internet Explorer 5.0</td>
-                        <td>Win 95+</td>
-                        <td class="center hidden-phone">5</td>
-                        <td class="center hidden-phone">C</td>
-                        <td>Trident</td>
-                        <td>Internet Explorer 4.0</td>
-                        <td>Win 95+</td>
-                      </tr>
-                      <tr>
-                        <td>Trident</td>
-                        <td>Internet Explorer 5.5</td>
-                        <td>Win 95+</td>
-                        <td class="center hidden-phone">5.5</td>
-                        <td class="center hidden-phone">A</td>
-                        <td>Trident</td>
-                        <td>Internet Explorer 4.0</td>
-                        <td>Win 95+</td>
-                      </tr>
-                      <tr>
-                        <td>Trident</td>
-                        <td>Internet Explorer 6</td>
-                        <td>Win 98+</td>
-                        <td class="center hidden-phone">6</td>
-                        <td class="center hidden-phone">A</td>
-                        <td>Trident</td>
-                        <td>Internet Explorer 4.0</td>
-                        <td>Win 95+</td>
-                      </tr>
-
-                      <tr style="border:none">
-                        <td colspan="8" style="text-align:center"><a>查看更多...</a></td>
-                        <!-- <td>Internet Explorer 7</td>
+                        <tr style="border:none">
+                          <td colspan="8" style="text-align:center"><a>查看更多...</a></td>
+                          <!-- <td>Internet Explorer 7</td>
                     <td>Win XP SP2+</td>
                     <td class="center hidden-phone">7</td>
                     <td class="center hidden-phone">A</td> -->
-                      </tr>
+                        </tr>
 
-                    </tbody>
+                      </tbody>
 
-                  </table>
+                    </table>
+                  </div>
                 </div>
-              </div>
-            </section>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div id="about3" class="tab-pane">
+          <div class="row">
+            <div class="col-sm-12">
+              <section class="panel" style="margin-bottom: 0px;">
+
+                <div class="panel-body" style="padding:0px;">
+                  <div class="adv-table">
+                    <table class="display table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th>姓名</th>
+                          <th>项目</th>
+                          <th>联系方式</th>
+                          <th>面试日期</th>
+                          <th>面试时间</th>
+                          <th>面试公司</th>
+                          <th>下一轮面试日期</th>
+                          <th>下一轮面试时间</th>
+                          <th>备注</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>张天爱</td>
+                          <td>资深前端工程师</td>
+                          <td>18956289635</td>
+                          <td class="center hidden-phone">2017/05/08</td>
+                          <td class="center hidden-phone">13:15</td>
+                          <td>辉瑞制药股份有限公司</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>以前从事过类似岗位</td>
+                        </tr>
+                        <tr>
+                          <td>张天爱</td>
+                          <td>资深前端工程师</td>
+                          <td>18956289635</td>
+                          <td class="center hidden-phone">2017/05/08</td>
+                          <td class="center hidden-phone">13:15</td>
+                          <td>辉瑞制药股份有限公司</td>
+                          <td>2017/05/12</td>
+                          <td>16:30</td>
+                          <td>以前从事过类似岗位</td>
+                        </tr>
+                        <tr>
+                          <td>张天爱</td>
+                          <td>资深前端工程师</td>
+                          <td>18956289635</td>
+                          <td class="center hidden-phone">2017/05/08</td>
+                          <td class="center hidden-phone">13:15</td>
+                          <td>辉瑞制药股份有限公司</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>以前从事过类似岗位</td>
+                        </tr>
+                        <tr>
+                          <td>张天爱</td>
+                          <td>资深前端工程师</td>
+                          <td>18956289635</td>
+                          <td class="center hidden-phone">2017/05/08</td>
+                          <td class="center hidden-phone">13:15</td>
+                          <td>辉瑞制药股份有限公司</td>
+                          <td>2017/05/12</td>
+                          <td>16:30</td>
+                          <td>以前从事过类似岗位</td>
+                        </tr>
+                        <tr>
+                          <td>张天爱</td>
+                          <td>资深前端工程师</td>
+                          <td>18956289635</td>
+                          <td class="center hidden-phone">2017/05/08</td>
+                          <td class="center hidden-phone">13:15</td>
+                          <td>辉瑞制药股份有限公司</td>
+                          <td>2017/05/12</td>
+                          <td>16:30</td>
+                          <td>以前从事过类似岗位</td>
+                        </tr>
+
+                        <tr style="border:none">
+                          <td colspan="8" style="text-align:center"><a>查看更多...</a></td>
+                          <!-- <td>Internet Explorer 7</td>
+                        <td>Win XP SP2+</td>
+                        <td class="center hidden-phone">7</td>
+                        <td class="center hidden-phone">A</td> -->
+                        </tr>
+
+                      </tbody>
+
+                    </table>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div id="contact3" class="tab-pane ">
+          <div class="row">
+            <div class="col-sm-12">
+              <section class="panel" style="margin-bottom: 0px;">
+
+                <div class="panel-body" style="padding:0px;">
+                  <div class="adv-table">
+                    <table class="display table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th>姓名</th>
+                          <th>项目</th>
+                          <th>联系方式</th>
+                          <th>面试日期</th>
+                          <th>面试时间</th>
+                          <th>面试公司</th>
+                          <th>下一轮面试日期</th>
+                          <th>下一轮面试时间</th>
+                          <th>备注</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>张天爱</td>
+                          <td>资深前端工程师</td>
+                          <td>18956289635</td>
+                          <td class="center hidden-phone">2017/05/08</td>
+                          <td class="center hidden-phone">13:15</td>
+                          <td>辉瑞制药股份有限公司</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>以前从事过类似岗位</td>
+                        </tr>
+                        <tr>
+                          <td>张天爱</td>
+                          <td>资深前端工程师</td>
+                          <td>18956289635</td>
+                          <td class="center hidden-phone">2017/05/08</td>
+                          <td class="center hidden-phone">13:15</td>
+                          <td>辉瑞制药股份有限公司</td>
+                          <td>2017/05/12</td>
+                          <td>16:30</td>
+                          <td>以前从事过类似岗位</td>
+                        </tr>
+                        <tr>
+                          <td>张天爱</td>
+                          <td>资深前端工程师</td>
+                          <td>18956289635</td>
+                          <td class="center hidden-phone">2017/05/08</td>
+                          <td class="center hidden-phone">13:15</td>
+                          <td>辉瑞制药股份有限公司</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>以前从事过类似岗位</td>
+                        </tr>
+                       
+                        <tr style="border:none">
+                          <td colspan="8" style="text-align:center"><a>查看更多...</a></td>
+                          <!-- <td>Internet Explorer 7</td>
+                        <td>Win XP SP2+</td>
+                        <td class="center hidden-phone">7</td>
+                        <td class="center hidden-phone">A</td> -->
+                        </tr>
+
+                      </tbody>
+
+                    </table>
+                  </div>
+                </div>
+              </section>
+            </div>
           </div>
         </div>
       </div>
-      <div id="about3" class="tab-pane">About</div>
-      <div id="contact3" class="tab-pane ">Contact</div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- <div class="col-md-4">
+  <!-- <div class="col-md-4">
       <div class="wdgt-profile">
         <div class="profile">
           <img src="../../assets/img/gallery/wdgt-img.jpg" alt="">
@@ -544,7 +592,7 @@
   </div>-->
 
 
-<!-- <div class="row">
+  <!-- <div class="row">
     <div class="col-md-4">
       <div class="panel widget-info-one">
         <div class="avatar-img">

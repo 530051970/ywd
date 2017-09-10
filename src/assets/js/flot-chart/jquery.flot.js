@@ -736,11 +736,11 @@ Licensed under the MIT license.
 
             var i, axisOptions, axisCount,
                 fontDefaults = {
-                    // style: placeholder.css("font-style"),
-                    // size: Math.round(0.8 * (+placeholder.css("font-size").replace("px", "") || 13)),
-                    // variant: placeholder.css("font-variant"),
-                    // weight: placeholder.css("font-weight"),
-                    // family: placeholder.css("font-family")
+                    style: placeholder.css("font-style"),
+                    size: Math.round(0.8 * (+placeholder.css("font-size").replace("px", "") || 13)),
+                    variant: placeholder.css("font-variant"),
+                    weight: placeholder.css("font-weight"),
+                    family: placeholder.css("font-family")
                 };
 
             fontDefaults.lineHeight = fontDefaults.size * 1.15;
