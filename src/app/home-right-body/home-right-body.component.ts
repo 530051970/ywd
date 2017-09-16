@@ -107,6 +107,12 @@ export class HomeRightBodyComponent implements OnInit {
     );    
     }
 
+    ngOnChanges() {
+        //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
+        //Add '${implements OnChanges}' to the class.
+        alert("size");
+    }
+
     ngAfterViewInit() {
 
         this.commonService.fullScreen.subscribe(

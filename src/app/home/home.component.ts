@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CommonService} from '../service/common.service';
+import {Observable} from "rxjs/Observable";
+// declare const target:any; 
 
 @Component({
   selector: 'app-home',
@@ -14,6 +16,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     // this.commonService.showDateAndTime();
+    // alert(jQuery(window).height());
 
   }
 
@@ -37,7 +40,21 @@ export class HomeComponent implements OnInit {
       
       }
     );
+
+    Observable.fromEvent(window, 'resize')
+    .debounceTime(200)
+    .subscribe((event) => { 
+      // `${event.target.innerHeight}`
+      let height0=jQuery("#header")[0].clientHeight;
+      let height1=jQuery("#states-info")[0].clientHeight;
+      let height2=jQuery("#middlerow")[0].clientHeight;
+      let height3=jQuery("#tablesec")[0].clientHeight;
+      jQuery("#leftDiv").css({height:height0+height1+height2+height3+15});
+      // alert("Height:"+window.innerHeight+" width:"+window.innerWidth);
+    });
   }
+
+
 
   
 

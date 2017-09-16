@@ -371,3 +371,9 @@ h5.left-nav-title {
   color: #fff;
   text-decoration: none;
 }
+
+@media screen and (max-width: 1180px) {
+  #leftDiv{
+    display: none;
+  }
+}

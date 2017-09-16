@@ -20,9 +20,11 @@ import { HomeRightBodyComponent } from './home-right-body/home-right-body.compon
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CommonService } from './service/common.service';
 import { MockService } from './service/mock.service';
+import { QuoteService} from './service/quote.service'
 import { FooterComponent } from './footer/footer.component';
 import { User} from './model/user.model';
 import './utils/debug.util';
+import { ChatComponent } from './chat/chat.component';
 
 export function createTranslateHttpLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -40,7 +42,8 @@ export function createTranslateHttpLoader(http: HttpClient) {
     HomeRightComponent,
     HomeRightBodyComponent,
     DashboardComponent,
-    FooterComponent
+    FooterComponent,
+    ChatComponent
   ],
   imports: [
     HttpModule,
@@ -60,6 +63,8 @@ export function createTranslateHttpLoader(http: HttpClient) {
     User,
     CommonService,
     MockService,
+    QuoteService,
+    
     {
       provide: LocationStrategy, useClass: HashLocationStrategy
     },{

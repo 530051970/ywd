@@ -56,7 +56,7 @@ $(function () {
   }
 
   // Toggle Left Menu
-
+  // $(window).resize(function() { alert("res");}); 
 
   // jQuery('.menu-list > a').click(function () {
 

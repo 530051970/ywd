@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonService } from '../service/common.service';
 
+
 @Component({
   selector: 'app-home-left',
   templateUrl: './home-left.component.html',
@@ -29,6 +30,7 @@ export class HomeLeftComponent implements OnInit {
 
 
     });
+
   }
 
   ngAfterViewInit() {

@@ -1,7 +1,8 @@
-<div class="sticky-header header-section" style="height:5%">
+<div class="sticky-header header-section" id="header">
 
   <!--toggle button start-->
-  <a class="toggle-btn" (click)="onClickToggleBtn()"><i class="fa fa-bars"></i></a>
+  <a class="toggle-btn" (click)="onClickToggleBtn()" id="large"><i class="fa fa-bars"></i></a>
+  <a class="toggle-btn"  id="small"><i class="fa fa-bars"></i></a>
   <!--toggle button end-->
   <!--<a class="toggle-btn"><i class="fa fa-bars"></i></a>-->
 
@@ -12,26 +13,26 @@
 <!--&lt;!&ndash;</div>&ndash;&gt;-->
   <!--</form>-->
   <!--search end-->
-  <div id="nt-title-container" class="navbar-left running-text visible-lg" style="padding-top: 7px;">
+  <div id="nt-title-container" class="navbar-left running-text" style="padding-top: 7px;">
     <div>
       <div class="date-top" style="width:121px;float:left;margin-left:10px;height:25px;overflow:hidden;">
-        <div class="fa fa-language" style="margin-top:5px;float:left"></div>
-        <div id="Lang" style="padding-left: 16px;overflow:hidden;width: 80px;float:left"><a (click)='onClickLang()' id='langLink'>中文</a></div>
+        <a (click)='onClickLang()' class="fa fa-language" style="margin-top:5px;float:left;color:white"></a>
+        <div id="Lang"><a (click)='onClickLang()' id='langLink'>中文</a></div>
         <div class="fa fa-angle-down" style="float:left;margin-top: 5px;"></div>        
       </div>
     <!-- </div> -->
-    <div class="date-top" style="margin-left: 10px;width:216px;">
+    <div class="date-top" style="margin-left: 10px;width:216px;" id="datediv">
       <li class="fa fa-calendar-o" style="margin-right:5px"></li>
       <li id="Date"></li>
     </div>
     </div>
-    <div style="float:left">
+    <div style="float:left" ID="clockdiv">
     <ul id="digital-clock" class="digital" style="margin-left: 0px;padding-left: 15px;">
       <li class="fa fa-clock-o" style="margin-right:5px"></li>
       <li >{{showDate| date:'HH:mm:ss'}}</li>
     </ul>
     </div>
-    <div style="float:left"><ul  style="padding-left: 40px;list-style:none;">
+    <div style="float:left"><ul id="player">
       <li><a id="player" style="color:#fff" (click)='onClickPlayer(msgList,play,stop)'><i class="fa fa-play-circle" #play></i>
         <i class="fa fa-pause-circle" style="display:none" #stop></i>
       </a></li></ul></div>
@@ -46,7 +47,7 @@
   <div class="menu-right" style="margin-right: 0px;">
     <ul class="notification-menu">
         
-        <li (mouseover)="onMoveinSearch(search)" (mouseout)="onMoveOutSearch(search)" >        
+        <li (mouseover)="onMoveinSearch(search)" (mouseout)="onMoveOutSearch(search)" id="search-home">        
             <a class="btn btn-default dropdown-toggle info-number" (click)='onClickSearch(search)' style="border-radius:30px 0 0 30px">
                 <input type="text" name="text"  #search class="search-input"  style="border-radius:30px 0 0 30px" placeholder="请输入查询关键字"/><i class="fa fa-search" ></i>
               <!--<span class="badge">4</span>-->
@@ -143,6 +144,65 @@
       </li>
       <li>
         <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+          <i class="fa fa-bell-o"></i>
+          <span class="badge">4</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-head pull-right">
+          <h5 class="title">通知</h5>
+          <ul class="dropdown-list normal-list">
+            <li class="new">
+              <a href="">
+                <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                <span class="name">博世科技新职位邀约.  </span>
+                <em class="small">34 mins</em>
+              </a>
+            </li>
+            <li class="new">
+              <a href="">
+                <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                <span class="name">日本NTT会社远程会议.  </span>
+                <em class="small">1 hrs</em>
+              </a>
+            </li>
+            <li class="new">
+              <a href="">
+                <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                <span class="name">技术部手机端APP研发.  </span>
+                <em class="small">4 hrs</em>
+              </a>
+            </li>
+            <li class="new">
+              <a href="">
+                <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                <span class="name">的水电费水电费水电费水电费十大.  </span>
+                <em class="small">4 hrs</em>
+              </a>
+            </li>
+            <li class="new"><a href="">查看所有通知</a></li>
+          </ul>
+        </div>
+      </li>
+      
+      <li>
+        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+          <i class="fa fa-address-book-o"></i>
+          <!--<span class="badge">4</span>-->
+        </a>
+      </li>
+      <li>
+        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+          <img src="../../assets/img/photos/user-avatar.png" alt=""/>
+          李 大雷
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+          <li><a href="#"><i class="fa fa-user"></i> 个人中心</a></li>
+          <li><a href="#"><i class="fa fa-cog"></i> 用户设置</a></li>
+          <li><a href="#"><i class="fa fa-sign-out"></i> 退出系统</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
           <i class="fa fa-comments-o"></i>
           <span class="badge">5</span>
         </a>
@@ -199,64 +259,7 @@
           </ul>
         </div>
       </li>
-      <li>
-        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
-          <i class="fa fa-bell-o"></i>
-          <span class="badge">4</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-head pull-right">
-          <h5 class="title">通知</h5>
-          <ul class="dropdown-list normal-list">
-            <li class="new">
-              <a href="">
-                <span class="label label-danger"><i class="fa fa-bolt"></i></span>
-                <span class="name">博世科技新职位邀约.  </span>
-                <em class="small">34 mins</em>
-              </a>
-            </li>
-            <li class="new">
-              <a href="">
-                <span class="label label-danger"><i class="fa fa-bolt"></i></span>
-                <span class="name">日本NTT会社远程会议.  </span>
-                <em class="small">1 hrs</em>
-              </a>
-            </li>
-            <li class="new">
-              <a href="">
-                <span class="label label-danger"><i class="fa fa-bolt"></i></span>
-                <span class="name">技术部手机端APP研发.  </span>
-                <em class="small">4 hrs</em>
-              </a>
-            </li>
-            <li class="new">
-              <a href="">
-                <span class="label label-danger"><i class="fa fa-bolt"></i></span>
-                <span class="name">的水电费水电费水电费水电费十大.  </span>
-                <em class="small">4 hrs</em>
-              </a>
-            </li>
-            <li class="new"><a href="">查看所有通知</a></li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
-          <i class="fa fa-address-book-o"></i>
-          <!--<span class="badge">4</span>-->
-        </a>
-      </li>
-      <li>
-        <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-          <img src="../../assets/img/photos/user-avatar.png" alt=""/>
-          李 大雷
-          <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
-          <li><a href="#"><i class="fa fa-user"></i> 个人中心</a></li>
-          <li><a href="#"><i class="fa fa-cog"></i> 用户设置</a></li>
-          <li><a href="#"><i class="fa fa-sign-out"></i> 退出系统</a></li>
-        </ul>
-      </li>
+     
 
     </ul>
   </div>

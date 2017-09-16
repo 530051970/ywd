@@ -3,7 +3,7 @@
 ------------------------------*/
 
 .main-content {
-  margin-left: 240px;
+  width: 86%;
   background: #eff0f4;
   min-height: 1000px;
   padding-top: 0px;
@@ -44,6 +44,12 @@
   display: block;
   content: '';
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1180px) {
+  .main-content{
+    width: 100%;
+  }
 }
 
 

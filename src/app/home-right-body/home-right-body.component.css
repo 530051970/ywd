@@ -273,7 +273,9 @@ div.kpicard {
   /* width: 250px;  */
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),0 12px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
+  float:left;
   }​
+
   div.kpiheader {
   background-color: #4CAF50;
   color: white;
@@ -296,3 +298,148 @@ div.kpicard {
     white-space:nowrap;
     float:left;
   }
+
+  #interview-success-number,#leavejob {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .countnumber {
+    font-size: 60px;
+    font-weight:bolder;height: 90px;
+    margin-bottom: 0px;
+  }
+
+  #carddiv{
+    height:167px;padding-left: 15px;
+  }
+  #middlerow{
+  height:51%
+}
+
+div.row.states-info{
+  height: 9%;
+}
+
+#right-body {
+  height:95%;position: relative;width:100%;z-index:0; padding: 15px 15px 0 15px;
+}
+
+#large-table {
+  display: block;
+}
+
+#small-table {
+  display: none;
+}
+
+
+  @media screen and (max-width: 1800px) {
+    .countnumber {
+      font-size: 50px;
+    }}
+
+    /* @media screen and (max-width: 1600px) {
+      .countnumber {
+        font-size: 45px;
+      }} */
+
+      @media screen and (max-width: 1600px) {
+        .countnumber {
+          font-size: 40px;
+        }}
+        @media screen and (max-width: 1390px) {
+          .blue-bg,.red-bg,.green-bg,.yellow-bg{
+            height:101px;
+        }
+        .number-panel {
+            width:50%;
+        }
+        div.row.states-info{
+          height: 21%;
+        }
+        #middlerow{
+          height: 50%
+        }
+      }
+        /* @media screen and (max-width: 1380px) {
+          #middlerow{
+            height: 60%
+          }
+        } */
+
+        @media screen and (max-width: 1312px) {
+          .countnumber {
+            font-size: 30px;            
+          }
+          .kpicard {
+           width:65px;
+          }
+        
+        }
+
+  .blue-bg,.red-bg,.green-bg,.yellow-bg{
+    height:82px;
+}
+  
+  @media screen and (max-width: 1270px) {
+    div.kpicard {
+      float: left;
+        width:48%;
+        height:50%;
+    }
+    div.kpiheader {
+      /* width:50%; */
+      height:50px;
+  }
+  h1.countnumber{
+    margin-top: 5px;
+  }
+  .subtitle {
+   margin-bottom:15px;
+   
+  }
+  #carddiv{
+    height:167px;padding-left: 15px;
+    margin-bottom: 15px;
+  }
+  }
+  
+
+
+  @media screen and (max-width: 990px) {
+    div.row.states-info{
+      height: 44%;
+    }
+
+    div.col-md-3.number-panel{
+      width:100%;
+    }
+
+    #middlerow{
+      height: 98%
+    }
+  }
+
+  @media screen and (max-width: 782px) {
+    div.row.states-info{
+      height: 46%;
+    }
+    #right-body {
+      padding-top:7%
+    }
+    #middlerow{
+      height: 102%
+    }
+  
+  }
+  @media screen and (max-width: 725px) {
+    #large-table {
+      display: none
+    }
+    #small-table {
+      display: block
+    }
+   }
+
+ 

@@ -284,7 +284,6 @@ export class HomeRightHeadComponent implements OnInit {
    onMoveOutSearch(obj){
      if(obj.value==null || obj.value==""){
     jQuery(obj).stop().animate({"width":"0px"});
-    // jQuery(obj).css({"border":"none"});
   } else {
     jQuery(obj).css({"border-width":"0 0 1px 0","border-bottom-color":"gray"} 
     );

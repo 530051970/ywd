@@ -9,6 +9,24 @@ import {User} from "../model/user.model";
 import {Observable} from "rxjs/Observable";
 import {Router} from "@angular/router";
 
+declare global {
+  // interface Document {
+  //     msExitFullscreen: any;
+  //     mozCancelFullScreen: any;
+  //     requestFullscreen:any;
+  //     webkitRequestFullscreen:any;
+  //     webkitRequestFullScreen:any;
+  //     mozRequestFullScreen:any;
+  //     msRequestFullscreen:any;
+      
+  // }
+  interface JQuery  {
+       slider: any;
+      // mozRequestFullScreen: any;
+  }
+}
+declare const slider;
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -20,7 +38,7 @@ export class LoginComponent implements OnInit {
   validationTimeout:any;
   notRegister: boolean;
   // 使用FormBuilder比传统的FormGroup代码更简洁
-  constructor(private commonService: CommonService, private fb: FormBuilder, private mockService$: MockService,private router: Router) {
+  constructor(private commonService: CommonService, private fb: FormBuilder, private mockServicejQuery: MockService,private router: Router) {
   }
 
   asyncValidator(): AsyncValidatorFn {
@@ -28,7 +46,7 @@ export class LoginComponent implements OnInit {
       clearTimeout(this.validationTimeout);
       return new Promise((resolve, reject) => {
         this.validationTimeout = setTimeout(() => {
-          this.mockService$.getUsers(control.value).bufferWhen(() => {
+          this.mockServicejQuery.getUsers(control.value).bufferWhen(() => {
             return Observable.interval(500);
           }).subscribe((res) => {
             console.log(res);
@@ -50,7 +68,25 @@ export class LoginComponent implements OnInit {
       email: ['', [Validators.required, Validators.email],this.asyncValidator()],
       password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(12)]]
     });
+    // jQuery("#slider2").slider({
+    //   width: 438, // width
+    //   height: 40, // height
+    //   sliderBg: "rgb(134, 134, 131)", // 滑块背景颜色
+    //   color: "#fff", // 文字颜色
+    //   fontSize: 14, // 文字大小
+    //   bgColor: "#33CC00", // 背景颜色
+    //   textMsg: "按住滑块，拖拽验证", // 提示文字
+    //   successMsg: "验证通过了哦", // 验证成功提示文字
+    //   successColor: "red", // 滑块验证成功提示文字颜色
+    //   time: 400, // 返回时间
+    //   callback: function(result) { // 回调函数，true(成功),false(失败)
+    //     jQuery("#result2").text(result);
+    //   }
+    // });
+    
   }
+
+  
 
   onSubmit() {
 
@@ -69,6 +105,8 @@ export class LoginComponent implements OnInit {
     }
 
   }
+
+ 
 }
 
 // export class User {
@@ -96,7 +134,7 @@ export class LoginComponent implements OnInit {
 // emailAsyncValidator(control:FormControl):any{
 //   // alert("1");
 //   // Rx.Observable.sub()
-//   this.mockService$.getUsers().subscribe(
+//   this.mockServicejQuery.getUsers().subscribe(
 //      res => {this.users = res});
 //     let tempUsers = this.users.filter(res => res.email===control.get('email').value);
 //     if(tempUsers!=null){
