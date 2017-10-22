@@ -1,8 +1,8 @@
 .sticky-header .header-section {
   /*position: fixed;*/
   top: 0;
-  left: 240px;
-  width: 100%;
+  left: 14%;
+  width: 86%;
   z-index: 100;
   height: 5%;
   background-color: #fff;
@@ -165,7 +165,7 @@
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
   content: "";
-  display: inline-block;
+  /* display: inline-block; */
   right: 10px;
   position: absolute;
   top: -6px;
@@ -475,9 +475,6 @@ a {
   font-weight: bold;
 }
 
-#Lang a:hover{
-
-}
 
 
 
@@ -1118,7 +1115,6 @@ ul#player{
   display: none;
 }
 
-
 @media screen and (max-width: 1600px) {
   #datediv,#clockdiv{display: none;}
   #nt-title-container{width:450px}
@@ -1162,3 +1158,24 @@ ul#player{
    display: none;
  }
 }
+
+@media screen and (max-width: 450px) {
+  #fullscreen{
+    display: none;
+  }
+  #task-div,#notice-div{
+    left: 0px;
+  }
+ }
+
+ @media screen and (max-width: 400px) {
+  #lockscreen{
+    display: none;
+  }
+ }
+
+ @media screen and (max-width: 350px) {
+  #username{
+    display: none;
+  }
+ }

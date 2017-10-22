@@ -11,7 +11,6 @@ export class MockService {
   constructor(private http:Http,@Inject('BASE_CONFIG')private config) {}
   //获取所有用户信息（users表）
   getUsers(obj):Observable<User[]>{
-    // alert("22222"); 
     const uri = `${this.config.json_server_uri}/users?email=`+obj;
     return this.http.get(uri).map(res => res.json() as User[]);
   }

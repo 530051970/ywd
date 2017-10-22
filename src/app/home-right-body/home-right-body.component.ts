@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {CommonService} from '../service/common.service';
 declare const jQuery:any;
-declare const moment:any;
-declare const calendars:any;
-declare const clndr:any;
+// declare const moment:any;
+// declare const calendars:any;
+// declare const clndr:any;
 
 
 @Component({
@@ -45,6 +45,7 @@ export class HomeRightBodyComponent implements OnInit {
   constructor(private commonService:CommonService) { }
 
   ngOnInit() { 
+    // 业绩走势
     jQuery.plot(jQuery("#visitors-chart #visitors-container"), [{
         data: this.data7_1,
         label: "本月",
@@ -104,13 +105,41 @@ export class HomeRightBodyComponent implements OnInit {
                 position: "right" /* left or right */
             }]
         }
-    );    
-    }
-
-    ngOnChanges() {
-        //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
-        //Add '${implements OnChanges}' to the class.
-        alert("size");
+    );
+    // 收入构成饼状图
+    var data = [{
+        label: "基本工资",
+        data: 4000
+    }, {
+        label: "绩效工资",
+        data: 8500
+    }, {
+        label: "其他",
+        data: 2080
+    }];
+    var options = {
+        series: {
+            pie: {
+                show: true,
+                innerRadius: 0.5,
+                // show: true
+            }
+        },
+        legend: {
+            show: true
+        },
+        grid: {
+            hoverable: true,
+            clickable: true
+        },
+        colors: ["#869cb3", "#6dc5a3", "#778a9f"],
+        tooltip: true,
+        tooltipOpts: {
+            defaultTheme: false
+        }
+    };
+    jQuery.plot(jQuery("#pie-chart-donut #pie-donutContainer"), data, options);
+    
     }
 
     ngAfterViewInit() {
@@ -121,10 +150,11 @@ export class HomeRightBodyComponent implements OnInit {
         if(this.fullscreen == "1"){
             jQuery("#middlerow").css("height", "47%");
             jQuery(".adv-table").css("height", "350px"); 
-            jQuery("#tablesec").css("height", "45%");        
+            jQuery("#tablesec").css("height", "45%");   
+            jQuery(".main-content").css("height", "100%");          
             
           }else{
-            jQuery("#middlerow").css("height", "53%"); 
+            jQuery("#middlerow").css("height", "51%"); 
             jQuery(".adv-table").css("height", "240px");
             jQuery("#tablesec").css("height", "36%");       
           }}
@@ -133,33 +163,42 @@ export class HomeRightBodyComponent implements OnInit {
 
 
 
-  onClickHeart(obj1,obj2,obj3){
+  onClickHeart(obj1,obj2,obj3,obj4){
     jQuery(obj1).show();
-    jQuery(obj2).add(obj3).hide();
+    jQuery(obj2).add(obj3).add(obj4).hide();
     if(!jQuery(obj1).hasClass("active")){
       jQuery(obj1).addClass("active");      
     }
-    jQuery(obj2).add(obj3).removeClass("active");
+    jQuery(obj2).add(obj3).add(obj4).removeClass("active");
 
   }
 
-  onClickRetro(obj1,obj2,obj3){
+  onClickRetro(obj1,obj2,obj3,obj4){
     jQuery(obj2).show();   
-    jQuery(obj1).add(obj3).hide();
+    jQuery(obj1).add(obj3).add(obj4).hide();
     if(!jQuery(obj2).hasClass("active")){
       jQuery(obj2).addClass("active");      
     }
-    jQuery(obj1).add(obj3).removeClass("active");
+    jQuery(obj1).add(obj3).add(obj4).removeClass("active");
 
   }
 
-  onClickTodo(obj1,obj2,obj3){
+  onClickTodo(obj1,obj2,obj3,obj4){
     jQuery(obj3).show();
-    jQuery(obj1).add(obj2).hide();
+    jQuery(obj1).add(obj2).add(obj4).hide();
     if(!jQuery(obj3).hasClass("active")){
       jQuery(obj3).addClass("active");      
     }
-    jQuery(obj1).add(obj2).removeClass("active");
+    jQuery(obj1).add(obj2).add(obj4).removeClass("active");
+  }
+
+  onClickSaying(obj1,obj2,obj3,obj4){
+    jQuery(obj4).show();
+    jQuery(obj1).add(obj2).add(obj3).hide();
+    if(!jQuery(obj4).hasClass("active")){
+      jQuery(obj4).addClass("active");      
+    }
+    jQuery(obj1).add(obj2).add(obj3).removeClass("active");
 
   }
 

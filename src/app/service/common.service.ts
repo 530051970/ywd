@@ -87,7 +87,6 @@ export class CommonService  {
 
   // 获取当前语言
   getCurrentLang(): any {
-    // alert(this.translateService.currentLang);
     return this.translateService.currentLang;
   }
 

@@ -8,24 +8,7 @@ import {
 } from "@angular/forms";
 import {Observable} from "rxjs/Observable";
 import {MockService} from '../service/mock.service';
-declare global {
-  interface Document {
-      msExitFullscreen: any;
-      mozCancelFullScreen: any;
-      requestFullscreen:any;
-      webkitRequestFullscreen:any;
-      webkitRequestFullScreen:any;
-      mozRequestFullScreen:any;
-      msRequestFullscreen:any;
-      
-  }
-  interface HTMLElement {
-      msRequestFullscreen: any;
-      mozRequestFullScreen: any;
-  }
-}
-// declare const mozRequestFullScreen;
-// declare const jQuery:any;
+import {exitFullScreen} from '../utils/common.utils';
 
 @Component({
   selector: 'app-home-right-head',
@@ -60,37 +43,6 @@ export class HomeRightHeadComponent implements OnInit {
     Rx.Observable.interval(1000).map(() => { return new Date() }).subscribe(
       t => { this.showDate = t; }
     );
-
-  //   //打开全屏方法
-  //   function openFullscreen(element) {
-  //     if (element.requestFullscreen) {
-  //         element.requestFullscreen();
-  //     } else if (element.mozRequestFullScreen) {
-  //         element.mozRequestFullScreen();
-  //     } else if (element.msRequestFullscreen) {
-  //         element.msRequestFullscreen();
-  //     } else if (element.webkitRequestFullscreen) {
-  //         element.webkitRequestFullScreen();
-  //     }
-  // }
-
-  // //退出全屏方法
-  // function exitFullScreen() {
-  //     if (document.exitFullscreen) {
-  //         document.exitFullscreen();
-  //     } else if (document.mozCancelFullScreen) {
-  //         document.mozCancelFullScreen();
-  //     } else if (document.msExitFullscreen) {
-  //         document.msExitFullscreen();
-  //     } else if (document.webkitCancelFullScreen) {
-  //         document.webkitCancelFullScreen();
-
-  //     } else if (document.webkitExitFullscreen) {
-  //         document.webkitExitFullscreen();
-  //     }
-  // }
-
-
   }
 
   ngAfterContentInit() {
@@ -100,6 +52,7 @@ export class HomeRightHeadComponent implements OnInit {
   // 点击三明治切换按钮
   onClickToggleBtn() {
     const body = jQuery('body');
+    const rightHeader =jQuery('#header');
     const bodyposition = body.css('position');
     const mainContent = jQuery('.main-content');
     const stickyLeftSide = jQuery('.sticky-left-side');
@@ -107,11 +60,14 @@ export class HomeRightHeadComponent implements OnInit {
     const logoIcon = jQuery('.text-center');
     if (bodyposition !== 'relative') {
       if (!body.hasClass('left-side-collapsed')) {
-        // alert("11111111");
+
         this.commonService.toggleButton.emit("close");
         body.addClass('left-side-collapsed');
         // mainContent.attr('style', 'margin-left:52px');
-        // stickyLeftSide.attr('style', 'width:52px');
+        // mainContent.attr('style', 'width:97%;float:left');
+        stickyLeftSide.attr('style', 'width:3%;float:left;position:fixed;z-index:999');
+        rightHeader.attr('style', 'width:97%;  left: 3%;position:fixed;');
+        mainContent.attr('style','width:97%;margin-top:51px');
         logo.hide();
         logoIcon.removeClass('logo-icon');
         logoIcon.show();
@@ -125,9 +81,10 @@ export class HomeRightHeadComponent implements OnInit {
         jQuery(this).addClass('menu-collapsed');
       } else {
         this.commonService.toggleButton.emit("open");
-        // mainContent.attr('style', 'margin-left:240px');
-        // stickyLeftSide.attr('style', 'width:240px');
         logoIcon.addClass('logo-icon');
+        stickyLeftSide.attr('style', 'width:14%;float:left;position:fixed;z-index:999');
+        rightHeader.attr('style', 'width:86%;left:14%;position:fixed;');
+        mainContent.attr('style','width:86%;margin-top:51px;margin-left: 14%;');
         logo.show();
         logoIcon.hide();
         // 对于每一个一级菜单，如果是选中状态，放开的时候显示子菜单。
@@ -164,6 +121,7 @@ export class HomeRightHeadComponent implements OnInit {
           marginTop: -n
         }, 500, function () {
           $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+          // $(this).css({ marginTop: "0px" }).find("li:second").attr('style','display:none');
         })
       }, 3000)
     } else {
@@ -221,7 +179,6 @@ export class HomeRightHeadComponent implements OnInit {
    }
 
    onClickLock(obj){
-    //  alert("PPPPPP");
     jQuery(".lock-screen").add("#sky-lock").add("#cloud-lock").show();
     obj.value="";
    }
@@ -245,31 +202,10 @@ export class HomeRightHeadComponent implements OnInit {
       if(jQuery(obj).attr('class') == "fa fa-expand"){
         jQuery(obj).attr('class',"fa fa-compress");
         this.commonService.fullScreen.emit("1");
-      //   var element=document.body;
-      //   if (element.requestFullscreen) {
-      //     element.requestFullscreen();
-      // } else if (element.mozRequestFullScreen) {
-      //     element.mozRequestFullScreen();
-      // } else if (element.msRequestFullscreen) {
-      //     element.msRequestFullscreen();
-      // } else if (element.webkitRequestFullscreen) {
-      //     element.webkitRequestFullScreen();
-      // }
       } else {
         this.commonService.fullScreen.emit("0");
         jQuery(obj).attr('class',"fa fa-expand");
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-      } else if (document.mozCancelFullScreen) {
-          document.mozCancelFullScreen();
-      } else if (document.msExitFullscreen) {
-          document.msExitFullscreen();
-      } else if (document.webkitCancelFullScreen) {
-          document.webkitCancelFullScreen();
-
-      } else if (document.webkitExitFullscreen) {
-          document.webkitExitFullscreen();
-      }
+        exitFullScreen(document);
       }
    }
 

@@ -17,15 +17,15 @@ $(function () {
   //   zindex: '0'
   // });
   //
-  $(".left-side").add(".main-content").add(".sticky-header").add("html").add("body").niceScroll({
-    styler: "fb",
-    cursorcolor: "#65cea7",
-    cursorwidth: '3',
-    cursorborderradius: '0px',
-    background: '#424f63',
-    spacebarenabled: false,
-    cursorborder: '0'
-  });
+  // $(".left-side").add(".main-content").add(".sticky-header").add("html").add("body").niceScroll({
+  //   styler: "fb",
+  //   cursorcolor: "#65cea7",
+  //   cursorwidth: '3',
+  //   cursorborderradius: '0px',
+  //   background: '#424f63',
+  //   spacebarenabled: false,
+  //   cursorborder: '0'
+  // });
   //
   // $('body').niceScroll({
   //   styler: "fb",
@@ -39,21 +39,21 @@ $(function () {
 
  
   
-  $('.sticky-left-side').add('.left-side-inner').niceScroll({
-    styler: "fb",
-    cursorcolor: "#65cea7",
-    cursorwidth: '3',
-    cursorborderradius: '0px',
-    background: '#424f63',
-    spacebarenabled: false,
-    cursorborder: '0'
-  });
+  // $('.sticky-left-side').add('.left-side-inner').niceScroll({
+  //   styler: "fb",
+  //   cursorcolor: "#65cea7",
+  //   cursorwidth: '3',
+  //   cursorborderradius: '0px',
+  //   background: '#424f63',
+  //   spacebarenabled: false,
+  //   cursorborder: '0'
+  // });
 
-  $(".left-side").getNiceScroll();
-  if ($('body').hasClass('left-side-collapsed')) {
-    // if ($('#leftDiv').hasClass('left-side-collapsed')) {
-    $(".left-side").getNiceScroll().hide();
-  }
+  // $(".left-side").getNiceScroll();
+  // if ($('body').hasClass('left-side-collapsed')) {
+  //   // if ($('#leftDiv').hasClass('left-side-collapsed')) {
+  //   $(".left-side").getNiceScroll().hide();
+  // }
 
   // Toggle Left Menu
   // $(window).resize(function() { alert("res");}); 
@@ -250,10 +250,10 @@ $(function () {
   // head.js("../assets/js/clock/jquery.clock.js", function() {
 
     //clock
-    $('#digital-clock').clock({
-      offset: '+5',
-      type: 'digital'
-    });
+    // $('#digital-clock').clock({
+    //   offset: '+5',
+    //   type: 'digital'
+    // });
 
   // var monthNames = ["January", "February", "March", "April", "May", "June",
   //   "July", "August", "September", "October", "November", "December"

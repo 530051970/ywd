@@ -440,7 +440,7 @@ h5.left-nav-title {
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     content: "";
-    display: inline-block;
+    /* display: inline-block; */
     right: 10px;
     position: absolute;
     top: -6px;
@@ -635,9 +635,10 @@ h5.left-nav-title {
 .sticky-header .header-section {
     /*position: fixed;*/
     top: 0;
-    left: 240px;
-    width: 100%;
+    left: 14%;
+    width: 86%;
     z-index: 100;
+    height: 5%;
 }
 
 .sticky-header .main-content {
@@ -1671,7 +1672,7 @@ ul.user-states li {
 
 .custom-tab ul > li > a {
     display: block;
-    padding: 20px 15px !important;
+    padding: 20px 15px ;
 }
 
 .custom-tab {

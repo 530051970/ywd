@@ -8,3 +8,4 @@ interface NodeModule {
 }
 
 declare function getNiceScroll();
+declare function Quill();

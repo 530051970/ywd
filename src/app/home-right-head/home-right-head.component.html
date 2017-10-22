@@ -1,4 +1,4 @@
-<div class="sticky-header header-section" id="header">
+<div class="sticky-header header-section" id="header" style="position:fixed">
 
   <!--toggle button start-->
   <a class="toggle-btn" (click)="onClickToggleBtn()" id="large"><i class="fa fa-bars"></i></a>
@@ -38,8 +38,8 @@
       </a></li></ul></div>
     <ul id="nt-title" #msgList class="remodal-bg">
       <li style="height:20px;"><a href="#" (click)='onClickTitle()' (hover)='onHoverTitle()'>测试用的1，暂时时没有消时没有消时没有消时没有消时没有消时没有消时没有消没有消息！</a></li>
-      <li style="height:20px;"><a href="#" (click)='onClickTitle()' (hover)='onHoverTitle()'>测试用的2，暂时没有消时没有消时没有消时没有消时没有消时没有消时没有消息！</a></li>
-      <li style="height:20px;"><a href="#" (click)='onClickTitle()' (hover)='onHoverTitle()'>测试用的3，暂时没有消息！</a></li>
+      <!-- <li style="height:20px;"><a href="#" (click)='onClickTitle()' (hover)='onHoverTitle()'>测试用的2，暂时没有消时没有消时没有消时没有消时没有消时没有消时没有消息！</a></li> -->
+      <!-- <li style="height:20px;"><a href="#" (click)='onClickTitle()' (hover)='onHoverTitle()'>测试用的3，暂时没有消息！</a></li> -->
     </ul>
   </div>
   <!--notification menu start -->
@@ -54,13 +54,13 @@
             </a>
           </li>
         <li>
-            <a class="btn btn-default dropdown-toggle info-number" (click)='onClickExpend(exp)'>
+            <a class="btn btn-default dropdown-toggle info-number" (click)='onClickExpend(exp)' id="fullscreen">
               <i class="fa fa-expand" #exp></i>
               <!--<span class="badge">4</span>-->
             </a>
           </li>
         <li>
-            <a class="btn btn-default dropdown-toggle info-number" (click)='onClickLock(pass)'>
+            <a class="btn btn-default dropdown-toggle info-number" (click)='onClickLock(pass)' id="lockscreen">
               <i class="fa fa-lock"></i>
               <!--<span class="badge">4</span>-->
             </a>
@@ -70,7 +70,7 @@
           <i class="fa fa-tasks"></i>
           <span class="badge">8</span>
         </a>
-        <div class="dropdown-menu dropdown-menu-head pull-right">
+        <div class="dropdown-menu dropdown-menu-head pull-right" id="task-div">
           <h5 class="title">你有 8 个未完成的任务</h5>
           <ul class="dropdown-list user-list">
             <li class="new">
@@ -147,7 +147,7 @@
           <i class="fa fa-bell-o"></i>
           <span class="badge">4</span>
         </a>
-        <div class="dropdown-menu dropdown-menu-head pull-right">
+        <div class="dropdown-menu dropdown-menu-head pull-right"  id="notice-div">
           <h5 class="title">通知</h5>
           <ul class="dropdown-list normal-list">
             <li class="new">
@@ -184,19 +184,19 @@
       </li>
       
       <li>
-        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+        <a [routerLink]="['./telbook']" class="btn btn-default dropdown-toggle info-number" >
           <i class="fa fa-address-book-o"></i>
           <!--<span class="badge">4</span>-->
         </a>
       </li>
       <li>
         <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-          <img src="../../assets/img/photos/user-avatar.png" alt=""/>
-          李 大雷
+          <img src="../../assets/img/photos/user1.png" alt=""/>
+          <span id="username">李 大雷</span>
           <span class="caret"></span>
         </a>
         <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
-          <li><a href="#"><i class="fa fa-user"></i> 个人中心</a></li>
+          <li><a [routerLink]="['./eprofile']"><i class="fa fa-user"></i> 个人中心</a></li>
           <li><a href="#"><i class="fa fa-cog"></i> 用户设置</a></li>
           <li><a href="#"><i class="fa fa-sign-out"></i> 退出系统</a></li>
         </ul>

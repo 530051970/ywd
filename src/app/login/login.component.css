@@ -2024,6 +2024,30 @@ a.forgot-pass {
   color: #ffffff !important;
 }
 
+#mobile-welcome {
+  display: none
+}
+
+#pc-welcome{
+  display: block
+}
+
+#pc{
+  display: block;
+}
+#mobile{
+  display: none;
+}
+
+#tip1,#tip2,#tip3,#tip4,#tip5,#tip6 {
+  font-weight:bold;
+  position:absolute;
+  top:5%;
+  left: 50%;
+  z-index:9999;
+  width: 600px;
+}
+
 /* 
 .btns,
 .slider,
@@ -2031,3 +2055,49 @@ a.forgot-pass {
   margin-bottom: 40px;
 }  */
 
+@media screen and (max-width: 900px) {
+  .auth-block {
+    width:80%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #username-label,#pass-label {
+    display: none;
+  }
+  #mobile-welcome {
+    display: block;
+  }
+  
+  #pc-welcome{
+    display: none;
+  }
+
+  #pc{
+    display: none;
+  }
+  #mobile{
+    display: block;
+    width: 105%;
+  }
+
+  #tip1,#tip2,#tip3,#tip4,#tip5,#tip6 {
+    font-weight:bold;
+    position:absolute;
+    top:5%;
+    left: 50%;
+    z-index:9999;
+    width: 80%;
+  }
+  
+
+ }
+
+ 
+@media screen and (max-width: 400px) {
+  /* .auth-block {
+    font-size: 14px;
+  } */
+  .auth-link,.forgot-pass {
+    font-size: 12px;
+  }
+  }

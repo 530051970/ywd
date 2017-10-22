@@ -1,5 +1,5 @@
-<div class="left-side sticky-left-side" id="leftDiv" style="width:14%;height:100%;float:left">
-  <!--logo and iconic logo start-->
+<div class="left-side sticky-left-side" id="leftDiv" style="height:100%;float:left;position:fixed">
+
   <div class="logo">
     <a href="index.html"><img src="../../assets/img/logo.png" alt=""></a>
   </div>
@@ -7,11 +7,9 @@
   <div class="logo-icon text-center" style="padding-top:10px">
     <a href="index.html"><img src="../../assets/img/logo_icon.png" alt=""></a>
   </div>
-  <!--logo and iconic logo end-->
 
   <div class="left-side-inner">
 
-    <!-- visible to small devices only -->
     <div class="visible-xs hidden-sm hidden-md hidden-lg">
       <div class="media logged-user">
         <img alt="" src="../../assets/img/photos/user-avatar.png" class="media-object">
@@ -29,24 +27,21 @@
       </ul>
     </div>
 
-    <!--sidebar nav start-->
     <ul class="nav nav-pills nav-stacked custom-nav">
       <!-- <li class="menu-list nav-active"><a href="index.html" (click)='onMenuListClick(listDash)' #listDash><i class="fa fa-home"></i> <span>{{'dashboard' | translate}}</span></a> -->
-        <li><a href="index.html"><i class="fa fa-home"></i> <span>{{'dashboard' | translate}}</span></a>
+        <li><a [routerLink]="['./']" ><i class="fa fa-home"></i> <span>{{'dashboard' | translate}}</span></a>
         <!-- <ul class="sub-menu-list">
           <li><a href="index_alt.html"> Dashboard 1</a></li>
           <li class="active"><a href="index.html"> Dashboard 2</a></li>
         </ul> -->
       </li>
 
-      <li><a href=""  (click)='onMenuListClick(listLay)' #listLay><i class="fa fa-laptop"></i> <span>{{'talentCenter'| translate}}</span></a>
-        <!-- <ul class="sub-menu-list">
-          <li><a href="blank_page.html"> Blank Page</a></li>
-          <li><a href="boxed_view.html"> Boxed Page</a></li>
-          <li><a href="leftmenu_collapsed_view.html"> Sidebar Collapsed</a></li>
-          <li><a href="horizontal_menu.html"> Horizontal Menu</a></li>
-
-        </ul> -->
+      <li class="menu-list"><a href=""  (click)='onMenuListClick(listLay)' #listLay><i class="fa fa-laptop"></i> <span>{{'talentCenter'| translate}}</span></a>
+        <ul class="sub-menu-list">
+          <li><a [routerLink]="['./talentlist']"> {{'talentList'| translate}}</a></li>
+          <li><a [routerLink]="['./talentadd']"> {{'talentAdd'| translate}}</a></li>
+          <li><a [routerLink]="['./talentbatch']"> {{'talentBatch'| translate}}</a></li>
+        </ul>
       </li>
       <li class="menu-list"><a href="" (click)='onMenuListClick(listUI)' #listUI><i class="fa fa-book"></i> <span>{{'CRM'| translate}}</span></a>
         <ul class="sub-menu-list">
@@ -81,7 +76,7 @@
 
       <li><a href="fontawesome.html"><i class="fa fa-file-text-o"></i> <span>{{'template files'| translate}}</span></a></li>
       <li><a href="fontawesome.html"><i class="fa fa-list-alt"></i> <span>{{'my schechudel'| translate}}</span></a></li>
-      <li><a href="fontawesome.html"><i class="fa fa-envelope"></i> <span>{{'email'| translate}}</span></a></li>
+      <li ><a href="fontawesome.html"><i class="fa fa-envelope"></i> <span>{{'email'| translate}}</span>&nbsp;&nbsp;<span class="badge">42</span></a></li>
       <li><a href="fontawesome.html"><i class="fa fa-wrench"></i> <span>{{'generalsettings'| translate}}</span></a></li>
       <li><a href="fontawesome.html"><i class="fa fa-sign-out"></i> <span>{{'logout'| translate}}</span></a></li>
 

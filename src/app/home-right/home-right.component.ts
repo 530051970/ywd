@@ -29,7 +29,4 @@ export class HomeRightComponent implements OnInit {
             );
           }
 
-          onResize(){
-            // alert("OLOLOL");
-          }
 }

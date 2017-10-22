@@ -7,7 +7,7 @@
   background-image:url("../../assets/img/sky.png"),url('../../assets/img/cloud.png');
   background-repeat: no-repeat, no-repeat;
   background-position-y:top, bottom;
-  width: 240px;
+  width:14%;
   position: absolute;
   top: 0;
   left: 0;
@@ -371,6 +371,14 @@ h5.left-nav-title {
   color: #fff;
   text-decoration: none;
 }
+
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: #2A323F;
+}
+
 
 @media screen and (max-width: 1180px) {
   #leftDiv{

@@ -25,6 +25,15 @@ import { FooterComponent } from './footer/footer.component';
 import { User} from './model/user.model';
 import './utils/debug.util';
 import { ChatComponent } from './chat/chat.component';
+import { TelbookComponent } from './telbook/telbook.component';
+import { ControlPanelComponent } from './control-panel/control-panel.component';
+import { ProfileViewComponent } from './profile-view/profile-view.component';
+import { ProfileEditComponent } from './profile-edit/profile-edit.component';
+import { BlogListComponent } from './blog-list/blog-list.component';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
+import { TalentListComponent } from './talent-list/talent-list.component';
+import { TalentAddComponent } from './talent-add/talent-add.component';
+import { TalentBatchComponent } from './talent-batch/talent-batch.component';
 
 export function createTranslateHttpLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -43,7 +52,16 @@ export function createTranslateHttpLoader(http: HttpClient) {
     HomeRightBodyComponent,
     DashboardComponent,
     FooterComponent,
-    ChatComponent
+    ChatComponent,
+    TelbookComponent,
+    ControlPanelComponent,
+    ProfileViewComponent,
+    ProfileEditComponent,
+    BlogListComponent,
+    BlogDetailComponent,
+    TalentListComponent,
+    TalentAddComponent,
+    TalentBatchComponent
   ],
   imports: [
     HttpModule,

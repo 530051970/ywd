@@ -291,6 +291,7 @@ div.kpicard {
   height: 30px;
   }
 
+
   .todo-title {
     width: 70%;          
     overflow:hidden;text-overflow:ellipsis; -o-text-overflow:ellipsis;padding-bottom: 10px;
@@ -299,6 +300,10 @@ div.kpicard {
     float:left;
   }
 
+  .saying{
+    padding-top: 20px;font-size:16px;background-color:#313946;color:antiquewhite;height:19%;text-align:center;overflow: hidden;
+    white-space: nowrap;text-overflow: ellipsis;
+  }
   #interview-success-number,#leavejob {
     padding-right: 5px;
     padding-left: 5px;
@@ -322,7 +327,7 @@ div.row.states-info{
 }
 
 #right-body {
-  height:95%;position: relative;width:100%;z-index:0; padding: 15px 15px 0 15px;
+  height:100%;position: relative;width:100%;z-index:0; padding: 15px 15px 0 15px;
 }
 
 #large-table {
@@ -330,6 +335,10 @@ div.row.states-info{
 }
 
 #small-table {
+  display: none;
+}
+
+#mini-table{
   display: none;
 }
 
@@ -424,7 +433,7 @@ div.row.states-info{
   @media screen and (max-width: 782px) {
     div.row.states-info{
       height: 46%;
-    }
+     }
     #right-body {
       padding-top:7%
     }
@@ -434,12 +443,35 @@ div.row.states-info{
   
   }
   @media screen and (max-width: 725px) {
-    #large-table {
+    #large-table,#small-table {
       display: none
     }
-    #small-table {
+    #mini-table {
       display: block
     }
    }
+
+   
+@media screen and (max-width: 500px) {
+  div.row.states-info{
+    padding-top: 30px;
+  }
+  #large-table,#small-table {
+    display: none
+  }
+  #mini-table {
+    display: block
+  }
+  #middlerow{
+    height: 100%
+  }
+
+ }
+
+ @media screen and (max-width: 350px) {
+  #firsttitle{
+    padding-left: 0px;
+  }
+ }
 
  
