@@ -2,6 +2,7 @@
 <div id="login-div">
   <main class="auth-main">
     <div class="auth-block">
+      <!-- <img src="../../assets/img/login_img.png" style="float:left"> -->
       <h1 [innerHtml]="'login-welcome' | translate " id="pc-welcome"></h1>
       <h1 [innerHtml]="'login-welcome-mobile' | translate " id="mobile-welcome"></h1>
       <form [formGroup]='formModel' (submit)="onSubmit()">
@@ -25,8 +26,8 @@
           </div>
         </div>
       </div>
-      <div class="auth-link" id="pc">{{'login-publish' | translate}}&nbsp;<a href="reg.html" >{{'login-here' | translate}}</a><span [innerHtml]="'login-click' | translate "></span></div>
-      <div class="auth-link" id="mobile">{{'login-publish-mobile' | translate}}&nbsp;<a href="reg.html" >{{'login-here-mobile' | translate}}</a><span [innerHtml]="'login-click-mobile' | translate "></span></div>  
+      <div class="auth-link" id="pc">{{'login-publish' | translate}}&nbsp;<a href="http://www.e-worlder.com" >{{'login-here' | translate}}</a><span [innerHtml]="'login-click' | translate "></span></div>
+      <div class="auth-link" id="mobile">{{'login-publish-mobile' | translate}}&nbsp;<a href="http://www.e-worlder.com" >{{'login-here-mobile' | translate}}</a><span [innerHtml]="'login-click-mobile' | translate "></span></div>  
     </form>
     </div>
   </main>

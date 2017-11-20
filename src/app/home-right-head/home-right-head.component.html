@@ -2,15 +2,15 @@
 
   <!--toggle button start-->
   <a class="toggle-btn" (click)="onClickToggleBtn()" id="large"><i class="fa fa-bars"></i></a>
-  <a class="toggle-btn"  id="small"><i class="fa fa-bars"></i></a>
+  <a class="toggle-btn" id="small"><i class="fa fa-bars"></i></a>
   <!--toggle button end-->
   <!--<a class="toggle-btn"><i class="fa fa-bars"></i></a>-->
 
   <!--search start-->
   <!--<form class="searchform" action="index.html" method="post">-->
-    <!--&lt;!&ndash;<div style="width:100px;height: 41px;float:left">&ndash;&gt;-->
-    <!--<input type="text" class="form-control" name="keyword" placeholder="Search here..." style="margin-left: 30px;"/>-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
+  <!--&lt;!&ndash;<div style="width:100px;height: 41px;float:left">&ndash;&gt;-->
+  <!--<input type="text" class="form-control" name="keyword" placeholder="Search here..." style="margin-left: 30px;"/>-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
   <!--</form>-->
   <!--search end-->
   <div id="nt-title-container" class="navbar-left running-text" style="padding-top: 7px;">
@@ -18,24 +18,27 @@
       <div class="date-top" style="width:121px;float:left;margin-left:10px;height:25px;overflow:hidden;">
         <a (click)='onClickLang()' class="fa fa-language" style="margin-top:5px;float:left;color:white"></a>
         <div id="Lang"><a (click)='onClickLang()' id='langLink'>中文</a></div>
-        <div class="fa fa-angle-down" style="float:left;margin-top: 5px;"></div>        
+        <div class="fa fa-angle-down" style="float:left;margin-top: 5px;"></div>
       </div>
-    <!-- </div> -->
-    <div class="date-top" style="margin-left: 10px;width:216px;" id="datediv">
-      <li class="fa fa-calendar-o" style="margin-right:5px"></li>
-      <li id="Date"></li>
-    </div>
+      <!-- </div> -->
+      <div class="date-top" style="margin-left: 10px;width:216px;" id="datediv">
+        <li class="fa fa-calendar-o" style="margin-right:5px"></li>
+        <li id="Date"></li>
+      </div>
     </div>
     <div style="float:left" ID="clockdiv">
-    <ul id="digital-clock" class="digital" style="margin-left: 0px;padding-left: 15px;">
-      <li class="fa fa-clock-o" style="margin-right:5px"></li>
-      <li >{{showDate| date:'HH:mm:ss'}}</li>
-    </ul>
+      <ul id="digital-clock" class="digital" style="margin-left: 0px;padding-left: 15px;">
+        <li class="fa fa-clock-o" style="margin-right:5px"></li>
+        <li>{{showDate| date:'HH:mm:ss'}}</li>
+      </ul>
     </div>
-    <div style="float:left"><ul id="player">
-      <li><a id="player" style="color:#fff" (click)='onClickPlayer(msgList,play,stop)'><i class="fa fa-play-circle" #play></i>
+    <div style="float:left">
+      <ul id="player">
+        <li><a id="player" style="color:#fff" (click)='onClickPlayer(msgList,play,stop)'><i class="fa fa-play-circle" #play></i>
         <i class="fa fa-pause-circle" style="display:none" #stop></i>
-      </a></li></ul></div>
+      </a></li>
+      </ul>
+    </div>
     <ul id="nt-title" #msgList class="remodal-bg">
       <li style="height:20px;"><a href="#" (click)='onClickTitle()' (hover)='onHoverTitle()'>测试用的1，暂时时没有消时没有消时没有消时没有消时没有消时没有消时没有消没有消息！</a></li>
       <!-- <li style="height:20px;"><a href="#" (click)='onClickTitle()' (hover)='onHoverTitle()'>测试用的2，暂时没有消时没有消时没有消时没有消时没有消时没有消时没有消息！</a></li> -->
@@ -43,28 +46,28 @@
     </ul>
   </div>
   <!--notification menu start -->
-  
+
   <div class="menu-right" style="margin-right: 0px;">
     <ul class="notification-menu">
-        
-        <li (mouseover)="onMoveinSearch(search)" (mouseout)="onMoveOutSearch(search)" id="search-home">        
-            <a class="btn btn-default dropdown-toggle info-number" (click)='onClickSearch(search)' style="border-radius:30px 0 0 30px">
+
+      <li (mouseover)="onMoveinSearch(search)" (mouseout)="onMoveOutSearch(search)" id="search-home">
+        <a class="btn btn-default dropdown-toggle info-number" (click)='onClickSearch(search)' style="border-radius:30px 0 0 30px">
                 <input type="text" name="text"  #search class="search-input"  style="border-radius:30px 0 0 30px" placeholder="请输入查询关键字"/><i class="fa fa-search" ></i>
               <!--<span class="badge">4</span>-->
             </a>
-          </li>
-        <li>
-            <a class="btn btn-default dropdown-toggle info-number" (click)='onClickExpend(exp)' id="fullscreen">
+      </li>
+      <li>
+        <a class="btn btn-default dropdown-toggle info-number" (click)='onClickExpend(exp)' id="fullscreen">
               <i class="fa fa-expand" #exp></i>
               <!--<span class="badge">4</span>-->
             </a>
-          </li>
-        <li>
-            <a class="btn btn-default dropdown-toggle info-number" (click)='onClickLock(pass)' id="lockscreen">
+      </li>
+      <li>
+        <a class="btn btn-default dropdown-toggle info-number" (click)='onClickLock(pass)' id="lockscreen">
               <i class="fa fa-lock"></i>
               <!--<span class="badge">4</span>-->
             </a>
-          </li>
+      </li>
       <li>
         <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
           <i class="fa fa-tasks"></i>
@@ -79,8 +82,7 @@
                   <div>数据库更新</div>
                 </div>
                 <div class="progress progress-striped">
-                  <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar"
-                       class="progress-bar progress-bar-warning">
+                  <div style="width: 40%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
                     <span class="">40%</span>
                   </div>
                 </div>
@@ -92,8 +94,7 @@
                   <div>财务报表的记录</div>
                 </div>
                 <div class="progress progress-striped">
-                  <div style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" role="progressbar"
-                       class="progress-bar progress-bar-success">
+                  <div style="width: 90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="90" role="progressbar" class="progress-bar progress-bar-success">
                     <span class="">90%</span>
                   </div>
                 </div>
@@ -105,8 +106,7 @@
                   <div>网站系统开发</div>
                 </div>
                 <div class="progress progress-striped">
-                  <div style="width: 66%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="66" role="progressbar"
-                       class="progress-bar progress-bar-info">
+                  <div style="width: 66%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="66" role="progressbar" class="progress-bar progress-bar-info">
                     <span class="">66% </span>
                   </div>
                 </div>
@@ -118,8 +118,7 @@
                   <div>手机端业务</div>
                 </div>
                 <div class="progress progress-striped">
-                  <div style="width: 33%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="33" role="progressbar"
-                       class="progress-bar progress-bar-danger">
+                  <div style="width: 33%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="33" role="progressbar" class="progress-bar progress-bar-danger">
                     <span class="">33% </span>
                   </div>
                 </div>
@@ -131,8 +130,7 @@
                   <div>对外业务开展</div>
                 </div>
                 <div class="progress progress-striped">
-                  <div style="width: 80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar"
-                       class="progress-bar">
+                  <div style="width: 80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar">
                     <span class="">80% </span>
                   </div>
                 </div>
@@ -147,7 +145,7 @@
           <i class="fa fa-bell-o"></i>
           <span class="badge">4</span>
         </a>
-        <div class="dropdown-menu dropdown-menu-head pull-right"  id="notice-div">
+        <div class="dropdown-menu dropdown-menu-head pull-right" id="notice-div">
           <h5 class="title">通知</h5>
           <ul class="dropdown-list normal-list">
             <li class="new">
@@ -182,9 +180,9 @@
           </ul>
         </div>
       </li>
-      
+
       <li>
-        <a [routerLink]="['./telbook']" class="btn btn-default dropdown-toggle info-number" >
+        <a [routerLink]="['./telbook']" class="btn btn-default dropdown-toggle info-number">
           <i class="fa fa-address-book-o"></i>
           <!--<span class="badge">4</span>-->
         </a>
@@ -202,96 +200,86 @@
         </ul>
       </li>
       <li>
-        <a href="#" class="btn btn-default dropdown-toggle info-number" data-toggle="dropdown">
+        <a class="btn btn-default dropdown-toggle info-number" (click)="onClickDialog()">
           <i class="fa fa-comments-o"></i>
           <span class="badge">5</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-head pull-right">
-          <h5 class="title">你有 5 封邮件 </h5>
-          <ul class="dropdown-list normal-list">
-            <li class="new">
-              <a href="">
-                <span class="thumb"><img src="../../assets/img/photos/user1.png" alt=""/></span>
-                <span class="desc">
-                                          <span class="name">王 小明 <span
-                                            class="badge badge-success">new</span></span>
-                                          <span class="msg">关于上次的合同修改...</span>
-                                        </span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span class="thumb"><img src="../../assets/img/photos/user2.png" alt=""/></span>
-                <span class="desc">
-                                          <span class="name">李 二柱</span>
-                                          <span class="msg">面试结果已经更新...</span>
-                                        </span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span class="thumb"><img src="../../assets/img/photos/user3.png" alt=""/></span>
-                <span class="desc">
-                                          <span class="name">赵 铁蛋</span>
-                                          <span class="msg">今天有五人未去面试...</span>
-                                        </span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span class="thumb"><img src="../../assets/img/photos/user4.png" alt=""/></span>
-                <span class="desc">
-                                          <span class="name">李 梅</span>
-                                          <span class="msg">财务报表已经更新，新员...</span>
-                                        </span>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <span class="thumb"><img src="../../assets/img/photos/user5.png" alt=""/></span>
-                <span class="desc">
-                                          <span class="name">张 大庆</span>
-                                          <span class="msg">明天客户来我司拜访，请...</span>
-                                        </span>
-              </a>
-            </li>
-            <li class="new"><a href="">查看所有邮件</a></li>
-          </ul>
-        </div>
+        </a>       
       </li>
-     
+
 
     </ul>
   </div>
   <!--notification menu end -->
-  
+
 
 </div>
-<div class="div-body" style="float:none;display:none" >  
-    <div class="div-zh" (click)='onChangeLang("chinese")'>中文</div>  
-    <div class="div-jp" (click)='onChangeLang("japanese")'>日本語</div>  
-    <div class="div-en" (click)='onChangeLang("english")'>English</div>  
-</div> 
-<div class="remodal-overlay" style="display: none;overflow:hidden" ></div>
+<div class="div-body" style="float:none;display:none">
+  <div class="div-zh" (click)='onChangeLang("chinese")'>中文</div>
+  <div class="div-jp" (click)='onChangeLang("japanese")'>日本語</div>
+  <div class="div-en" (click)='onChangeLang("english")'>English</div>
+</div>
+<div class="remodal-overlay" style="display: none;overflow:hidden"></div>
 
 <div class="remodal-wrapper" style="display: none;overflow:hidden" (click)='onClickLay()'>
-  <div class="remodal" id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc" tabindex="-1" style="display:block;margin-top: 0px;text-align:center">
-  <button data-remodal-action="close" class="remodal-close" aria-label="Close" (click)='onClickLay()'></button>
-  <div>
-    <h2 id="modal1Title">公司平台升级相关事项</h2>
-    <p id="modal1Desc" style="max-height:400px;overflow-y:auto">
-      各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！
-                                
-    </p>
-  </div>
-  <br>
-  <button data-remodal-action="cancel" class="remodal-cancel" (click)='onClickLay()'>取消</button>
-  <button data-remodal-action="confirm" class="remodal-confirm" (click)='onClickLay()'>确认</button>
-</div></div>
+  <!-- 公告 -->
+  <div id="modal">
+    <div class="mod notice">
+      <button data-remodal-action="close" class="remodal-close" aria-label="Close" (click)='onClickLay()'></button>
+      <div class="scroll-bar-css" style="max-height:500px;overflow-y:auto">
+        <h2 id="modal1Title">公司平台升级相关事项</h2>
+        <p id="modal1Desc" style="text-align: left;margin-top: 20px;">
+          各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！
+          各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！各位用户，由于本系统将于本月26号上午8时进行系统升级，请大家做好数据备份工作，必要时请和我们联系，谢谢合作！
 
-<!-- Lock界面 -->
-<div class="lock-screen" style="display: none;overflow:hidden">
-    <div class="lock-wrapper" >
+        </p>
+        <br>
+        <!-- <button data-remodal-action="cancel" class="remodal-cancel" (click)='onClickLay()'>取消</button>
+        <button data-remodal-action="confirm" class="remodal-confirm" (click)='onClickLay()'>确认</button> -->
+      </div>
+    </div>
+  </div>
+  <!-- 上传照片 -->
+  <div id="uploadPho" >
+    <div class="mod" >
+      <div>
+          <p class="upload">
+              <button class="upload-btn btn-lg" >
+                选择图片
+              </button>
+              <input type="file" name="avatar" cropper-source="avatar" cropper-file-types="jpg,jpeg,png" (click)="onClickUpload($event)"/>
+              支持格式:JPG PNG JPEG
+            </p>
+            <div class="preview-container">
+              <div class="image-container target" cropper="avatar" cropper-context="cropContext">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="noavatar"/>
+              </div>
+              <div class="large-wrapper">
+                <div class="image-container large" cropper-preview="avatar">
+                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class="noavatar" />
+                </div>
+                <p>预览</p>
+              </div>              
+            </div>
+          
+            <!-- <input type="hidden" name="x" value="{{cropContext.left}}"/>
+            <input type="hidden" name="y" value="{{cropContext.top}}"/>
+            <input type="hidden" name="w" value="{{cropContext.width}}"/>
+            <input type="hidden" name="h" value="{{cropContext.height}}"/> -->
+            <input type="hidden" name="x" />
+            <input type="hidden" name="y" />
+            <input type="hidden" name="w" />
+            <input type="hidden" name="h" />
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+
+  <!-- Lock界面 -->
+  <div class="lock-screen" style="display: none;overflow:hidden">
+    <div class="lock-wrapper">
       <div class="panel lock-box text-center">
         <img alt="lock avatar" src="../../assets/img/photos/user1.png">
         <div class="locked">
@@ -300,7 +288,7 @@
         <h1>李 大雷</h1>
         <div class="row">
           <div class="form-inline">
-            <div class="form-group col-md-12 col-sm-12 col-xs-12">              
+            <div class="form-group col-md-12 col-sm-12 col-xs-12">
               <input type="password" class="form-control lock-input" placeholder="{{'inputUnlockPassword' | translate }}" #pass>
               <button type="submit" class="btn btn-lock pull-right" (click)="onConfirmPass(pass)">
               <i class="fa fa-check"></i>
@@ -314,4 +302,3 @@
   </div>
   <div id="sky-lock" style="display:none"></div>
   <div id="cloud-lock" style="display:none"></div>
- 

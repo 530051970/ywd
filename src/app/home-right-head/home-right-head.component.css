@@ -669,6 +669,109 @@ a#player:hover {
     display: block;
 }
 
+/* 上传图片对话框样式 START*/
+.preview-container {
+  overflow: hidden;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.preview-container .noavatar {
+  background-color: #efeeef;
+}
+
+.preview-container > div {
+  float: left;
+  height: 320px;
+}
+
+.large-wrapper {
+  border-left: 1px solid #eee;
+  padding-left: 30px;
+  margin-right: 30px;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  margin-bottom: 5px;
+}
+
+.image-container .image-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.image-container img {
+  position: absolute;
+}
+
+.image-container.target {
+  width: 320px;
+  height: 320px;
+  margin-right: 30px;
+}
+
+.image-container.target img {
+  width: 320px;
+  height: 320px;
+  left: 0px;
+}
+
+.image-container.large {
+  width: 210px;
+  height: 210px;
+}
+
+.image-container.large img {
+  width: 210px;
+  height: 210px;
+}
+
+.image-container.large .noavatar {
+  background-position: -320px 0;
+  left: 0px;
+}
+
+p.upload {
+  padding-top: 22px;
+  line-height: 40px;
+  font-size: 14px;
+  position: relative;
+  color: #666;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+p.upload .upload-btn {
+  width: 120px;
+  padding: 12px 20px;
+  font-size: 14px;
+  border: 1px solid #1e89e0;
+  background-color: transparent;
+  color: #1e89e0;
+  margin-right: 20px;
+}
+
+p.upload input {
+  position: absolute;
+  font-size: 480px;
+  top: 22px;
+  left: -30px;
+  height: 42px;
+  width: 150px;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  cursor: pointer;
+}
+
+/* 上传图片对话框样式 END */
+
 
 
 
@@ -948,10 +1051,10 @@ div.lock-screen {
 
 /* Default theme styles of the modal dialog */
 
-.remodal {
+.remodal,.mod {
   box-sizing: border-box;
-  width: 100%;
-  margin-bottom: 10px;
+  width: 800px;
+  /* margin-bottom: 10px; */
   padding: 35px;
 
   -webkit-transform: translate3d(0, 0, 0);
@@ -959,6 +1062,14 @@ div.lock-screen {
 
   color: #2b2e38;
   background: #fff;
+  margin-top: 150px;
+  text-align:center;
+  top: 200px;
+  margin-left: 600px;
+}
+
+div.mod.notice {
+  max-height: 600px;
 }
 
 .remodal.remodal-is-opening,

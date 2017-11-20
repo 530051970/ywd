@@ -2048,6 +2048,12 @@ a.forgot-pass {
   width: 600px;
 }
 
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 /* 
 .btns,
 .slider,

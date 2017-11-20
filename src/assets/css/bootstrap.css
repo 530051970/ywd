@@ -1095,7 +1095,9 @@ a {
 a:hover,
 a:focus {
   color: #23527c;
-  text-decoration: underline;
+  text-decoration:none;
+  cursor: pointer;
+  font-weight: bold;
 }
 a:focus {
   outline: thin dotted;

@@ -34,6 +34,9 @@ import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 import { TalentListComponent } from './talent-list/talent-list.component';
 import { TalentAddComponent } from './talent-add/talent-add.component';
 import { TalentBatchComponent } from './talent-batch/talent-batch.component';
+import { GeneralsettingsComponent } from './generalsettings/generalsettings.component';
+import { MailComponent } from './mail/mail.component';
+import { ResumeComponent } from './resume/resume.component';
 
 export function createTranslateHttpLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -61,7 +64,10 @@ export function createTranslateHttpLoader(http: HttpClient) {
     BlogDetailComponent,
     TalentListComponent,
     TalentAddComponent,
-    TalentBatchComponent
+    TalentBatchComponent,
+    GeneralsettingsComponent,
+    MailComponent,
+    ResumeComponent
   ],
   imports: [
     HttpModule,

@@ -1,7 +1,7 @@
 /* the norm */
 #gritter-notice-wrapper {
 	position:fixed;
-	top:20px;
+	top:80px;
 	right:20px;
 	width:301px;
 	z-index:9999;
@@ -25,7 +25,8 @@
 .gritter-item-wrapper {
 	position:relative;
 	margin:0 0 10px 0;
-	background:url('../images/ie-spacer.gif'); /* ie7/8 fix */ 
+	/* background:url('../images/ie-spacer.gif'); */
+	 /* ie7/8 fix */ 
 }
 .gritter-top {
 	background:url(../images/gritter.png) no-repeat left -30px;

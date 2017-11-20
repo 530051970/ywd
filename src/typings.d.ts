@@ -7,5 +7,9 @@ interface NodeModule {
   id: string;
 }
 
+// declare var module: gritter;
+
 declare function getNiceScroll();
 declare function Quill();
+
+// declare  var  grift=require('../../assets/js/gritter/js/jquery.gritter.js');

@@ -12,6 +12,7 @@ export class CommonService  {
   
   fullScreen:EventEmitter<string> = new EventEmitter();
   toggleButton:EventEmitter<string> = new EventEmitter();
+  dialogSwitch:EventEmitter<string> = new EventEmitter();
   private lang: string;
   public json2: any;
   // private subscription:Observable;

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CommonService} from '../service/common.service';
+// import * as Quill from 'quill';
 declare const jQuery:any;
 // declare const moment:any;
 // declare const calendars:any;
@@ -12,6 +13,8 @@ declare const jQuery:any;
   styleUrls: ['./home-right-body.component.css']
 })
 export class HomeRightBodyComponent implements OnInit {
+
+    // const openSpeacker:any
     private data7_1 = [
         [1354586000000, 253],
         [1354587000000, 465],
@@ -139,6 +142,50 @@ export class HomeRightBodyComponent implements OnInit {
         }
     };
     jQuery.plot(jQuery("#pie-chart-donut #pie-donutContainer"), data, options);
+
+    if(1<0){
+    setInterval(function(){
+
+        showAndSpeekMessage(function(obj){
+            setTimeout(function(){jQuery('#'+obj).remove();},5000)
+            
+        });
+        
+    },8000)}
+
+    function showAndSpeekMessage(removeTmpDiv){
+        const context="崔胡斌已经入职阿里巴巴集团！";
+        console.log(context);
+        // 生成一个div
+        var mydate = new Date();;
+        var tmpId=mydate.getMilliseconds();
+        // var tmpId=123;
+        // var tmpDiv=jQuery('<div></div>');        //创建一个父div
+        // tmpDiv.attr('id',tmpId);        //给父div设置id
+        // tmpDiv.attr('display',"hidden");
+        // tmpDiv.text(context);    
+        // tmpDiv.appendto("body");
+        jQuery(document.body).append('<div id='+tmpId+' style="display:none">'+context+'</div>');
+       console.log(tmpId);
+        // 文字提醒
+        jQuery.gritter.add({  
+            title: '易招提醒您:',  
+            text: context,  
+            image: '../../assets/img/photos/user1.png',  
+            sticky: false,  
+            time: 3000,  
+            speed:3000,  
+            position: 'bottom-right',  
+            class_name: 'gritter-success'//gritter-center   
+        }); 
+        jQuery('#'+tmpId).speech({
+            "speech": false,
+            "speed": 6,
+        });        
+        removeTmpDiv&&removeTmpDiv(tmpId);
+    }
+
+
     
     }
 
@@ -148,17 +195,19 @@ export class HomeRightBodyComponent implements OnInit {
           res => {this.fullscreen = res;
 
         if(this.fullscreen == "1"){
-            jQuery("#middlerow").css("height", "47%");
+            jQuery("#middlerow").css("height", "44%");
             jQuery(".adv-table").css("height", "350px"); 
             jQuery("#tablesec").css("height", "45%");   
             jQuery(".main-content").css("height", "100%");          
             
           }else{
-            jQuery("#middlerow").css("height", "51%"); 
+            jQuery("#middlerow").css("height", "48%"); 
             jQuery(".adv-table").css("height", "240px");
             jQuery("#tablesec").css("height", "36%");       
           }}
         );
+
+      
       }
 
 
@@ -201,5 +250,8 @@ export class HomeRightBodyComponent implements OnInit {
     jQuery(obj1).add(obj2).add(obj3).removeClass("active");
 
   }
+
+
+
 
 }

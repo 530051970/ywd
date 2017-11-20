@@ -90,5 +90,14 @@ export class HomeLeftComponent implements OnInit {
     return false;
   }
 
+  onClickLogout(){
+    
+  }
+
+  onUploadd(){
+    alert("232");
+  }
+  
+
 
 }

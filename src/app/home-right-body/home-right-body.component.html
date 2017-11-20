@@ -1,658 +1,100 @@
-<div id="right-body">
-  <router-outlet></router-outlet>
-  <!-- <div class="row states-info" id="states-info">
-    <div class="col-md-3 number-panel"> 
-      <div class="panel red-bg">
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-xs-4">
-              <i class="fa fa-check-square-o"></i>
-            </div>
-            <div class="col-xs-8" id="interview-success-number">
-              <span class="state-title"> {{'Interview Success Number Of Yesterday'|translate}} </span>
-              <h4>23,232</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3 number-panel">
-      <div class="panel blue-bg">
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-xs-4">
-              <i class="fa fa-tag"></i>
-            </div>
-            <div class="col-xs-8">
-              <span class="state-title">  {{'Interviewers Today'|translate}}  </span>
-              <h4>2,980</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3 number-panel">
-      <div class="panel green-bg">
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-xs-4">
-              <i class="fa fa-gavel"></i>
-            </div>
-            <div class="col-xs-8" >
-              <span class="state-title">  {{'Candidates Of This Month'|translate}}  </span>
-              <h4>5980</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3 number-panel">
-      <div class="panel yellow-bg">
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-xs-4">
-              <i class="fa fa-eye"></i>
-            </div>
-            <div class="col-xs-8" id="leavejob">
-              <span class="state-title">  {{'Dimissions Of This Month'|translate}}  </span>
-              <h4>10,000</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row"  id="middlerow">
-    <div class="col-md-8">
-      <section class="panel" style="margin-bottom: 10px;height: 443px;">
-        <header class="panel-heading">
-          {{'Performance trend'|translate}}
-          <span class="tools pull-right">
-                <a href="javascript:;" class="fa fa-chevron-down"></a>
-                <a href="javascript:;" class="fa fa-times"></a>
-             </span>
-        </header>
-        <div class="panel-body">
-          <div id="visitors-chart">
-            <div id="visitors-container" style="width: 100%;height:358px; text-align: center; margin:0 auto;">
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <div class="col-md-4">
-      <div class="row">
-        <div class="col-md-12" #heart>
-          <div class="panel widget-info-twt blue-box zzsc" style="margin-bottom: 20px;">
-            <div class="ribbon-zzsc-green">
-              <div class="ribbon-green">本月KPI</div>
-            </div>
-            <h5>李 大雷</h5>
-            <span class="subtitle">之岸（上海）信息技术有限公司  高级营业顾问</span>
-            <div id="carddiv">
-              <div class="kpicard">
-                <div class="kpiheader">
-                  <h1 class="countnumber">21</h1>
-                </div>
-                <div class="kpicontainer" style="background-color: white;color:#545454;height:30px">
-                  <p style="padding-top: 5px;">新增简历</p>
-                </div>
-              </div>​
-
-              <div class="kpicard" >
-                <div class="kpiheader">
-                  <h1 class="countnumber">283</h1>
-                </div>
-                <div class="kpicontainer" style="background-color: white;color:#545454;height:30px">
-                  <p style="padding-top: 5px;">参加面试</p>
-                </div>
-              </div>​
-
-              <div class="kpicard" >
-                <div class="kpiheader">
-                  <h1 class="countnumber">92</h1>
-                </div>
-                <div class="kpicontainer" style="background-color: white;color:#545454;height:30px">
-                  <p style="padding-top: 5px;">成功入职</p>
-                </div>
-              </div>
-              <div class="kpicard" >
-                <div class="kpiheader">
-                  <h1 class="countnumber">92</h1>
-                </div>
-                <div class="kpicontainer" style="background-color: white;color:#545454;height:30px">
-                  <p style="padding-top: 5px;">达保证期</p>
-                </div>
-              </div>
-            </div>
-            <a class="btn btn-follow" href="#"><span><i></i>查看更多KPI</span></a>
-          </div>
-        </div>
-
-        <div class="col-md-12" style="display:none" #todo>
-            <div class="panel" style="margin-bottom: 5px;margin-left: 0px;height: 350px;width: 100%;overflow-y: auto;padding-right: 15px;margin-right: 0px;padding-left: 20px;">
-              <header class="panel-heading">
-                今日日程
-              </header>
-              <div class="panel-body" style="padding-bottom: 0px;">
-                <ul class="to-do-list" id="sortable-todo">
-                  <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
-                    <span class="drag-marker"><i></i></span>
-                    <div class="todo-check pull-left" style="width:30px;">
-                      12:05
-                    </div>
-                    <div class="todo-title">
-                      客户公司李总要过来，接待会议
-                    </div>
-                    <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
-                      <span class="label label-warning">重要</span>
-                    </div>
-                  </li>
-                  <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
-                    <span class="drag-marker"><i></i></span>
-                    <div class="todo-check pull-left" style="width:30px;">
-                      12:05
-                    </div>
-                    <div class="todo-title">
-                      客户公司李总要过来，接待会议
-                    </div>
-                    <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
-                      <span class="label label-danger">紧急</span>
-                    </div>
-                  </li>
-                  <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
-                    <span class="drag-marker"><i></i></span>
-                    <div class="todo-check pull-left" style="width:30px;">
-                      12:05
-                    </div>
-                    <div class="todo-title">
-                      客户公司李总要过来，接待会议
-                    </div>
-                    <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
-                      <span class="label label-danger">紧急</span>
-                    </div>
-                  </li>
-                  <li class="clearfix" style="padding-top: 5px;padding-bottom: 5px;">
-                    <span class="drag-marker"><i></i></span>
-                    <div class="todo-check pull-left" style="width:30px;">
-                      12:05
-                    </div>
-                    <div class="todo-title">
-                      客户公司李总要过来，接待会议
-                    </div>
-                    <div class="todo-actionlist pull-right clearfix" style="top: 8px;">
-                      <span class="label label-info">一般</span>
-                    </div>
-                  </li>
-                </ul>
-  
-              </div>
-            </div>
-          </div>
-
-        <div class="col-md-12">
-        <div class="panel" #cal style="margin-bottom: 2px;display:none;">
-          <div class="panel-body" style="padding-bottom: 0px;height:351px;padding-top: 10px;margin-bottom: 1px;">
-            <header class="panel-heading">
-              本月收入
-            </header>
-            <div id="pie-chart-donut" class="pie-chart" style="width:100%;height:100%">
-              <div id="pie-donutContainer" style="width: 100%;height:80%; text-align: left;"></div>
-            </div>
-          </div>
-        </div></div>
-
-        <div class="col-md-12" style="display:none" #saying>
-            <div class="panel" style="margin-bottom: 5px;margin-left: 0px;height: 350px;width: 100%;overflow-y: auto;padding-right: 0px;margin-right: 0px;padding-left: 0px;">
-              <header class="panel-heading" style="padding-bottom: 0px;">
-                每日一句
-              </header>
-              <div class="panel-body" style="padding-bottom: 0px;height:91%">
-                <img src="../../assets/img/meiriyiju.jpg" style="width: 100%;height:240px" />
-                <div class="saying">测试士大夫士大夫防守打法大发到付撒地方阿斯蒂芬阿斯蒂芬撒地方</div> 
-              </div>
-            </div>
-          </div>
-        <div class="col-md-12">
-          <div class="panel">
-            <ul class="iconic-list">
-              <li class="active" (click)="onClickHeart(heart,cal,todo,saying)">
-                <a>
-                  <i class="fa fa-heart"></i>
-                </a>
-              </li>
-              <li (click)="onClickTodo(heart,cal,todo,saying)">
-                <a>
-                  <i class="fa fa-calendar"></i>
-                </a>
-                </li>
-              <li (click)="onClickRetro(heart,cal,todo,saying)">
-                <a>
-                  <i class="fa fa-money fa-lg"></i>
-                </a>
-              </li>
-              
-              <li (click)="onClickSaying(heart,cal,todo,saying)">
-                <a class="last">
-                  <i class="fa fa-crosshairs"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <section class="panel" style=" height:37%;margin-bottom: 0px;" id="tablesec"> 
-    <header class="panel-heading custom-tab turquoise-tab" id="large-table">
-      <ul class="nav nav-tabs">
-        <li class="active">
-          <a data-toggle="tab" href="#home3">
-            <i class="fa fa-home">进展中的项目</i>
-          </a>
-        </li>
-        <li>
-          <a data-toggle="tab" href="#about3">
-                    <i class="fa fa-user"></i>
-                    面试-第一轮
-                </a>
-        </li>
-        <li class="">
-          <a data-toggle="tab" href="#contact3">
-                    <i class="fa fa-envelope-o"></i>
-                    面试-第二轮
-                </a>
-        </li>
-        <li class="">
-          <a data-toggle="tab" href="#more3">
-                  <i class="fa fa-envelope-o"></i>
-                  面试-更多轮
-              </a>
-        </li>
-        <li class="">
-          <a data-toggle="tab" href="#contact3">
-                <i class="fa fa-envelope-o"></i>
-                签订offer
-            </a>
-        </li>
-        <li class="">
-          <a data-toggle="tab" href="#contact3">
-              <i class="fa fa-envelope-o"></i>
-              入职
-          </a>
-        </li>
-      </ul>
-    </header>
-
-    <header class="panel-heading custom-tab turquoise-tab" id="small-table">
-        <ul class="nav nav-tabs">
-          <li class="active">
-            <a data-toggle="tab" href="#home3">
-                      <i class="fa fa-home">进展中的项目</i>
-                  </a>
-          </li>
-          <li>
-            <a data-toggle="tab" href="#about3">
-                      <i class="fa fa-user"></i>
-                      一面
-                  </a>
-          </li>
-          <li class="">
-            <a data-toggle="tab" href="#contact3">
-                      <i class="fa fa-envelope-o"></i>
-                      二面
-                  </a>
-          </li>
-          <li class="">
-            <a data-toggle="tab" href="#more3">
-                    <i class="fa fa-envelope-o"></i>
-                    更多面
-                </a>
-          </li>
-          <li class="">
-            <a data-toggle="tab" href="#contact3">
-                  <i class="fa fa-envelope-o"></i>
-                  offer
-              </a>
-          </li>
-          <li class="">
-            <a data-toggle="tab" href="#contact3">
-                <i class="fa fa-envelope-o"></i>
-                入职
-            </a>
-          </li>
-        </ul>
-      </header>
-
-      <header class="panel-heading custom-tab turquoise-tab" id="mini-table">
-          <ul class="nav nav-tabs">
-            <li class="active" style="writing-mode:tb-rl">
-              <a data-toggle="tab" href="#home3" id="firsttitle">
-                        <i class="fa fa-home">进展中项目</i>
-                    </a>
-            </li>
-            <li style="writing-mode:tb-rl">
-              <a data-toggle="tab" href="#about3">
-                        <i class="fa fa-user"></i>
-                        第一轮面试
-                    </a>
-            </li>
-            <li style="writing-mode:tb-rl">
-              <a data-toggle="tab" href="#contact3">
-                        <i class="fa fa-envelope-o"></i>
-                        第二轮面试
-                    </a>
-            </li>
-            <li style="writing-mode:tb-rl">
-              <a data-toggle="tab" href="#more3">
-                      <i class="fa fa-envelope-o"></i>
-                      更多轮面试
-                  </a>
-            </li>
-            <li style="writing-mode:tb-rl">
-              <a data-toggle="tab" href="#contact3">
-                    <i class="fa fa-envelope-o"></i>
-                    获得offer
-                </a>
-            </li>
-            <li style="writing-mode:tb-rl">
-              <a data-toggle="tab" href="#contact3">
-                  <i class="fa fa-envelope-o"></i>
-                  已入职
-              </a>
-            </li>
-          </ul>
-        </header>
-    <div class="panel-body" style="padding-bottom: 0px;">
-      <div class="tab-content">
-        <div id="home3" class="tab-pane  active">
-          <div class="row">
-            <div class="col-sm-12" style="height:286px;">
-              <section class="panel" style="margin-bottom: 0px;">
-                <div class="panel-body" style="padding:0px;">
-                  <div class="adv-table" style="height:240px;overflow:hidden;">
-                    <table class="display table table-bordered table-striped" style="margin-bottom: 0px;">
-                      <thead>
-                        <tr>
-                          <th>项目名称</th>
-                          <th>公司名称</th>
-                          <th>薪资待遇</th>
-                          <th>已经推荐</th>
-                          <th>面试人数</th>
-                          <th>入职人数</th>
-                          <th>达到保证期人数</th>
-                          <th>佣金收入(元)</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>移动Java后端</td>
-                          <td>博士多（上海）科技有限公司</td>
-                          <td>30k/月</td>
-                          <td class="center hidden-phone">24</td>
-                          <td class="center hidden-phone">8</td>
-                          <td>4</td>
-                          <td>3</td>
-                          <td>30000</td>
-                        </tr>
-                        <tr>
-                          <td>移动Java后端</td>
-                          <td>博士多（上海）科技有限公司</td>
-                          <td>30k/月</td>
-                          <td class="center hidden-phone">24</td>
-                          <td class="center hidden-phone">8</td>
-                          <td>4</td>
-                          <td>3</td>
-                          <td>30000</td>
-                        </tr>
-                        <tr>
-                          <td>移动Java后端</td>
-                          <td>博士多（上海）科技有限公司</td>
-                          <td>30k/月</td>
-                          <td class="center hidden-phone">24</td>
-                          <td class="center hidden-phone">8</td>
-                          <td>4</td>
-                          <td>3</td>
-                          <td>30000</td>
-                        </tr>
-                        <tr>
-                          <td>移动Java后端</td>
-                          <td>博士多（上海）科技有限公司</td>
-                          <td>30k/月</td>
-                          <td class="center hidden-phone">24</td>
-                          <td class="center hidden-phone">8</td>
-                          <td>4</td>
-                          <td>3</td>
-                          <td>30000</td>
-                        </tr>
-                        <tr>
-                          <td>移动Java后端</td>
-                          <td>博士多（上海）科技有限公司</td>
-                          <td>30k/月</td>
-                          <td class="center hidden-phone">24</td>
-                          <td class="center hidden-phone">8</td>
-                          <td>4</td>
-                          <td>3</td>
-                          <td>30000</td>
-                        </tr>
-                        <tr>
-                          <td>移动Java后端</td>
-                          <td>博士多（上海）科技有限公司</td>
-                          <td>30k/月</td>
-                          <td class="center hidden-phone">24</td>
-                          <td class="center hidden-phone">8</td>
-                          <td>4</td>
-                          <td>3</td>
-                          <td>30000</td>
-                        </tr>
-                        <tr>
-                          <td>移动Java后端</td>
-                          <td>博士多（上海）科技有限公司</td>
-                          <td>30k/月</td>
-                          <td class="center hidden-phone">24</td>
-                          <td class="center hidden-phone">8</td>
-                          <td>4</td>
-                          <td>3</td>
-                          <td>30000</td>
-                        </tr>
-                        <tr>
-                          <td>移动Java后端</td>
-                          <td>博士多（上海）科技有限公司</td>
-                          <td>30k/月</td>
-                          <td class="center hidden-phone">24</td>
-                          <td class="center hidden-phone">8</td>
-                          <td>4</td>
-                          <td>3</td>
-                          <td>30000</td>
-                        </tr>                       
-
-                      </tbody>
-
-                    </table></div>
-                 
-                        <div style="text-align:center;border:none;padding-top: 8px;"><a>查看更多...</a></div>
-                     
-                  
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-        <div id="about3" class="tab-pane">
-          <div class="row">
-            <div class="col-sm-12" style="height:286px;">
-              <section class="panel" style="margin-bottom: 0px;">
-
-                <div class="panel-body" style="padding:0px;">
-                  <div class="adv-table">
-                    <table class="display table table-bordered table-striped">
-                      <thead>
-                        <tr>
-                          <th>姓名</th>
-                          <th>项目</th>
-                          <th>联系方式</th>
-                          <th>面试日期</th>
-                          <th>面试时间</th>
-                          <th>面试公司</th>
-                          <th>下一轮面试日期</th>
-                          <th>下一轮面试时间</th>
-                          <th>备注</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>张天爱</td>
-                          <td>资深前端工程师</td>
-                          <td>18956289635</td>
-                          <td class="center hidden-phone">2017/05/08</td>
-                          <td class="center hidden-phone">13:15</td>
-                          <td>辉瑞制药股份有限公司</td>
-                          <td>-</td>
-                          <td>-</td>
-                          <td>以前从事过类似岗位</td>
-                        </tr>
-                        <tr>
-                          <td>张天爱</td>
-                          <td>资深前端工程师</td>
-                          <td>18956289635</td>
-                          <td class="center hidden-phone">2017/05/08</td>
-                          <td class="center hidden-phone">13:15</td>
-                          <td>辉瑞制药股份有限公司</td>
-                          <td>2017/05/12</td>
-                          <td>16:30</td>
-                          <td>以前从事过类似岗位</td>
-                        </tr>
-                        <tr>
-                          <td>张天爱</td>
-                          <td>资深前端工程师</td>
-                          <td>18956289635</td>
-                          <td class="center hidden-phone">2017/05/08</td>
-                          <td class="center hidden-phone">13:15</td>
-                          <td>辉瑞制药股份有限公司</td>
-                          <td>-</td>
-                          <td>-</td>
-                          <td>以前从事过类似岗位</td>
-                        </tr>
-                        <tr>
-                          <td>张天爱</td>
-                          <td>资深前端工程师</td>
-                          <td>18956289635</td>
-                          <td class="center hidden-phone">2017/05/08</td>
-                          <td class="center hidden-phone">13:15</td>
-                          <td>辉瑞制药股份有限公司</td>
-                          <td>2017/05/12</td>
-                          <td>16:30</td>
-                          <td>以前从事过类似岗位</td>
-                        </tr>
-                        <tr>
-                          <td>张天爱</td>
-                          <td>资深前端工程师</td>
-                          <td>18956289635</td>
-                          <td class="center hidden-phone">2017/05/08</td>
-                          <td class="center hidden-phone">13:15</td>
-                          <td>辉瑞制药股份有限公司</td>
-                          <td>2017/05/12</td>
-                          <td>16:30</td>
-                          <td>以前从事过类似岗位</td>
-                        </tr>
-
-                        <tr style="border:none">
-                          <td colspan="9" style="text-align:center"><a>查看更多...</a></td>
-                          
-                        </tr>
-
-                      </tbody>
-
-                    </table>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-        <div id="contact3" class="tab-pane ">
-          <div class="row">
-            <div class="col-sm-12" style="height:286px;">
-              <section class="panel" style="margin-bottom: 0px;">
-
-                <div class="panel-body" style="padding:0px;">
-                  <div class="adv-table">
-                    <table class="display table table-bordered table-striped">
-                      <thead>
-                        <tr>
-                          <th>姓名</th>
-                          <th>项目</th>
-                          <th>联系方式</th>
-                          <th>面试日期</th>
-                          <th>面试时间</th>
-                          <th>面试公司</th>
-                          <th>下一轮面试日期</th>
-                          <th>下一轮面试时间</th>
-                          <th>备注</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>张天爱</td>
-                          <td>资深前端工程师</td>
-                          <td>18956289635</td>
-                          <td class="center hidden-phone">2017/05/08</td>
-                          <td class="center hidden-phone">13:15</td>
-                          <td>辉瑞制药股份有限公司</td>
-                          <td>-</td>
-                          <td>-</td>
-                          <td>以前从事过类似岗位</td>
-                        </tr>
-                        <tr>
-                          <td>张天爱</td>
-                          <td>资深前端工程师</td>
-                          <td>18956289635</td>
-                          <td class="center hidden-phone">2017/05/08</td>
-                          <td class="center hidden-phone">13:15</td>
-                          <td>辉瑞制药股份有限公司</td>
-                          <td>2017/05/12</td>
-                          <td>16:30</td>
-                          <td>以前从事过类似岗位</td>
-                        </tr>
-                        <tr>
-                          <td>张天爱</td>
-                          <td>资深前端工程师</td>
-                          <td>18956289635</td>
-                          <td class="center hidden-phone">2017/05/08</td>
-                          <td class="center hidden-phone">13:15</td>
-                          <td>辉瑞制药股份有限公司</td>
-                          <td>-</td>
-                          <td>-</td>
-                          <td>以前从事过类似岗位</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-        <div id="more3" class="tab-pane ">
-          <div class="row">
-            <div class="col-sm-12" style="height:286px;">
-              <section class="panel" style="margin-bottom: 0px;">
-
-                <div class="panel-body" style="padding:0px;">
-                  <div class="adv-table">
-                    无相关记录
-                    
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
+<div id="right-body" class="scroll-bar-css">
+    <router-outlet></router-outlet>
 </div>
-
-  
+<div id="diaglog">
+    <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;">
+        <div class="sidebar-inner" style="overflow: hidden; width: auto; height: 100%;">
+            <div class="sidebar-panel mt0">
+                <div class="sidebar-panel-content fullwidth pt0">
+                    <div class="chat-user-list">
+                        <div class="form-horizontal chat-search" role="form">
+                            <div class="form-group sear">
+                                <i class="fa fa-binoculars"></i>
+                                <input type="text" class="form-control" placeholder="查找...">
+                                <!-- <button type="submit"><i class="ec-search s16"></i>
+                            </button> -->
+                            </div>
+                            <!-- End .form-group  -->
+                        </div>
+                        <ul class="chat-ui bsAccordion">
+                            <li class="">
+                                <a href="#">默认分组一 <span class="notification teal">4</span>
+                              <i class="fa fa-angle-down"></i>
+                            </a>
+                                <ul class="collapse in" aria-expanded="true">
+                                    <li style="display: block;">
+                                        <a href="#" class="chat-name">
+                                        <img class="chat-avatar" src="assets/img/photos/user1.png" tppabs="assets/img/photos/user1.png" alt="@chadengle">
+                                        <div style="width:100px;float:left">李 大志</div>
+                                        <div style="width:100px;float: left;">08/29 15:30</div>
+                                        <div style="float: left; margin-top: 5px;color: gray;">昨天说的十大法师打发第三方士大夫</div>
+                                    </a>
+                                        <span class="status hasmessage"><i class="fa fa-circle"></i></span>
+                                    </li>
+                                    <li style="display: block;">
+                                        <a href="#" class="chat-name">
+                                        <img class="chat-avatar" src="assets/img/photos/user3.png" tppabs="assets/img/photos/user1.png" alt="@chadengle">
+                                        <div style="width:100px;float:left">蒋 小雅</div>
+                                        <div style="width:100px;float: left;">08/29 15:30</div>
+                                        <div style="float: left; margin-top: 5px;color: gray;">昨天说的十大法师打发第三方士大夫</div>
+                                    </a>
+                                        <span class="status hasmessage"><i class="fa fa-circle"></i></span>
+                                    </li>
+                                    <li style="display: block;">
+                                        <a href="#" class="chat-name">
+                                        <img class="chat-avatar" src="assets/img/photos/user6.png" tppabs="assets/img/photos/user1.png" alt="@chadengle">
+                                        <div style="width:100px;float:left">王 海伦</div>
+                                        <div style="width:100px;float: left;">08/29 15:30</div>
+                                        <div style="float: left; margin-top: 5px;color: gray;">昨天说的十大法师打发第三方士大夫</div>
+                                    </a>
+                                    </li>
+                                    <li style="display: block;">
+                                        <a href="#" class="chat-name">
+                                        <img class="chat-avatar" src="assets/img/photos/user2.png" tppabs="assets/img/photos/user1.png" alt="@chadengle">
+                                        <div style="width:100px;float:left">路 彤</div>
+                                        <div style="width:100px;float: left;">08/29 15:30</div>
+                                        <div style="float: left; margin-top: 5px;color: gray;">昨天说的十大法师打发第三方士大夫</div>
+                                    </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a href="#">默认分组二 <span class="notification green">3</span><i class="en-arrow-down5"></i></a>
+                                <ul class="collapse in" aria-expanded="true">
+                                    <li>
+                                        <a href="#" class="chat-name">
+                                        <img class="chat-avatar" src="assets/img/photos/user5.png" tppabs="assets/img/photos/user1.png" alt="@kolage">
+                                        <span class="status online"><i class="en-dot"></i></span>
+                                        <div style="width:100px;float:left">邓 海华</div>
+                                        <div style="width:100px;float: left;">08/29 15:30</div>
+                                        <div style="float: left; margin-top: 5px;color: gray;">昨天说的十大法师打发第三方士大夫</div>
+                                    </a>
+                                    </li>
+                                    <li style="display: block;">
+                                        <a href="#" class="chat-name">
+                                        <img class="chat-avatar" src="assets/img/photos/user6.png" tppabs="assets/img/photos/user1.png" alt="@mikebeecham">
+                                        <div style="width:100px;float:left">杨 明芳</div>
+                                        <div style="width:100px;float: left;">08/29 15:30</div>
+                                        <div style="float: left; margin-top: 5px;color: gray;">昨天说的十大法师打发第三方士大夫</div>
+                                    </a>
+                                        <span class="status online"><i class="en-dot"></i></span>
+                                    </li>
+                                    <li style="display: block;">
+                                        <a href="#" class="chat-name">
+                                        <img class="chat-avatar" src="assets/img/photos/user7.png" tppabs="assets/img/photos/user1.png" alt="@derekebradley">
+                                        <span class="status online"><i class="en-dot"></i></span>
+                                        <div style="width:100px;float:left">胡 坤芳</div>
+                                        <div style="width:100px;float: left;">08/29 15:30</div>
+                                        <div style="float: left; margin-top: 5px;color: gray;">昨天说的十大法师打发第三方士大夫</div>
+                                    </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- <div id="gritter-item-17" class="gritter-item-wrapper " style="opacity: 0.705757;"><div class="gritter-top"></div><div class="gritter-item"><div class="gritter-close"></div><div class="gritter-without-image"><span class="gritter-title">This is a notice without an image!</span><p>This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" style="color:#ccc">magnis dis parturient</a> montes, nascetur ridiculus mus.</p></div><div style="clear:both"></div></div><div class="gritter-bottom"></div></div> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

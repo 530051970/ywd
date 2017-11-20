@@ -6,9 +6,9 @@ import {
   FormBuilder, FormGroup, FormControl, Validators, AsyncValidatorFn, AbstractControl,
   ValidationErrors
 } from "@angular/forms";
-import {Observable} from "rxjs/Observable";
-import {MockService} from '../service/mock.service';
-import {exitFullScreen} from '../utils/common.utils';
+import { Observable } from "rxjs/Observable";
+import { MockService } from '../service/mock.service';
+import { exitFullScreen } from '../utils/common.utils';
 
 @Component({
   selector: 'app-home-right-head',
@@ -19,20 +19,21 @@ export class HomeRightHeadComponent implements OnInit {
 
   showDate: Date;
   private timer;
-  private LangDivStatus:string;
-  validationTimeout:any;
-  validPassword:boolean=false;
+  private LangDivStatus: string;
+  validationTimeout: any;
+  validPassword: boolean = false;
+  dialogStatus: String = "0";
 
-  constructor(private commonService: CommonService,private mockService$:MockService) { 
-       
+  constructor(private commonService: CommonService, private mockService$: MockService) {
+
   }
 
   ngOnInit() {
     // 当前语言的设置
-    let currentLang:string = this.commonService.getCurrentLang();
-    if(currentLang=='zh'){
+    let currentLang: string = this.commonService.getCurrentLang();
+    if (currentLang == 'zh') {
       jQuery('#langLink').text("中文");
-    } else if(currentLang=='jp'){
+    } else if (currentLang == 'jp') {
       jQuery('#langLink').text("日本語");
     } else {
       jQuery('#langLink').text("English");
@@ -46,13 +47,13 @@ export class HomeRightHeadComponent implements OnInit {
   }
 
   ngAfterContentInit() {
-    setInterval(this.commonService.showTime(), 1000);    
+    setInterval(this.commonService.showTime(), 1000);
   }
 
   // 点击三明治切换按钮
   onClickToggleBtn() {
     const body = jQuery('body');
-    const rightHeader =jQuery('#header');
+    const rightHeader = jQuery('#header');
     const bodyposition = body.css('position');
     const mainContent = jQuery('.main-content');
     const stickyLeftSide = jQuery('.sticky-left-side');
@@ -67,7 +68,7 @@ export class HomeRightHeadComponent implements OnInit {
         // mainContent.attr('style', 'width:97%;float:left');
         stickyLeftSide.attr('style', 'width:3%;float:left;position:fixed;z-index:999');
         rightHeader.attr('style', 'width:97%;  left: 3%;position:fixed;');
-        mainContent.attr('style','width:97%;margin-top:51px');
+        mainContent.attr('style', 'width:97%;margin-top:51px');
         logo.hide();
         logoIcon.removeClass('logo-icon');
         logoIcon.show();
@@ -84,7 +85,7 @@ export class HomeRightHeadComponent implements OnInit {
         logoIcon.addClass('logo-icon');
         stickyLeftSide.attr('style', 'width:14%;float:left;position:fixed;z-index:999');
         rightHeader.attr('style', 'width:86%;left:14%;position:fixed;');
-        mainContent.attr('style','width:86%;margin-top:51px;margin-left: 14%;');
+        mainContent.attr('style', 'width:86%;margin-top:51px;margin-left: 14%;');
         logo.show();
         logoIcon.hide();
         // 对于每一个一级菜单，如果是选中状态，放开的时候显示子菜单。
@@ -104,6 +105,7 @@ export class HomeRightHeadComponent implements OnInit {
       else
         body.addClass('left-side-show');
     }
+
 
   }
 
@@ -137,19 +139,8 @@ export class HomeRightHeadComponent implements OnInit {
   // 点击ul里面的li标题，弹出窗口
   onClickTitle() {
     jQuery('.remodal-overlay').add('.remodal-wrapper').add('#modal').show();
-    // jQuery('.remodal-overlay').show();
-    // document.body.style.overflow = 'hidden';
+    jQuery('#uploadPho').hide();
     document.body.style.height = '100%';
-    // document.documentElement.style.overflow = 'hidden';
-    // jQuery(".left-side").add(".main-content").add(".sticky-header").add("html").niceScroll({
-    //   styler: "fb",
-    //   cursorcolor: "#65cea7",
-    //   cursorwidth: '3',
-    //   cursorborderradius: '0px',
-    //   background: '#424f63',
-    //   spacebarenabled: false,
-    //   cursorborder: '0'
-    // });
     return false;
   }
 
@@ -160,70 +151,83 @@ export class HomeRightHeadComponent implements OnInit {
   // 显示语言切换窗口
   onClickLang() {
     jQuery('.div-body').slideToggle();
-   }
+  }
 
-   onChangeLang(obj){
-     this.commonService.onChangeLang(obj);
-     if(obj=='chinese'){
+  onChangeLang(obj) {
+    this.commonService.onChangeLang(obj);
+    if (obj == 'chinese') {
       jQuery('#langLink').text("中文");
       this.commonService.showDate("zh");
-     } else if(obj=='japanese'){
+    } else if (obj == 'japanese') {
       jQuery('#langLink').text("日本語");
       this.commonService.showDate("jp");
     } else {
       jQuery('#langLink').text("English");
       this.commonService.showDate("en");
     }
-    
+
     jQuery('.div-body').slideToggle();
-   }
+  }
 
-   onClickLock(obj){
+  onClickLock(obj) {
     jQuery(".lock-screen").add("#sky-lock").add("#cloud-lock").show();
-    obj.value="";
-   }
+    obj.value = "";
+  }
 
-   onConfirmPass(obj){
+  onConfirmPass(obj) {
     this.mockService$.getUsers("admin@eworlder.com").subscribe(res => {
-      if(obj.value===res[0].password){
+      if (obj.value === res[0].password) {
         this.validPassword = true;
-        if(this.validPassword){
+        if (this.validPassword) {
           jQuery(".lock-screen").add("#sky-lock").add("#cloud-lock").hide();
         }
-      }else{
+      } else {
         this.commonService.showTip(jQuery('#tip1'), 'danger');
       }
     });
-    
-   }
 
-   onClickExpend(obj){
-    
-      if(jQuery(obj).attr('class') == "fa fa-expand"){
-        jQuery(obj).attr('class',"fa fa-compress");
-        this.commonService.fullScreen.emit("1");
-      } else {
-        this.commonService.fullScreen.emit("0");
-        jQuery(obj).attr('class',"fa fa-expand");
-        exitFullScreen(document);
-      }
-   }
-
-   onClickSearch(obj){
-
-   }
-
-   onMoveinSearch(obj){
-    jQuery(obj).stop().animate({"width":"160px"});
-   }
-
-   onMoveOutSearch(obj){
-     if(obj.value==null || obj.value==""){
-    jQuery(obj).stop().animate({"width":"0px"});
-  } else {
-    jQuery(obj).css({"border-width":"0 0 1px 0","border-bottom-color":"gray"} 
-    );
   }
-   }
+
+  onClickExpend(obj) {
+
+    if (jQuery(obj).attr('class') == "fa fa-expand") {
+      jQuery(obj).attr('class', "fa fa-compress");
+      this.commonService.fullScreen.emit("1");
+    } else {
+      this.commonService.fullScreen.emit("0");
+      jQuery(obj).attr('class', "fa fa-expand");
+      exitFullScreen(document);
+    }
+  }
+
+  onClickSearch(obj) {
+
+  }
+
+  onMoveinSearch(obj) {
+    jQuery(obj).stop().animate({ "width": "160px" });
+  }
+
+  onMoveOutSearch(obj) {
+    if (obj.value == null || obj.value == "") {
+      jQuery(obj).stop().animate({ "width": "0px" });
+    } else {
+      jQuery(obj).css({ "border-width": "0 0 1px 0", "border-bottom-color": "gray" }
+      );
+    }
+  }
+
+  onClickDialog() {
+    const tar = jQuery("#diaglog");
+    if (tar.width() == 0) {
+      jQuery("#diaglog").stop().animate({ "width": "320px" });
+    } else {
+      jQuery("#diaglog").stop().animate({ "width": "0px" });
+    }
+  }
+ // 点击选择图片按钮时，防止事件冒泡 
+  onClickUpload(event){
+    event.stopPropagation();
+  }
 }
 

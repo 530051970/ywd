@@ -270,9 +270,9 @@ tr.even {
 }
 
 .top, .bottom {
-	padding: 15px;
-	background-color: #F5F5F5;
-	border: 1px solid #CCCCCC;
+	/* padding: 15px; */
+	/* background-color: #F5F5F5;
+	border: 1px solid #CCCCCC; */
 }
 
 .top .dataTables_info {
