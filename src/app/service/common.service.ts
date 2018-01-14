@@ -50,7 +50,9 @@ export class CommonService  {
     const dayNamesJp = ['日曜日 ', '月曜日 ', '火曜日 ', '水曜日 ', '木曜日 ', '金曜日 ', '土曜日 '];
     const newDate = new Date();
     newDate.setDate(newDate.getDate());
+    jQuery('#Date').empty();
     if (currentLang == 'zh') {
+      
       jQuery('#Date').html(newDate.getFullYear() + '年' + (newDate.getMonth() + 1) + '月' + newDate.getDate() + '日 ' + dayNamesZh[newDate.getDay()]);
     } else if (currentLang == 'jp') {
       jQuery('#Date').html(newDate.getFullYear() + '年' + (newDate.getMonth() + 1) + '月' + newDate.getDate() + '日 ' + dayNamesJp[newDate.getDay()]);
@@ -61,16 +63,16 @@ export class CommonService  {
     }
   }
 
-  showTime() {
-    const newDate = new Date();
-    const hours: number = newDate.getHours();
-    const mins: number = newDate.getMinutes();
-    const sec: number = newDate.getSeconds();
-    jQuery('.hour').html((hours < 10) ? ('0' + hours) : hours.toString());
-    jQuery('.min').html((mins < 10) ? ('0' + mins) : mins.toString());
-    jQuery('.sec').html((sec < 10) ? ('0' + sec) : sec.toString());
-    jQuery('.meridiem').html((hours < 12) ? 'AM' : 'PM');
-  }
+  // showTime() {
+  //   const newDate = new Date();
+  //   const hours: number = newDate.getHours();
+  //   const mins: number = newDate.getMinutes();
+  //   const sec: number = newDate.getSeconds();
+  //   jQuery('.hour').html((hours < 10) ? ('0' + hours) : hours.toString());
+  //   jQuery('.min').html((mins < 10) ? ('0' + mins) : mins.toString());
+  //   jQuery('.sec').html((sec < 10) ? ('0' + sec) : sec.toString());
+  //   jQuery('.meridiem').html((hours < 12) ? 'AM' : 'PM');
+  // }
   // 弹出弹窗,2s后消失
   // obj:Jquery对象
   // content:弹窗内容

@@ -9,7 +9,12 @@ interface NodeModule {
 
 // declare var module: gritter;
 
-declare function getNiceScroll();
+// declare function getNiceScroll();
 declare function Quill();
+declare function qrcode();
 
+// interface jQuery {
+//   qrcode(arg):void;
+// }
+// 
 // declare  var  grift=require('../../assets/js/gritter/js/jquery.gritter.js');

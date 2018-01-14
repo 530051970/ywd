@@ -6,7 +6,7 @@
   "login-inputEmail":"メールアドレスを入力してください",
   "login-inputPassword":"パスワードを入力してください",
   "login-login":"ログイン",
-  "login-welcome":"Y.W.D. 人材管理システム",
+  "login-welcome":"外国人技術者募集センター",
   "login-welcome-mobile":"ようこそ...",
   "login-forgetPassword":"パスワードを忘れる",
   "login-publish":"初回求人情報を登録する?",
@@ -19,7 +19,7 @@
 
   "comment3":"====================================以下是404页",
   "404-404":"404 エラー",
-  "404-pageNotExist":"ごめん、がこのページは見つからない。",
+  "404-pageNotExist":"ごめん、このページは見つからない。",
   "404-returnBack":"戻る",
   "404-copyRight":"Y.W.D | all right reserved",
 

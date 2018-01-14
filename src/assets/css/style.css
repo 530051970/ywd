@@ -5281,6 +5281,23 @@ ul.iconic-list li a:hover, ul.iconic-list li.active a {
 	margin-top: -11px;
 }
 
+/*----------------------------
+       TAGS INPUT STYLE
+-----------------------------*/
+
+div.tagsinput span.tag {
+    background: #65CEA7 !important;
+    border-color: #65CEA7;
+    color: #fff;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    padding: 2px 10px;
+}
+
+div.tagsinput span.tag a {
+    color: #43886e;
+}
+
 
 .scroll-bar-css::-webkit-scrollbar-track
 {
@@ -5306,3 +5323,9 @@ ul.iconic-list li a:hover, ul.iconic-list li.active a {
 									   color-stop(0.72, rgb(73,125,189)),
 									   color-stop(0.86, rgb(28,58,148)));
 }
+
+a.chat-name img{
+    float:left;
+}
+
+

@@ -1226,6 +1226,12 @@ ul#player{
   display: none;
 }
 
+
+/* 职位选择框 START */
+
+
+/* 职位选择框 END */
+
 @media screen and (max-width: 1600px) {
   #datediv,#clockdiv{display: none;}
   #nt-title-container{width:450px}

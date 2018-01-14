@@ -41,8 +41,8 @@
     </div>
     <ul id="nt-title" #msgList class="remodal-bg">
       <li style="height:20px;"><a href="#" (click)='onClickTitle()' (hover)='onHoverTitle()'>测试用的1，暂时时没有消时没有消时没有消时没有消时没有消时没有消时没有消没有消息！</a></li>
-      <!-- <li style="height:20px;"><a href="#" (click)='onClickTitle()' (hover)='onHoverTitle()'>测试用的2，暂时没有消时没有消时没有消时没有消时没有消时没有消时没有消息！</a></li> -->
-      <!-- <li style="height:20px;"><a href="#" (click)='onClickTitle()' (hover)='onHoverTitle()'>测试用的3，暂时没有消息！</a></li> -->
+      <li style="height:20px;"><a href="#" (click)='onClickTitle()' (hover)='onHoverTitle()'>测试用的2，暂时没有消时没有消时没有消时没有消时没有消时没有消时没有消息！</a></li>
+      <li style="height:20px;"><a href="#" (click)='onClickTitle()' (hover)='onHoverTitle()'>测试用的3，暂时没有消息！</a></li>
     </ul>
   </div>
   <!--notification menu start -->
@@ -237,6 +237,49 @@
         <button data-remodal-action="confirm" class="remodal-confirm" (click)='onClickLay()'>确认</button> -->
       </div>
     </div>
+  </div>
+  <!-- 行业选择 -->
+  <div id="selectJob">
+      <div class="showbg bx4" style="top: 183px; margin-bottom: 0px; margin-top: 0px;">
+          <div class="select-job-title">
+            <div class="job-title-top">
+              <h4>期望行业 <span>(最多支持选择3项)</span></h4>
+              <em class="icon16 close-blank-icon rg showbg_close" title="关闭"></em>
+            </div>
+            
+            <div class="job-title-main">
+              <div class="ins-from-txt bx4 le">
+                <ul id="trade_selected_list"><li class="bx4" data-id="1" title="互联网/电子商务"><p>互联网/电子商务</p><em class="icon16 city-close"></em></li><li class="bx4" data-id="3" title="计算机硬件"><p>计算机硬件</p><em class="icon16 city-close"></em></li><li class="bx4" data-id="5" title="计算机软件"><p>计算机软件</p><em class="icon16 city-close"></em></li></ul>
+                <div class="job-keyword" style="width: 240px;"><input type="text" class="in_txt" id="resume_search_hangyeName" placeholder="请输入您要查找的职位名称" data-placeholder="1"></div>
+                <em class="icon16 search-gray"></em>
+                <div class="job-search-list scllbg">
+                </div>
+              </div>
+              <span class="btn0 btn-blue rg" id="resume_trade_btn">确定</span>
+            </div>
+          </div>
+          
+          <div class="resume-trade-con select_more_city">
+            
+            <div class="resumelist-loading loading-box" style="margin-top: 62px;padding-right: 20px; display: none;">
+                  <div class="img-box">
+                    <img class="Reminders_img" src="zpgSource/images/computer/loading.gif" alt="" title="">
+                  </div>
+                  <p class="text-box">正在载入</p>
+            </div>
+            
+            <div class="resume-trade-main">
+            
+              <ul class="resume-trade-le " id="resume_trade_list"><li data-id="15" class="" title="IT | 通信 | 电子 | 互联网">IT | 通信 | 电子 | 互联网</li><li data-id="16" title="金融业" class="">金融业</li><li data-id="17" title="房地产 | 建筑业" class="curr">房地产 | 建筑业</li><li data-id="18" title="商业服务">商业服务</li><li data-id="19" title="贸易 | 批发 | 零售 | 租赁业 ">贸易 | 批发 | 零售 | 租赁业 </li><li data-id="20" title="教育 | 培训">教育 | 培训</li><li data-id="21" title="生产 | 加工 | 制造">生产 | 加工 | 制造</li><li data-id="22" title="交通 | 运输 | 物流 | 仓储">交通 | 运输 | 物流 | 仓储</li><li data-id="23" title="服务业">服务业</li><li data-id="24" title="文化 | 传媒 | 娱乐 | 体育">文化 | 传媒 | 娱乐 | 体育</li><li data-id="25" title="能源 | 矿产 | 环保">能源 | 矿产 | 环保</li><li data-id="26" title="政府 | 非盈利机构">政府 | 非盈利机构</li><li data-id="27" title="农 | 林 | 牧 | 渔">农 | 林 | 牧 | 渔</li><li data-id="28" title="其他">其他</li></ul>
+              
+              <dl class="resume-trade-rg scllbg" id="select_resume_trade"><dd data-id="13" title="房地产/建筑/建材/工程">房地产/建筑/建材/工程</dd><dd data-id="14" title="物业管理/商业中心">物业管理/商业中心</dd><dd data-id="15" title="家居/室内设计/装饰装潢">家居/室内设计/装饰装潢</dd></dl>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+
   </div>
   <!-- 上传照片 -->
   <div id="uploadPho" >

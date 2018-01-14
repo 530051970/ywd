@@ -23,9 +23,14 @@ export class LoginComponent implements OnInit {
   notRegister: boolean;
   // 使用FormBuilder比传统的FormGroup代码更简洁
   constructor(private commonService: CommonService, private fb: FormBuilder, private mockServicejQuery: MockService,private router: Router) {
+    this.formModel = this.fb.group({
+      email: ['', [Validators.required, Validators.email],this.asyncValidator()],
+      password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(12)]]
+    });
   }
 
   asyncValidator(): AsyncValidatorFn {
+    
     return (control: AbstractControl): Promise<ValidationErrors> => {
       clearTimeout(this.validationTimeout);
       return new Promise((resolve, reject) => {
@@ -59,20 +64,21 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
 
-    if (this.formModel.hasError('required', ['email']) || this.formModel.get('email').untouched) {
-      this.commonService.showTip(jQuery('#tip1'), 'danger');
-    } else if (this.formModel.hasError('asyncValidator', ['email'])) {
-      this.commonService.showTip(jQuery('#tip3'), 'danger');
-    } else if (this.formModel.get('email').invalid) {
-      this.commonService.showTip(jQuery('#tip2'), 'danger');
-    } else if (this.formModel.hasError('required', ['password']) || this.formModel.get('password').untouched) {
-      this.commonService.showTip(jQuery('#tip4'), 'danger');
-    } else if (this.formModel.hasError('minlength', ['password']) || this.formModel.hasError('maxlength', ['password'])) {
-      this.commonService.showTip(jQuery('#tip5'), 'danger');
-    } else {
-　　　　this.router.navigate(['home']);　　
-    }
-
+//     if (this.formModel.hasError('required', ['email']) || this.formModel.get('email').untouched) {
+//       this.commonService.showTip(jQuery('#tip1'), 'danger');
+//     } else if (this.formModel.hasError('asyncValidator', ['email'])) {
+//       this.commonService.showTip(jQuery('#tip3'), 'danger');
+//     } else if (this.formModel.get('email').invalid) {
+//       this.commonService.showTip(jQuery('#tip2'), 'danger');
+//     } else if (this.formModel.hasError('required', ['password']) || this.formModel.get('password').untouched) {
+//       this.commonService.showTip(jQuery('#tip4'), 'danger');
+//     } else if (this.formModel.hasError('minlength', ['password']) || this.formModel.hasError('maxlength', ['password'])) {
+//       this.commonService.showTip(jQuery('#tip5'), 'danger');
+//     } else {
+// 　　　　this.router.navigate(['home']);　　
+//     }
+sessionStorage.setItem("userId", "1111");
+this.router.navigate(['home']);　
   }
 
  

@@ -42,12 +42,8 @@ export class HomeRightHeadComponent implements OnInit {
     this.commonService.showDate(currentLang);
     // 时间的设置
     Rx.Observable.interval(1000).map(() => { return new Date() }).subscribe(
-      t => { this.showDate = t; }
+      t => { this.showDate = t; console.log( this.showDate)}
     );
-  }
-
-  ngAfterContentInit() {
-    setInterval(this.commonService.showTime(), 1000);
   }
 
   // 点击三明治切换按钮
@@ -58,7 +54,7 @@ export class HomeRightHeadComponent implements OnInit {
     const mainContent = jQuery('.main-content');
     const stickyLeftSide = jQuery('.sticky-left-side');
     const logo = jQuery('.logo');
-    const logoIcon = jQuery('.text-center');
+    const logoIcon = jQuery('.logo-icon.text-center.homeleft');
     if (bodyposition !== 'relative') {
       if (!body.hasClass('left-side-collapsed')) {
 
@@ -68,11 +64,11 @@ export class HomeRightHeadComponent implements OnInit {
         // mainContent.attr('style', 'width:97%;float:left');
         stickyLeftSide.attr('style', 'width:3%;float:left;position:fixed;z-index:999');
         rightHeader.attr('style', 'width:97%;  left: 3%;position:fixed;');
-        mainContent.attr('style', 'width:97%;margin-top:51px');
+        mainContent.attr('style', 'width:97%;margin-top:51px;height:100%');
         logo.hide();
         logoIcon.removeClass('logo-icon');
         logoIcon.show();
-        jQuery('.text-center').attr('style', 'height:48px')
+        jQuery('.text-center.homeleft').attr('style', 'height:48px')
         // 对于每一个一级菜单，如果是选中状态，收缩的时候不显示子菜单。
         jQuery.each(jQuery('.menu-list'), function (i, item) {
           if (jQuery(item).hasClass('nav-active')) {
@@ -82,10 +78,11 @@ export class HomeRightHeadComponent implements OnInit {
         jQuery(this).addClass('menu-collapsed');
       } else {
         this.commonService.toggleButton.emit("open");
+        const logoIcon =jQuery('.text-center.homeleft');
         logoIcon.addClass('logo-icon');
         stickyLeftSide.attr('style', 'width:14%;float:left;position:fixed;z-index:999');
         rightHeader.attr('style', 'width:86%;left:14%;position:fixed;');
-        mainContent.attr('style', 'width:86%;margin-top:51px;margin-left: 14%;');
+        mainContent.attr('style', 'width:86%;margin-top:51px;margin-left: 14%;height:100%');
         logo.show();
         logoIcon.hide();
         // 对于每一个一级菜单，如果是选中状态，放开的时候显示子菜单。
@@ -219,7 +216,7 @@ export class HomeRightHeadComponent implements OnInit {
 
   onClickDialog() {
     const tar = jQuery("#diaglog");
-    if (tar.width() == 0) {
+    if (tar.width() <= 0) {
       jQuery("#diaglog").stop().animate({ "width": "320px" });
     } else {
       jQuery("#diaglog").stop().animate({ "width": "0px" });

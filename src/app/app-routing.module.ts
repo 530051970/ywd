@@ -15,11 +15,13 @@ import {TalentBatchComponent} from './talent-batch/talent-batch.component';
 import {GeneralsettingsComponent} from './generalsettings/generalsettings.component';
 import {MailComponent} from './mail/mail.component';
 import {ResumeComponent} from './resume/resume.component';
+import {LoginGuard} from './guard/login.guard';
 
 
 const routes: Routes = [
   // 路由重定向，默认显示登录页面
   {path: '', redirectTo: '/login', pathMatch: 'full'},
+  // {path: '#', redirectTo: '/login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},  
   {path: 'home', component: HomeComponent,children:[
     {path: '', component: ControlPanelComponent},
@@ -35,7 +37,7 @@ const routes: Routes = [
       {path: 'detail', component: BlogDetailComponent}
     ]},
     {path: 'eprofile', component: ProfileEditComponent}
-  ]},
+  ],canActivate:[LoginGuard]},
   {path: 'code404', component: Code404Component},
   {path: '**', component: Code404Component}
 ];
@@ -43,7 +45,7 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: []
+  providers: [LoginGuard]
 })
 export class AppRoutingModule {
 }
