@@ -1,0 +1,63 @@
+    <div class="col-md-4" style="height:97%;">
+        <div class="row" style="margin-left: -30px;height:100%">
+            <div class="col-md-12" style="height:24%">
+                <div class="panel">
+                    <div class="panel-body" style="background-image:url('../../assets/img/bkg.jpg');background-size: cover">
+                        <div class="userpic-wrapper profile-pic text-center">
+                            <img alt="" src="../../assets/img/photos/user1.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12" style="padding-bottom: 15px;height:7%">
+                <button type="button" class="btn btn-primary btn-lg btn-block" *ngIf="follow" (click)="onFollow()"><i class="  fa fa-eye"></i> 关注</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block" *ngIf="!follow" (click)="onCancelFollow()"><i class="  fa fa-eye-slash"></i> 取消关注</button>
+            </div>
+            <div class="col-md-12" style="height:24%">
+                <div class="panel">
+                    <div class="panel-body">
+                        <ul class="p-info">
+                            <li>
+                                <div class="title">性别</div>
+                                <div class="desk">男</div>
+                            </li>
+                            <li>
+                                <div class="title">区域</div>
+                                <div class="desk">中国 上海</div>
+                            </li>
+                            <li>
+                                <div class="title">公司名</div>
+                                <div class="desk">博客多(上海)信息技术有限公司</div>
+                            </li>
+                            <li>
+                                <div class="title">所属部门</div>
+                                <div class="desk">人力资源部</div>
+                            </li>
+                            <li>
+                                <div class="title">邮箱</div>
+                                <div class="desk">admin@e-worlder.com</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12" style="height:45%">
+                <div class="panel" style="height:100%">
+                    <div class="panel-body">
+                        <div class="blog-post">
+                            <h3>文章列表</h3>
+                            <ul>
+                                <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> 的收入发光飞碟</a></li>
+                                <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> 讽德诵功豆腐干豆腐是 梵蒂冈的双方各</a></li>
+                                <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> 单方事故电饭锅</a></li>
+                                <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> 豆腐干豆腐身高多少非官方大哥讽德诵功</a></li>
+                                <li><a href="javascript:;"><i class="  fa fa-angle-right"></i> 单方事故电饭锅打发打发时光</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <router-outlet></router-outlet>

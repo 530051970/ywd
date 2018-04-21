@@ -1,0 +1,242 @@
+div.col-md-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.custom-tab {
+    background: #eff0f4;
+}
+section.panel {
+    border-width: 0px;
+}
+
+
+
+div.col-xs-4 i {
+    font-size: 50px;
+}
+.fa {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+div.panel-body.selected {
+    display: block;
+    background-color: lightslategray;
+    color: white;
+}
+
+div.panel-body.selected span {
+    color: white;
+}
+
+.panel{
+    border:none;
+}
+
+.panel-body span.state-title {
+    color: gray;
+}
+
+div.selected .panel-body span.state-title {
+    color: white;
+}
+
+div.left.row {
+    color: gainsboro;
+}
+
+div.left.row:hover {
+    color:#65CEA7;
+}
+
+div.selected div.left.row {
+    color: white;
+}
+
+/* div.col-md-9>div.row>div.col-md-12>div.panel {
+    display:none;
+}
+
+div.col-md-9>div.row>div.col-md-12>div.panel.selected {
+    display: block;
+} */
+
+div.col-md-12 a:hover {
+    cursor: pointer;
+    background-color:linen;
+    color:#65CEA7;
+}
+
+/* div.profile-pic.text-center img {
+    display:block;
+} */
+
+div.profile-pic.text-center img.upload {
+    display:none;
+}
+
+/* div.profile-pic.text-center.logo-icon{
+    display:block;
+} */
+
+.md-screen-part input {
+    width: 100%;
+    height: 100%;
+    padding-left: 0px;
+    line-height: 20px;
+    color: #313534;
+}
+
+.placeholder {
+    font-size: 14px;
+    color: #888;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    height: 28px;
+    margin-top: -14px;
+    line-height: 28px;
+}
+
+.md-screen-part-age.talent-add{
+    border: solid 1px rgb(204, 204, 204);
+    padding-left: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 6px;
+}
+
+.md-screen-part-age>input {
+    border: none;
+    outline: none;
+}
+
+.layui-laydate {
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+
+/* div下拉框 START */
+div.dropdown {
+    position:relative;
+    width:470px;
+    color:gray;
+    border: solid 1px rgb(204, 204, 204);
+    padding-left: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 6px;    
+}
+
+div.dropdown i {
+    float:right;padding-right: 10px;padding-top: 3px;
+}
+
+ul.dropdown {
+    padding:0px;
+    list-style:none;
+    position:absolute;
+    width:470px;
+    border:1px solid rgb(204, 204, 204);
+    border-radius:6px;
+    top:40px;
+    display:none;
+    z-index: 99999;
+    background-color: whitesmoke;
+}
+
+ul.dropdown li{
+    padding-left:15px;
+    padding-right:15px;
+    width:100%;
+    height:35px;
+    vertical-align:middle;
+    padding-top: 7px;    
+    border-bottom: 1px solid rgb(204, 204, 204);
+    border-collapse:collapse
+    
+}
+
+
+ul.dropdown li:hover {
+   background-color: #56b4f8;
+   color: white;
+   cursor: pointer;
+}
+/* div下拉框 END */
+
+div.pretty {
+    padding-left: 0px;margin-left: 20px;margin-right: 0px;
+}
+
+
+div.row div.upload {
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    position: relative;
+    /* background-color: lightgrey; */
+}
+
+i.upload {
+    color: lightgrey;
+    position: absolute;
+    margin: auto auto;
+    top: 50px;
+    left: 0px;
+    right: 0px;
+}
+
+div.row div.upload-text{
+    padding-top: 120px;
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+    font-family: cursive;
+}
+
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: none;
+}
+
+/* 手工入力页面右侧CSS */
+#mainArea>div.panel.baseInf {
+    height: 100%;
+    border: none;
+}
+
+#mainArea a{
+    float: right; margin-right: 80px;color:gray
+}
+
+#mainArea a:hover {
+    color:#65CEA7;
+    font-weight:bold;
+}
+
+i.fa.fa-bars.fa-stack-1x.left{    
+    margin-bottom: 0px;
+    bottom: 12px;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+i.fa.fa-angle-left.fa-stack-1x.left{    
+    bottom: 10px;
+    left: -13px;
+}
+
+i.fa.fa-angle-right.fa-stack-1x.left{    
+    left: 13px;
+    top: 8px;
+}
+
+

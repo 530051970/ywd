@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  <link href="assets/js/iCheck/skins/minimal/minimal.css" rel="stylesheet">
+  <link href="assets/js/iCheck/skins/square/square.css" rel="stylesheet">
+  <link href="assets/js/iCheck/skins/square/red.css" rel="stylesheet">
+  <link href="assets/js/iCheck/skins/square/blue.css" rel="stylesheet">
+  <link href="assets/css/jquery.slider.css" rel="stylesheet">
+
+  <!--dashboard calendar-->
+  <link href="assets/css/clndr.css" rel="stylesheet">
+
+
+  <!--common-->
+  <!--<link href="assets/css/style.css" rel="stylesheet">-->
+  <link href="assets/css/style-responsive.css" rel="stylesheet">
+  <title>依沃黛-无处不在，行而必果！</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="keywords" content="依沃黛,e-worlder,人力资源外包,招聘服务提供商,RPO,猎头,企业招聘">
+  <meta name="description" content="依沃黛，以具有专业禀赋的灵活性和高效率，为客户提供高端招聘解决方案，持续为国内客户带来超越期望的企业价值。目前在金融、地产、互联网、人工智能等领域，凭籍令人赞叹的寻访能力，或领跑业界，或业绩斐然；长期以深度聚焦 HRO 业务，一站式解决企业人才需求为使命，专业专注，口碑卓著。">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background: #F5FAFD
+    }
+
+    .mvBox {
+      height: 15px;
+      background: #F5FAFD url(../assets/img/loading2.jpg) no-repeat left center;
+      width: 471px;
+      position: relative;
+      padding: 0 30px;
+      margin: 0 auto;
+    }
+
+    .mvBtn {
+      position: absolute;
+      left: 50px;
+    }
+
+    .mvTxt {
+      line-height: 50px;
+      width: 531px;
+      text-align: center;
+      font-size: 30px;
+      color: #29B6FF;
+      font-family: Arial;
+      margin: 0 auto;
+      height: 50px;
+    }
+
+    @media screen and (max-width: 706px) {
+      .mvTxt,.mvBox{
+       width:60%;
+     }
+     .mvTxt {
+       font-size: 14px;
+     }
+  
+
+ }
+  </style>
+</head>
+<body style="height: 100%; width: 100%;">
+  <app-root>
+    <div style="background:#F5FAFD; padding:50px;height:100%;text-align:center;padding-top:300px;width:100%">
+      <!--效果开始-->
+      <div class="mvTxt">Loading<span class="mvSq">.</span><span class="mvSq">.</span><span class="mvSq">.</span></div>
+      <div class="mvBox">
+        <img class="mvBtn" src="../assets/img/loading1.jpg" />
+      </div>
+      <script language="javascript">
+        var delVal = 50;
+        function autoMove() {
+          delVal = delVal + 8;
+          if (delVal > 400) {
+            delVal = 50;
+          }
+          //  $(".mvBtn").css("left",delVal);
+        }
+        setInterval(autoMove, 1);
+        var deNum = 0;
+        function autoTsq() {
+          $(".mvSq").css("color", "#F5FAFD");
+          setTimeout(function () { $(".mvSq").eq(0).css("color", "#29B6FF") }, 0);
+          setTimeout(function () { $(".mvSq").eq(1).css("color", "#29B6FF") }, 500);
+          setTimeout(function () { $(".mvSq").eq(2).css("color", "#29B6FF") }, 1000);
+        }
+        setInterval(autoTsq, 1500);
+      </script>
+      <!--End-->
+    </div>
+  </app-root>
+  <script src="assets/js/jquery-1.10.2.min.js"></script>
+  <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+  <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/modernizr.min.js"></script>
+
+  <!--easy pie chart-->
+  <script src="assets/js/easypiechart/jquery.easypiechart.js"></script>
+  <script src="assets/js/easypiechart/easypiechart-init.js"></script>
+
+  <!--Sparkline Chart-->
+  <script src="assets/js/sparkline/jquery.sparkline.js"></script>
+  <script src="assets/js/sparkline/sparkline-init.js"></script>
+
+  <!--icheck -->
+  <script src="assets/js/iCheck/jquery.icheck.js"></script>
+  <script src="assets/js/icheck-init.js"></script>
+  <script src="assets/js/jquery.nicescroll.js"></script>
+
+  <!-- jQuery Flot Chart-->
+  <script src="assets/js/flot-chart/jquery.flot.js"></script>
+  <script src="assets/js/flot-chart/jquery.flot.tooltip.js"></script>
+  <script src="assets/js/flot-chart/jquery.flot.resize.js"></script>
+  <script src="assets/js/flot-chart/jquery.flot.pie.resize.js"></script>
+  <script src="assets/js/flot-chart/jquery.flot.selection.js"></script>
+  <script src="assets/js/flot-chart/jquery.flot.stack.js"></script>
+  <script src="assets/js/flot-chart/jquery.flot.time.js"></script>
+  <script src="assets/js/flot.chart.init.js"></script>
+
+
+  <script src="assets/js/remodal.min.js"></script>
+  <script src="assets/js/jquery-loader.js"></script>
+  <script src="assets/js/zepto.js"></script>
+  <script src="assets/js/showTip.js"></script>
+  <script src="assets/js/underscore.js"></script>
+
+  
+  <script src="assets/js/calendar/clndr.js"></script>
+  <script src="assets/js/calendar/evnt.calendar.init.js"></script>
+  <script src="assets/js/calendar/moment-2.2.1.js"></script>
+  <script src="assets/js/jquery.slider.min.js"></script>
+
+
+  <script src="assets/js/jquery.clock.js"></script>
+  <script src="assets/js/moment.min.js"></script>
+
+  <script src="assets/js/jquery.slider.min.js"></script>
+
+  <!--common scripts for all pages-->
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>

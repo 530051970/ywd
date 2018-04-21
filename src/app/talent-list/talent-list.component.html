@@ -1,0 +1,763 @@
+<div class="sidebar"></div>
+<div class="row">
+  <div class="col-md-2" style="padding-right:0px;height: 233px;">
+    <div class="col-md-12" style="padding-left: 0px;padding-right:0px;">
+      <div class="panel panel-default toggle panelRefresh panelClose showControls" style="height:100%;border-left-width: 0px;border-right-width: 0px;border-top-width: 0px;border-bottom-width: 0px;">
+        <div class="panel-heading" style="height: 40px;padding-left: 8px;">
+          <div class="panel-title" style="float:left"><i class="fa fa-users" style="margin-right: 7px;"></i>我的分組</div>
+        </div>
+        <div class="panel-body">
+          <div id="FlatTree2" class="tree">
+              <div class="tree-folder" (click)="onclickGroup(groupone1,grouponeOpen1)">
+                  <a class="tree-folder-header" style="display:block" (mouseover)="onMouseOverGroup(rename1,badge1)" (mouseleave)="onMouseOutGroup(rename1,badge1)">                
+                    <a class="tree-folder-name">
+                      <a>
+                        <i class="fa fa-folder" style="float:left;padding-top: 3px;margin-right: 2px;color:#666" #groupone1></i>
+                        <i class="fa fa-folder-open" style="float:left;padding-top: 3px;color:#666;display:none;margin-right: 0px;" #grouponeOpen1></i>
+                        <div style="float:left;max-width: 100px;margin-left: 3px;color:#333;" #groupdiv1>全部</div>
+                      </a>                 
+                  <span class="badge" style="float: right;background-color:#666" #badge1>20</span>
+                  </a>
+                  </a>
+                </div>
+            <div class="tree-folder" (click)="onclickGroup(groupone1,grouponeOpen1)">
+              <a class="tree-folder-header" style="display:block" (mouseover)="onMouseOverGroup(rename1,badge1)" (mouseleave)="onMouseOutGroup(rename1,badge1)">                
+                <a class="tree-folder-name">
+                  <a>
+                    <i class="fa fa-folder" style="float:left;padding-top: 3px;margin-right: 2px;color:#666" #groupone1></i>
+                    <i class="fa fa-folder-open" style="float:left;padding-top: 3px;color:#666;display:none;margin-right: 0px;" #grouponeOpen1></i>
+                    <div style="float:left;max-width: 100px;margin-left: 3px;color:#333;" #groupdiv1>默认分组一</div>
+                    <input type="" style="padding-left:1px;float: left;max-width: 100px;margin-left: 2px;color: rgb(51, 51, 51);border: none;display:none" value="默认分组一" #groupinput1 (click)="onClickInput($event)" (blur)="obBlurInput()"/>
+                  </a>
+              <a (click)="onclickChange($event,groupdiv1,groupinput1)" style="display:none;" #rename1><i class="fa fa-pencil" style="margin-left:5px;color:#666"  ></i></a>
+              <span class="badge" style="float: right;background-color:#666" #badge1>20</span>
+              </a>
+              </a>
+            </div>
+            <div class="tree-folder" (click)="onclickGroup(groupone2,grouponeOpen2)">
+              <a class="tree-folder-header" style="display:block" (mouseover)="onMouseOverGroup(rename2,badge2)" (mouseleave)="onMouseOutGroup(rename2,badge2)">                
+                  <a class="tree-folder-name">
+                    <a>
+                      <i class="fa fa-folder" style="float:left;padding-top: 3px;margin-right: 2px;color:#666" #groupone2></i>
+                      <i class="fa fa-folder-open" style="float:left;padding-top: 3px;color:#666;display:none" #grouponeOpen2></i>
+                      <div style="float:left;max-width: 100px;margin-left: 3px;color:#333;" #groupdiv2>默认分组一</div>
+                      <input type="" style="float:left;max-width: 100px;margin-left: 3px;color:#333;display:none" value="默认分组一" #groupinput2 (click)="onClickInput($event)" (blur)="obBlurInput()"/>
+                    </a>
+              <a (click)="onclickChange($event,groupdiv2,groupinput2)" style="display:none;" #rename2><i class="fa fa-pencil" style="margin-left:5px;color:#666"  ></i></a>
+              <span class="badge" style="float: right;background-color:#666" #badge2>20</span>
+              </a>
+              </a>
+            </div>
+            <div class="tree-folder" (click)="onclickGroup(groupone3,grouponeOpen3)">
+              <a class="tree-folder-header" style="display:block" (mouseover)="onMouseOverGroup(rename3,badge3)" (mouseleave)="onMouseOutGroup(rename3,badge3)">                
+                    <a class="tree-folder-name">
+                      <a>
+                        <i class="fa fa-folder" style="float:left;padding-top: 3px;margin-right: 2px;color:#666" #groupone3></i>
+                        <i class="fa fa-folder-open" style="float:left;padding-top: 3px;color:#666;display:none" #grouponeOpen3></i>
+                        <div style="float:left;max-width: 100px;margin-left: 3px;color:#333;" #groupdiv3>默认分组一</div>
+                        <input type="" style="float:left;max-width: 100px;margin-left: 3px;color:#333;display:none" value="默认分组一" #groupinput3 (click)="onClickInput($event)" (blur)="obBlurInput()"/>
+                      </a>
+              <a (click)="onclickChange($event,groupdiv3,groupinput3)" style="display:none;" #rename3><i class="fa fa-pencil" style="margin-left:5px;color:#666"  ></i></a>
+              <span class="badge" style="float: right;background-color:#666" #badge3>20</span>
+              </a>
+              </a>
+            </div>
+            <!-- <div class="tree-folder" (click)="onclickGroup(groupone4,grouponeOpen4)">
+              <a class="tree-folder-header" style="display:block" (mouseover)="onMouseOverGroup(rename4,badge4)" (mouseleave)="onMouseOutGroup(rename4,badge4)">                
+                      <a class="tree-folder-name">
+                        <a>
+                          <i class="fa fa-folder" style="float:left;padding-top: 3px;margin-right: 2px;color:#666" #groupone4></i>
+                          <i class="fa fa-folder-open" style="float:left;padding-top: 3px;color:#666;display:none" #grouponeOpen4></i>
+                          <div style="float:left;max-width: 100px;margin-left: 3px;color:#333;" #groupdiv4>默认分组一</div>
+                          <input type="" style="float:left;max-width: 100px;margin-left: 3px;color:#333;display:none" value="默认分组一" #groupinput4 (click)="onClickInput($event)" (blur)="obBlurInput()"/>
+                        </a>
+              <a (click)="onclickChange($event,groupdiv4,groupinput4)" style="display:none;" #rename4><i class="fa fa-pencil" style="margin-left:5px;color:#666"  ></i></a>
+              <span class="badge" style="float: right;background-color:#666" #badge4>20</span>
+              </a>
+              </a>
+            </div> -->
+            <div class="tree-folder" (click)="onclickGroup(groupone5,grouponeOpen5)">
+              <a class="tree-folder-header" style="display:block" (mouseover)="onMouseOverGroup(rename5,badge5)" (mouseleave)="onMouseOutGroup(rename5,badge5)">                
+                        <a class="tree-folder-name">
+                          <a>
+                            <i class="fa fa-folder" style="float:left;padding-top: 3px;margin-right: 2px;color:#666" #groupone5></i>
+                            <i class="fa fa-folder-open" style="float:left;padding-top: 3px;color:#666;display:none" #grouponeOpen5></i>
+                            <div style="float:left;max-width: 100px;margin-left: 3px;color:#333;" #groupdiv5>默认分组一</div>
+                            <input type="" style="float:left;max-width: 100px;margin-left: 3px;color:#333;display:none" value="默认分组一" #groupinput5 (click)="onClickInput($event)" (blur)="obBlurInput()"/>
+                          </a>
+              <a (click)="onclickChange($event,groupdiv5,groupinput5)" style="display:none;" #rename5><i class="fa fa-pencil" style="margin-left:5px;color:#666"  ></i></a>
+              <span class="badge" style="float: right;background-color:#666" #badge5>20</span>
+              </a>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-10" style="padding-left: 0px;padding-right: 0px;">
+    <div class="col-md-9 search-panel">
+      <div class="col-md-12" style="padding-left: 0px;padding-right:0px;">
+        <div class="panel col-md-12" style="margin-bottom: 0px;padding-right: 0px;">
+          <div class="panel-body col-md-12" style="padding: 15px 0 0 0;">
+            <div class="panel col-md-6" style="padding-left: 0px;padding-right: 0px; margin-bottom: 0px;">
+              <label class="col-sm-2 col-sm-2 control-label" style="padding-top: 10px;padding-left: 0px;float: left;margin-right:-3px">区&nbsp;&nbsp;&nbsp;&nbsp;域</label>
+              <div class="control-label" style="padding-left:0px;float: left;width:76%">
+                <div class="col-sm-12" style="color:#888;padding-bottom: 5px;padding-top: 10px;border:solid 1px rgb(204, 204, 204);border-radius:4px;">
+                  点击选择省市区...
+                  <i class="fa fa-plus-square-o" style="margin-top: 5px;float:right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="panel col-md-6" style="margin-bottom: 0px;padding-left:0px;padding-right: 0px;">
+              <label class="col-sm-2 col-sm-2 control-label" style="padding-top: 10px;padding-left: 0px;float: left;margin-right:-3px">行&nbsp;&nbsp;&nbsp;&nbsp;业</label>
+              <div class="col-sm-10 col-sm-10 control-label" style="padding-left:0px;padding-right:0px;float: left;width:76%">
+                <div class="col-sm-12" style="color:#888;padding-bottom: 5px;padding-top: 10px;border:solid 1px rgb(204, 204, 204);border-radius:4px;">
+                  点击选择所属行业...
+                  <i class="fa fa-plus-square-o" style="margin-top: 5px;float:right"></i>
+                </div>
+              </div>
+            </div>
+            <div class="panel-body col-md-6" style="padding-top: 0px;padding-left: 0px;padding-bottom: 0px;margin-top: 15px;padding-right:0px;">
+              <label class="col-sm-2 col-sm-2 control-label" style="padding-top: 10px;padding-left: 0px;padding-right: 0px;float:left;">学&nbsp;&nbsp;&nbsp;&nbsp;历</label>
+              <div class="col-sm-10" style="padding-left: 0px;padding-right: 0px;">
+                <div id="screen_education" class="col-md-12" style="padding-left: 0px;padding-right: 0px;">
+                  <div class="bx4 le md-screen-part nofilled col-md-5" data-type="start">
+                    <p class="result" style="margin-bottom: 0px;">选择学历</p>
+                    <ul class="md-screen-partul scllbg">
+                      <li data-value="-1">不限</li>
+                      <li data-value="1">高中/中技/中专</li>
+                      <li data-value="2">大专</li>
+                      <li data-value="3">本科</li>
+                      <li data-value="4">硕士</li>
+                      <li data-value="5">MBA</li>
+                      <li data-value="6">博士</li>
+                    </ul>
+                  </div>
+                  <span class="public_input_line le"></span>
+                  <div class="bx4 le md-screen-part nofilled col-md-5 right" data-type="end">
+                    <p class="result" style="margin-bottom: 0px;">及以上</p>
+                    <ul class="md-screen-partul scllbg">
+                      <li data-value="-1">不限</li>
+                      <li data-value="1">高中/中技/中专</li>
+                      <li data-value="2">大专</li>
+                      <li data-value="3">本科</li>
+                      <li data-value="4">硕士</li>
+                      <li data-value="5">MBA</li>
+                      <li data-value="6">博士</li>
+                      <li data-value="100">及以上</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-body col-md-6" style="padding-bottom: 10px;padding-left:0px;">
+              <label class="col-sm-2 col-sm-2 control-label" style="padding-top: 10px;padding-left: 0px;padding-right: 0px;float:left;">性&nbsp;&nbsp;&nbsp;&nbsp;别</label>
+              <div class="col-sm-4 col-sm-4 minimal-blue" style="padding-right:0px;float:left">
+                <div class="square-blue single-row">
+                  <!-- <input type="radio" id="radio-1-1" name="radio-1-set" class="regular-radio" checked />
+                  <label for="radio-1-1">不限</label> -->
+                  <div class="radio " (click)="onClickSexRadio('1')">
+                    <div class="sex-radio">
+                      <div class="inner-radio" id="all"></div>
+                    </div>
+                    <label style="padding-left:10px;">不限 </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3 col-sm-3 minimal-blue" style="padding-right:0px;float:left">
+                <div class="square-blue single-row">
+                  <div class="radio " (click)="onClickSexRadio('2')">
+                    <div class="sex-radio">
+                        <div class="inner-radio" id="man"></div>
+                    </div>
+                    <label style="padding-left:10px;">男 </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-3 col-sm-3 minimal-blue" style="padding-right:0px;float:left">
+                <div class="square-blue single-row">
+                  <div class="radio " (click)="onClickSexRadio('3')">
+                    <div class="sex-radio">
+                        <div class="inner-radio" id="woman"></div>
+                    </div>
+                    <label style="padding-left:10px;">女 </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-body col-md-6" style="padding-top: 0px;padding-left: 0px;padding-right: 0px;">
+              <label class="col-sm-2 col-sm-2 control-label" style="padding-top: 10px;padding-left: 0px;padding-right: 0px;float:left;">年&nbsp;&nbsp;&nbsp;&nbsp;龄</label>
+              <div class="col-sm-10" style="padding-left: 0px;padding-right: 0px;">
+
+                <div class="col-md-12" style="padding-left: 0px;padding-right: 0px;">
+                  <div class="bx4 le md-screen-part-age nofilled col-md-5" data-type="start">
+                    <input type="number" name="" class="result" data-placeholder="1" placeholder="填写年龄">
+                  </div>
+                  <span class="public_input_line le"></span>
+                  <div class="bx4 le md-screen-part-age nofilled col-md-5 right" data-type="end">
+                    <input type="number" name="" class="result" data-placeholder="1" placeholder="及以上">
+                    <!-- <span class="placeholder" style="display: block;">及以上</span> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-body col-md-6" style="padding-top: 0px;padding-left: 0px;padding-right: 0px;">
+              <label class="col-sm-2 col-sm-2 control-label" style="padding-top: 10px;padding-left: 0px;padding-right: 0px;">经&nbsp;&nbsp;&nbsp;&nbsp;验</label>
+              <div class="col-sm-10" style="padding-left: 0px;padding-right: 0px;">
+                <div id="screen_education" class="col-md-12" style="padding-left: 0px;padding-right: 0px;">
+                  <div class="bx4 le md-screen-part nofilled col-md-5" data-type="start">
+                    <p class="result" style="margin-bottom: 0px;">工作经验</p>
+                    <ul class="md-screen-partul scllbg">
+                      <li data-value="-1">不限</li>
+                      <li data-value="1">高中/中技/中专</li>
+                      <li data-value="2">大专</li>
+                      <li data-value="3">本科</li>
+                      <li data-value="4">硕士</li>
+                      <li data-value="5">MBA</li>
+                      <li data-value="6">博士</li>
+                    </ul>
+                  </div>
+                  <span class="public_input_line le"></span>
+                  <div class="bx4 le md-screen-part nofilled col-md-5 right" data-type="end" style="margin-left:0px;">
+                    <p class="result" style="margin-bottom: 0px;">及以上</p>
+                    <ul class="md-screen-partul scllbg">
+                      <li data-value="-1">不限</li>
+                      <li data-value="1">高中/中技/中专</li>
+                      <li data-value="2">大专</li>
+                      <li data-value="3">本科</li>
+                      <li data-value="4">硕士</li>
+                      <li data-value="5">MBA</li>
+                      <li data-value="6">博士</li>
+                      <li data-value="100">及以上</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-3" style="padding-right: 15px;padding-left: 0px;">
+      <div class="col-md-12" style="padding-left: 0px;padding-right:0px;">
+        <!-- <div class="panel" style="margin-bottom: 0px;">
+        <div class="panel-body" style="height: 165px;padding-right:0px;"> -->
+        <div class="panel panel-default" style="border:none;height: 171px;margin-bottom: 0px;">
+          <div class="panel-heading" style="height: 40px;padding-left: 8px;">
+            <div class="panel-title" style="float:left"><i class="fa fa-key" style="margin-right: 7px;"></i>常用关键词汇</div>
+            <a class="addItem"><i class="fa fa-plus" ></i></a>
+          </div>
+          <div class="panel-body scroll-bar-css" style="padding-right: 0px;padding-left: 10px;padding-top: 10px;overflow-y: auto;height:131px">
+            <div class="label label-primary" style="background-color:#6bc5a4" (mouseover)="onMouseOverKeyword(key1)" (mouseout)="onMouseOutKeyword(key1)"  #word1><a>销售</a><a (click)="onClickKeya(word1)"><i class="fa fa-times"#key1></i></a></div>
+            <div class="label label-primary" style="background-color:#6bc5a4" (mouseover)="onMouseOverKeyword(key2)" (mouseout)="onMouseOutKeyword(key2)" #word2>java<a (click)="onClickKeya(word2)"><i class="fa fa-times" #key2></i></a></div>
+            <div class="label label-primary" style="background-color:#6bc5a4" (mouseover)="onMouseOverKeyword(key3)" (mouseout)="onMouseOutKeyword(key3)" #word3>资深前端工程师<a (click)="onClickKeya(word3)"><i class="fa fa-times" #key3></i></a></div>
+            <div class="label label-primary" style="background-color:#6bc5a4" (mouseover)="onMouseOverKeyword(key4)" (mouseout)="onMouseOutKeyword(key4)" #word4>PHP<a (click)="onClickKeya(word4)"><i class="fa fa-times" #key4></i></a></div>
+            <div class="label label-primary" style="background-color:#6bc5a4" (mouseover)="onMouseOverKeyword(key5)" (mouseout)="onMouseOutKeyword(key5)" #word5>Angular<a (click)="onClickKeya(word5)"><i class="fa fa-times" #key5></i></a></div>
+            <div class="label label-primary" style="background-color:#6bc5a4" (mouseover)="onMouseOverKeyword(key6)" (mouseout)="onMouseOutKeyword(key6)" #word6>售后支持<a (click)="onClickKeya(word6)"><i class="fa fa-times" #key6></i></a></div>
+            <div class="label label-primary" style="background-color:#6bc5a4" (mouseover)="onMouseOverKeyword(key7)" (mouseout)="onMouseOutKeyword(key7)" #word7>客户经理<a (click)="onClickKeya(word7)"><i class="fa fa-times" #key7></i></a></div>
+            <div class="label label-primary" style="background-color:#6bc5a4" (mouseover)="onMouseOverKeyword(key8)" (mouseout)="onMouseOutKeyword(key8)" #word8>客户经理<a (click)="onClickKeya(word8)"><i class="fa fa-times" #key8></i></a></div>
+            <div class="label label-primary" style="background-color:#6bc5a4" (mouseover)="onMouseOverKeyword(key9)" (mouseout)="onMouseOutKeyword(key9)" #word9>客户经理<a (click)="onClickKeya(word9)"><i class="fa fa-times" #key9></i></a></div>
+            <div class="label label-primary" style="background-color:#6bc5a4" (mouseover)="onMouseOverKeyword(key10)" (mouseout)="onMouseOutKeyword(key10)" #word10>客户经理<a (click)="onClickKeya(word10)"><i class="fa fa-times" #key10></i></a></div>
+            <div class="label label-primary" style="background-color:#6bc5a4" (mouseover)="onMouseOverKeyword(key11)" (mouseout)="onMouseOutKeyword(key11)" #word11>客户经理<a (click)="onClickKeya(word11)"><i class="fa fa-times" #key11></i></a></div>
+            <div class="label label-primary" style="background-color:#6bc5a4" (mouseover)="onMouseOverKeyword(key12)" (mouseout)="onMouseOutKeyword(key12)" #word12>客户经理<a (click)="onClickKeya(word12)"><i class="fa fa-times" #key12></i></a></div>
+            <div class="label label-primary" style="background-color:#6bc5a4" (mouseover)="onMouseOverKeyword(key13)" (mouseout)="onMouseOutKeyword(key13)" #word13>客户经理<a (click)="onClickKeya(word13)"><i class="fa fa-times" #key13></i></a></div>
+            <div class="label label-primary" style="background-color:#6bc5a4" (mouseover)="onMouseOverKeyword(key14)" (mouseout)="onMouseOutKeyword(key14)" #word14>客户经理<a (click)="onClickKeya(word14)"><i class="fa fa-times" #key14></i></a></div>
+            <div class="label label-primary" style="background-color:#6bc5a4" (mouseover)="onMouseOverKeyword(key15)" (mouseout)="onMouseOutKeyword(key15)" #word15>java<a (click)="onClickKeya(word15)"><i class="fa fa-times" #key15></i></a></div>
+            <!-- <form action="#" class="form-horizontal"> -->
+                <!-- <div class="form-group">
+                    <div class="col-md-12">
+                        <input id="tags_2" type="text" class="tags" value="tag1,tag2" />
+                    </div>
+                </div> -->
+            <!-- </form> -->
+          </div>
+        </div>
+        <!-- </div>
+      </div> -->
+      </div>
+    </div>
+
+    <div class="col-md-9 find">
+      <div class="panel" style="margin-bottom: 0px;">
+        <div class="panel-body" style="padding-top: 8px;padding-left:0px;padding-right: 0px;">
+          <div class="col-md-10" style="padding-right: 0px;">
+            <input type="text" class="form-control" placeholder="请输入关键词，多个可用空格分隔" style="border-radius: 4px 0 0 4px;">
+          </div>
+          <div class="col-md-2" style="padding-left: 0px;padding-right: 0px;">
+            <button class="btn btn-info " type="button" style="width: 76%;border-radius:0 4px 4px 0;float:left;"><i class="fa fa-search" style="margin-right: 10px"></i>搜索</button>
+            <a (click)="onClickHistory()"><i class="fa fa-history" style="margin-left: 4%;margin-right: 0px;margin-top: 13px;width: 11%;"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-3" style="padding-left: 0px;padding-top: 0px;margin-top: 10px;height: 50px;">
+      <div class="panel">
+        <div class="panel-body search">
+          <a><i class="fa fa-trash">&nbsp;清空搜索条件</i></a>
+          <a><i class="fa fa-save">&nbsp;保存搜索条件</i></a>
+          <a><i class="fa fa-angle-double-up">&nbsp;收起</i></a>
+        </div>
+
+        <div class="panel-body search middle">
+            <div style="float:left;color:gray;font-size:14px">检索条件:&nbsp;&nbsp;</div>
+            <a><i class="fa fa-trash">&nbsp;清空</i></a>
+            <a><i class="fa fa-save">&nbsp;保存</i></a>
+            <a><i class="fa fa-angle-double-up">&nbsp;收起</i></a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="col-md-12" style="padding-left: 0px;padding-right: 0px;margin-top: 15px;height:75%"> -->
+<div class="col-md-12" style="padding-left: 0px;padding-right: 0px;margin-top: 15px;height:68%">
+  <div class="panel">
+    <div class="panel-body">
+      <div class="adv-table">
+        <div id="dynamic-table_wrapper" class="dataTables_wrapper form-inline" role="grid">
+          <div class="row-fluid">
+            <div class="col-md-12" style="padding-left: 0px;margin-bottom: 10px;padding-right:0px;">
+              <section class="panel">
+                <header class=" col-md-12 panel-heading custom-tab " style="padding-bottom: 0px;height: 51px;margin-bottom: 10px;">
+                  <ul class="col-md-6 nav nav-tabs">
+                    <li class="active">
+                      <a href="#inner" data-toggle="tab"><i class="fa fa-indent" style="margin-top: 3px;"></i>内部人才库</a>
+                    </li>
+                    <li class="">
+                      <a href="#online" data-toggle="tab"><i class="fa fa-globe" style="margin-top: 3px;"></i>线上人才库</a>
+                    </li>
+                    <li class="">
+                      <a href="#focus" data-toggle="tab"><i class="fa fa-bookmark-o" style="margin-top: 3px;"></i>我关注的人才</a>
+                    </li>
+                    <!-- <li class="">
+                            <a href="#contact" data-toggle="tab">Contact</a>
+                        </li> -->
+                  </ul>
+                  <div class="col-md-6" style="padding-right: 0px;height: 50px;float: right;padding-bottom: 0px;margin-top: -3px;">
+                    <div class="dataTables_filter" id="dynamic-table_filter" style="float:left;width:95%;padding-top: 3px;"><label>快速查找: <input type="text" class="form-control" aria-controls="dynamic-table"></label></div>
+                    <div style="width:5%;float:right;padding-left: 20px;padding-right:0px;padding-top: 13px;">
+                      <a class="exportExcel"><i class="fa fa-cloud-download fa-lg" style="float: right;"></i></a>
+                      <!-- <a class="exportPdf"><i class="fa fa-file-pdf-o fa-lg"></i></a> -->
+                    </div>
+                  </div>
+                </header>
+                <!-- <div id="dynamic-table_length" class="dataTables_length"> -->
+                <!-- <label>
+                <select class="form-control" size="1" name="dynamic-table_length" aria-controls="dynamic-table"><option value="10" selected="selected">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> records per page</label> -->
+                <!-- </div> -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="inner">
+                    <table class="display table table-bordered table-striped dataTable" id="dynamic-table" aria-describedby="dynamic-table_info">
+                      <thead>
+                        <tr role="row">
+                          <th role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending"
+                            style="width:62px;text-align:center">选中</th>
+                          <th class="sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending"
+                            style="width: 8%">姓名</th>
+                          <th class="sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending"
+                            style="width: 4%">性别</th>
+                          <th class="sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending"
+                            style="width: 8%">地级市</th>
+                          <th class="sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending"
+                            style="width: 8%">区县</th>
+                          <th class="sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
+                            style="width: 9%">行业</th>
+                          <th class="sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
+                            style="width: 4%">年龄</th>
+                          <th class="sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
+                            style="width: 6%">状态</th>
+                          <th class="sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
+                            style="width: 20%">联系方式</th>
+                          <th class="sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
+                            style="width: 15%">备注</th>
+                          <th class="hidden-phone sorting" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
+                            style="">操作</th>
+                          <!-- <th class="hidden-phone sorting_desc" role="columnheader" tabindex="0" aria-controls="dynamic-table" rowspan="1" colspan="1"
+                            aria-sort="descending" aria-label="CSS grade: activate to sort column ascending" style="width: 173px;">CSS grade</th> -->
+                        </tr>
+                      </thead>
+
+                      <!-- <tfoot>
+                        <tr>
+                          <th rowspan="1" colspan="1">Rendering engine</th>
+                          <th rowspan="1" colspan="1">Browser</th>
+                          <th rowspan="1" colspan="1">Platform(s)</th>
+                          <th class="hidden-phone" rowspan="1" colspan="1">Engine version</th>
+                          <th class="hidden-phone" rowspan="1" colspan="1">CSS grade</th>
+                        </tr>
+                      </tfoot> -->
+                      <tbody role="alert" aria-live="polite" aria-relevant="all">
+                        <tr class="gradeX odd">
+                          <td class="center" (mouseover)="onMouseOverCheck(check1)" (mouseout)="onMouseOutCheck(check1)" (click)="onClickCheck(check1)">
+                            <div #check1></div>
+                          </td>
+                          <td (mouseover)="onMouseOverName(qrcode1,preview1)" (mouseout)="onMouseOutName(qrcode1,preview1)">
+                            <a id="employerName1" (click)="onOpenResume()">王大义</a>
+                           
+                            <a (click)="onMakeQRcode(qrcodeImg1)" #qrcode1 class="function">                            
+                              <i class="fa fa-qrcode" style="float:right;padding-top:3px;position:relative"></i>
+                              <div #qrcodeImg1 style="position:absolute;top:140px;"></div>
+                          </a>
+                          <a  #preview1 class="function">                            
+                            <i class="fa fa-eye" style="float:right;padding-top:3px;" #eye (click)="onOpenPreview(eye,eyeslash)"></i>
+                            <i class="fa fa-eye-slash" style="float:right;padding-top:3px;" #eyeslash (click)="onClosePreview(eye,eyeslash)"></i>
+                        </a>
+                        </td>
+                          <td>男</td>
+                          <td>上海市</td>
+                          <td>徐汇区</td>
+                          <td>金融服务业</td>
+                          <td>28</td>
+                          <td><span class="label label-primary">面试中</span></td>
+                          <td class=" hidden-phone ">
+                            <a class="conlink" (mouseover)="onMouseOverPhone(phone1)" (mouseout)="onMouseOutPhone(phone1)">
+                              <i class="fa fa-phone contact" style="float:left"></i>
+                              <div #phone1 >17337238888</div>
+                            </a>
+                            <a class="conlink" (mouseover)="onMouseOverQQ(qq1)" (mouseout)="onMouseOutQQ(qq1)">
+                              <i class="fa fa-qq contact"></i>
+                              <div #qq1 >53248625</div>
+                            </a>
+                            <a class="conlink" (mouseover)="onMouseOverWechat(wechat1)" (mouseout)="onMouseOutWechat(wechat1)">
+                              <i class="fa fa-wechat contact"></i>
+                              <div #wechat1 >sdfsdf</div>
+                            </a>
+                            <a class="conlink" (mouseover)="onMouseOverEmail(mail1)" (mouseout)="onMouseOutEmail(mail1)">
+                              <i class="fa fa-envelope contact"></i>
+                              <div #mail1 class="email">53248625@126.com</div>
+                            </a>
+                          </td>
+                          <td class=" hidden-phone  sorting_1"><abbr title="李大柱 2017/08/28 15:00">正在找</abbr>&nbsp;<abbr title="王晓丽 2017/09/08 15:00">已经找了三家</abbr></td>
+                          <td ><a (click)="showMinisizeTime()">轨迹</a>&nbsp;&nbsp;<a>关注</a>&nbsp;&nbsp;<a>推荐</a>&nbsp;&nbsp;<a>其他</a>
+                            <span style="display:none">&nbsp;&nbsp;<a>分组</a>&nbsp;&nbsp;<a>导出</a></span></td>
+                        </tr>                        
+                        <tr class="gradeX odd">
+                          <td class="center" (mouseover)="onMouseOverCheck(check3)" (mouseout)="onMouseOutCheck(check3)" (click)="onClickCheck(check3)">
+                            <div #check3></div>
+                          </td>
+                          <td (mouseover)="onMouseOverName(qrcode2,preview2)" (mouseout)="onMouseOutName(qrcode2,preview2)">
+                            <a id="employerName2" (click)="onOpenResume()">李晓玲</a>
+                           
+                            <a (click)="onMakeQRcode(qrcodeImg2)" #qrcode2 class="function">                            
+                              <i class="fa fa-qrcode" style="float:right;padding-top:3px;position:relative"></i>
+                              <div #qrcodeImg2 style="position:absolute;top:140px;"></div>
+                          </a>
+                          <a  #preview2 class="function">                            
+                            <i class="fa fa-eye" style="float:right;padding-top:3px;" #eye2 (click)="onOpenPreview(eye2,eyeslash2)"></i>
+                            <i class="fa fa-eye-slash" style="float:right;padding-top:3px;" #eyeslash2 (click)="onClosePreview(eye,eyeslash)"></i>
+                        </a>
+                        </td>
+                          <td >男</td>
+                          <td >上海市</td>
+                          <td >徐汇区</td>
+                          <td >金融服务业</td>
+                          <td >28</td>
+                          <td ><span class="label label-success">已入职</span></td>
+                          <td class=" hidden-phone ">
+                              <a class="conlink" (mouseover)="onMouseOverPhone(phone3)" (mouseout)="onMouseOutPhone(phone3)">
+                                  <i class="fa fa-phone contact"></i>
+                                  <div #phone3 >17337238888</div>
+                                </a>
+                          </td>
+                          <td class=" hidden-phone  sorting_1"><abbr title="李大柱 2017/08/28 15:00">正在找</abbr>&nbsp;<abbr title="王晓丽 2017/09/08 15:00">已经找了三家</abbr></td>
+                          <td ><a>轨迹</a>&nbsp;&nbsp;<a>关注</a>&nbsp;&nbsp;<a>分组</a>&nbsp;&nbsp;<a>导出</a> </td>
+                        </tr>
+                        <tr class="gradeX odd">
+                          <td class="center" (mouseover)="onMouseOverCheck(check4)" (mouseout)="onMouseOutCheck(check4)" (click)="onClickCheck(check4)">
+                            <div #check4></div>
+                          </td>
+                          <td ><a id="employerName">王大义</a></td>
+                          <td >男</td>
+                          <td >上海市</td>
+                          <td >徐汇区</td>
+                          <td >金融服务业</td>
+                          <td >28</td>
+                          <td ><span class="label label-info">获得Offer</span></td>
+                          <td class=" hidden-phone ">
+                            <a class="conlink" (mouseover)="onMouseOverQQ(qq4)" (mouseout)="onMouseOutQQ(qq4)">
+                                  <i class="fa fa-qq contact"></i>
+                                  <div #qq4 >53248625</div>
+                                </a>
+                            <a class="conlink" (mouseover)="onMouseOverWechat(wechat4)" (mouseout)="onMouseOutWechat(wechat4)">
+                                  <i class="fa fa-wechat contact"></i>
+                                  <div #wechat4 >sdfsdf</div>
+                                </a>
+                          </td>
+                          <td class=" hidden-phone  sorting_1"><abbr title="李大柱 2017/08/28 15:00">正在找</abbr>&nbsp;<abbr title="王晓丽 2017/09/08 15:00">已经找了三家</abbr></td>
+                          <td ><a>轨迹</a>&nbsp;&nbsp;<a>关注</a>&nbsp;&nbsp;<a>分组</a>&nbsp;&nbsp;<a>导出</a> </td>
+                        </tr>
+                        <tr class="gradeX odd">
+                          <td class="center" (mouseover)="onMouseOverCheck(check5)" (mouseout)="onMouseOutCheck(check5)" (click)="onClickCheck(check5)">
+                            <div #check5></div>
+                          </td>
+                          <td ><a id="employerName">王大义</a></td>
+                          <td >男</td>
+                          <td >上海市</td>
+                          <td >徐汇区</td>
+                          <td >金融服务业</td>
+                          <td >28</td>
+                          <td ><span class="label label-danger">状态待确认</span></td>
+                          <td class=" hidden-phone ">
+                            <a class="conlink" (mouseover)="onMouseOverQQ(qq5)" (mouseout)="onMouseOutQQ(qq5)">
+                                  <i class="fa fa-qq contact"></i>
+                                  <div #qq5 >53248625</div>
+                                </a>
+                            <a class="conlink" (mouseover)="onMouseOverWechat(wechat5)" (mouseout)="onMouseOutWechat(wechat5)">
+                                  <i class="fa fa-wechat contact"></i>
+                                  <div #wechat5 >sdfsdf</div>
+                                </a>
+                          </td>
+                          <td class=" hidden-phone  sorting_1"><abbr title="李大柱 2017/08/28 15:00">正在找</abbr>&nbsp;<abbr title="王晓丽 2017/09/08 15:00">已经找了三家</abbr></td>
+                          <td ><a>轨迹</a>&nbsp;&nbsp;<a>关注</a>&nbsp;&nbsp;<a>分组</a>&nbsp;&nbsp;<a>导出</a> </td>
+                        </tr>
+                        <tr class="gradeX odd">
+                          <td class="center" (mouseover)="onMouseOverCheck(check6)" (mouseout)="onMouseOutCheck(check6)" (click)="onClickCheck(check6)">
+                            <div #check6></div>
+                          </td>
+                          <td ><a id="employerName">王大义</a></td>
+                          <td >男</td>
+                          <td >上海市</td>
+                          <td >徐汇区</td>
+                          <td >金融服务业</td>
+                          <td >28</td>
+                          <td ><span class="label label-default">已找到工作</span></td>
+                          <td class=" hidden-phone ">
+                            <a class="conlink" (mouseover)="onMouseOverPhone(phone6)" (mouseout)="onMouseOutPhone(phone6)">
+                                  <i class="fa fa-phone contact"></i>
+                                  <div #phone6>17337238888</div>
+                                </a>
+                            <a class="conlink" (mouseover)="onMouseOverQQ(qq6)" (mouseout)="onMouseOutQQ(qq6)">
+                                  <i class="fa fa-qq contact"></i>
+                                  <div #qq6>53248625</div>
+                                </a>
+                            <a class="conlink" (mouseover)="onMouseOverWechat(wechat6)" (mouseout)="onMouseOutWechat(wechat6)">
+                                  <i class="fa fa-wechat contact"></i>
+                                  <div #wechat6>sdfsdf</div>
+                                </a>
+                          </td>
+                          <td class=" hidden-phone  sorting_1"><abbr title="李大柱 2017/08/28 15:00">正在找</abbr>&nbsp;<abbr title="王晓丽 2017/09/08 15:00">已经找了三家</abbr></td>
+                          <td ><a>轨迹</a>&nbsp;&nbsp;<a>关注</a>&nbsp;&nbsp;<a>分组</a>&nbsp;&nbsp;<a>导出</a> </td>
+                        </tr>
+                        <tr class="gradeX odd">
+                          <td class="center" (mouseover)="onMouseOverCheck(check7)" (mouseout)="onMouseOutCheck(check7)" (click)="onClickCheck(check7)">
+                            <div #check7></div>
+                          </td>
+                          <td ><a id="employerName">王大义</a></td>
+                          <td >男</td>
+                          <td >上海市</td>
+                          <td >徐汇区</td>
+                          <td >金融服务业</td>
+                          <td >28</td>
+                          <td ><span class="label finding">求职中</span></td>
+                          <td class=" hidden-phone ">
+                            <a class="conlink" (mouseover)="onMouseOverPhone(phone7)" (mouseout)="onMouseOutPhone(phone7)">
+                                  <i class="fa fa-phone contact"></i>
+                                  <div #phone7 >17337238888</div>
+                                </a>
+                            <a class="conlink" (mouseover)="onMouseOverQQ(qq7)" (mouseout)="onMouseOutQQ(qq7)">
+                                  <i class="fa fa-qq contact"></i>
+                                  <div #qq7 >53248625</div>
+                                </a>
+                            <a class="conlink" (mouseover)="onMouseOverWechat(wechat7)" (mouseout)="onMouseOutWechat(wechat7)">
+                                  <i class="fa fa-wechat contact"></i>
+                                  <div #wechat7 >sdfsdf</div>
+                                </a>
+                            <a class="conlink" (mouseover)="onMouseOverEmail(mail7)" (mouseout)="onMouseOutEmail(mail7)">
+                                  <i class="fa fa-envelope contact"></i>
+                                  <div #mail7 class="email">53248625@126.com</div>
+                                </a>
+                          </td>
+                          <td class=" hidden-phone  sorting_1"><abbr title="李大柱 2017/08/28 15:00">正在找</abbr>&nbsp;<abbr title="王晓丽 2017/09/08 15:00">已经找了三家</abbr></td>
+                          <td ><a>轨迹</a>&nbsp;&nbsp;<a>关注</a>&nbsp;&nbsp;<a>分组</a>&nbsp;&nbsp;<a>导出</a> </td>
+                        </tr>
+                        <tr class="gradeX odd">
+                          <td class="center" (mouseover)="onMouseOverCheck(check8)" (mouseout)="onMouseOutCheck(check8)" (click)="onClickCheck(check8)">
+                            <div #check8></div>
+                          </td>
+                          <td ><a id="employerName">王大义</a></td>
+                          <td >男</td>
+                          <td >上海市</td>
+                          <td >徐汇区</td>
+                          <td >金融服务业</td>
+                          <td >28</td>
+                          <td ><span class="label finding">求职中</span></td>
+                          <td class=" hidden-phone ">
+                            <a class="conlink" (mouseover)="onMouseOverQQ(qq8)" (mouseout)="onMouseOutQQ(qq8)">
+                                  <i class="fa fa-qq contact"></i>
+                                  <div #qq8 >53248625</div>
+                                </a>
+                          </td>
+                          <td class=" hidden-phone  sorting_1"><abbr title="李大柱 2017/08/28 15:00">正在找</abbr>&nbsp;<abbr title="王晓丽 2017/09/08 15:00">已经找了三家</abbr></td>
+                          <td ><a>轨迹</a>&nbsp;&nbsp;<a>关注</a>&nbsp;&nbsp;<a>分组</a>&nbsp;&nbsp;<a>导出</a> </td>
+                        </tr>
+                        <tr class="gradeX odd">
+                          <td class="center" (mouseover)="onMouseOverCheck(check9)" (mouseout)="onMouseOutCheck(check9)" (click)="onClickCheck(check9)">
+                            <div #check9></div>
+                          </td>
+                          <td ><a id="employerName">王大义</a></td>
+                          <td >男</td>
+                          <td >上海市</td>
+                          <td >徐汇区</td>
+                          <td >金融服务业</td>
+                          <td >28</td>
+                          <td ><span class="label label-default">已找到工作</span></td>
+                          <td class=" hidden-phone ">
+                            <a class="conlink" (mouseover)="onMouseOverWechat(wechat9)" (mouseout)="onMouseOutWechat(wechat9)">
+                                  <i class="fa fa-wechat contact"></i>
+                                  <div #wechat9 >sdfsdf</div>
+                                </a>
+                            <a class="conlink" (mouseover)="onMouseOverEmail(mail9)" (mouseout)="onMouseOutEmail(mail9)">
+                                  <i class="fa fa-envelope contact"></i>
+                                  <div #mail9 class="email">53248625@126.com</div>
+                                </a>
+                          </td>
+                          <td class=" hidden-phone  sorting_1"><abbr title="李大柱 2017/08/28 15:00">正在找</abbr>&nbsp;<abbr title="王晓丽 2017/09/08 15:00">已经找了三家</abbr></td>
+                          <td ><a>轨迹</a>&nbsp;&nbsp;<a>关注</a>&nbsp;&nbsp;<a>分组</a>&nbsp;&nbsp;<a>导出</a> </td>
+                        </tr>
+                        <tr class="gradeX odd">
+                          <td class="center" (mouseover)="onMouseOverCheck(check9)" (mouseout)="onMouseOutCheck(check9)" (click)="onClickCheck(check9)">
+                            <div #check9></div>
+                          </td>
+                          <td ><a id="employerName">王大义</a></td>
+                          <td >男</td>
+                          <td >上海市</td>
+                          <td >徐汇区</td>
+                          <td >金融服务业</td>
+                          <td >28</td>
+                          <td ><span class="label label-default">已找到工作</span></td>
+                          <td class=" hidden-phone ">
+                            <a class="conlink" (mouseover)="onMouseOverWechat(wechat9)" (mouseout)="onMouseOutWechat(wechat9)">
+                                  <i class="fa fa-wechat contact"></i>
+                                  <div #wechat9 >sdfsdf</div>
+                                </a>
+                            <a class="conlink" (mouseover)="onMouseOverEmail(mail9)" (mouseout)="onMouseOutEmail(mail9)">
+                                  <i class="fa fa-envelope contact"></i>
+                                  <div #mail9 class="email">53248625@126.com</div>
+                                </a>
+                          </td>
+                          <td class=" hidden-phone  sorting_1"><abbr title="李大柱 2017/08/28 15:00">正在找</abbr>&nbsp;<abbr title="王晓丽 2017/09/08 15:00">已经找了三家</abbr></td>
+                          <td ><a>轨迹</a>&nbsp;&nbsp;<a>关注</a>&nbsp;&nbsp;<a>分组</a>&nbsp;&nbsp;<a>导出</a> </td>
+                        </tr>
+                        <tr class="gradeX odd">
+                          <td class="center" (mouseover)="onMouseOverCheck(check9)" (mouseout)="onMouseOutCheck(check9)" (click)="onClickCheck(check9)">
+                            <div #check9></div>
+                          </td>
+                          <td ><a id="employerName">王大义</a></td>
+                          <td >男</td>
+                          <td >上海市</td>
+                          <td >徐汇区</td>
+                          <td >金融服务业</td>
+                          <td >28</td>
+                          <td ><span class="label label-default">已找到工作</span></td>
+                          <td class=" hidden-phone ">
+                            <a class="conlink" (mouseover)="onMouseOverWechat(wechat9)" (mouseout)="onMouseOutWechat(wechat9)">
+                                  <i class="fa fa-wechat contact"></i>
+                                  <div #wechat9 >sdfsdf</div>
+                                </a>
+                            <a class="conlink" (mouseover)="onMouseOverEmail(mail9)" (mouseout)="onMouseOutEmail(mail9)">
+                                  <i class="fa fa-envelope contact"></i>
+                                  <div #mail9 class="email">53248625@126.com</div>
+                                </a>
+                          </td>
+                          <td class=" hidden-phone  sorting_1"><abbr title="李大柱 2017/08/28 15:00">正在找</abbr>&nbsp;<abbr title="王晓丽 2017/09/08 15:00">已经找了三家</abbr></td>
+                          <td ><a>轨迹</a>&nbsp;&nbsp;<a>关注</a>&nbsp;&nbsp;<a>分组</a>&nbsp;&nbsp;<a>导出</a> </td>
+                        </tr>
+                        
+                        <tr class="gradeX odd">
+                          <td class="center" (mouseover)="onMouseOverCheck(check10)" (mouseout)="onMouseOutCheck(check10)" (click)="onClickCheck(check10)">
+                            <div #check10></div>
+                          </td>
+                          <td ><a id="employerName">王大义</a></td>
+                          <td >男</td>
+                          <td >上海市</td>
+                          <td >徐汇区</td>
+                          <td >金融服务业</td>
+                          <td >28</td>
+                          <td ><span class="label finding">求职中</span></td>
+                          <td class=" hidden-phone ">
+                              <a class="conlink" (mouseover)="onMouseOverQQ(qq10)" (mouseout)="onMouseOutQQ(qq10)">
+                                  <i class="fa fa-qq contact"></i>
+                                  <div #qq10 >53248625</div>
+                                </a>
+                            <a class="conlink" (mouseover)="onMouseOverWechat(wechat10)" (mouseout)="onMouseOutWechat(wechat10)">
+                                  <i class="fa fa-wechat contact"></i>
+                                  <div #wechat10 >sdfsdf</div>
+                                </a>
+                          </td>
+                          <td class=" hidden-phone  sorting_1"><abbr title="李大柱 2017/08/28 15:00">正在找</abbr>&nbsp;<abbr title="王晓丽 2017/09/08 15:00">已经找了三家</abbr></td>
+                          <td ><a>轨迹</a>&nbsp;&nbsp;<a>关注</a>&nbsp;&nbsp;<a>分组</a>&nbsp;&nbsp;<a>导出</a> </td>
+                        </tr>
+                        <tr class="gradeX odd">
+                          <td class="center" (mouseover)="onMouseOverCheck(check11)" (mouseout)="onMouseOutCheck(check11)" (click)="onClickCheck(check11)">
+                            <div #check11></div>
+                          </td>
+                          <td ><a id="employerName">王大义</a></td>
+                          <td >男</td>
+                          <td >上海市</td>
+                          <td >徐汇区</td>
+                          <td >金融服务业</td>
+                          <td >28</td>
+                          <td ><span class="label label-danger">状态待确认</span></td>
+                          <td class=" hidden-phone ">
+                            <a class="conlink" (mouseover)="onMouseOverPhone(phone11)" (mouseout)="onMouseOutPhone(phone11)">
+                                  <i class="fa fa-phone contact"></i>
+                                  <div #phone11 >17337238888</div>
+                                </a>
+                            <a class="conlink" (mouseover)="onMouseOverQQ(qq11)" (mouseout)="onMouseOutQQ(qq11)">
+                                  <i class="fa fa-qq contact"></i>
+                                  <div #qq11 >53248625</div>
+                                </a>
+                            <a class="conlink" (mouseover)="onMouseOverWechat(wechat11)" (mouseout)="onMouseOutWechat(wechat11)">
+                                  <i class="fa fa-wechat contact"></i>
+                                  <div #wechat11 >sdfsdf</div>
+                                </a>
+                            <a class="conlink" (mouseover)="onMouseOverEmail(mail11)" (mouseout)="onMouseOutEmail(mail11)">
+                                  <i class="fa fa-envelope contact"></i>
+                                  <div #mail11 class="email">53248625@126.com</div>
+                                </a>
+                          </td>
+                          <td class=" hidden-phone  sorting_1"><abbr title="李大柱 2017/08/28 15:00">正在找</abbr>&nbsp;<abbr title="王晓丽 2017/09/08 15:00">已经找了三家</abbr></td>
+                          <td ><a>轨迹</a>&nbsp;&nbsp;<a>关注</a>&nbsp;&nbsp;<a>分组</a>&nbsp;&nbsp;<a>导出</a> </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="row-fluid">
+                      <div class="span6">
+                        <div class="dataTables_info" id="dynamic-table_info">显示1到10,共57条记录</div>
+                      </div>
+                      <div class="span6">
+                        <div class="dataTables_paginate paging_bootstrap pagination" style="padding-top: 0px;">
+                          <ul>
+                            <li class="prev disabled"><a href="#">← Previous</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li class="next"><a href="#">Next → </a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div></div>
+                  </div>
+
+                  <div class="tab-pane" id="online">
+                    online
+                  </div>
+                  <div class="tab-pane" id="focus">
+                    focus
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->

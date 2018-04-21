@@ -1,0 +1,56 @@
+.directory-list {
+    width:80%;
+    float: left;
+}
+
+.searchdiv {
+    width:15%;float:right;height:36px;
+}
+
+.directory-info-row {
+    height:86%;
+    overflow: hidden;
+}
+
+.row {
+    height: 100%;
+}
+
+div.col-md-4.col-sm-6 {
+    height:34%;
+  }
+
+  @media screen and (min-width: 1692px) {
+    .panel{
+        height:242px;
+    }
+   }
+
+@media screen and (min-width: 1155px) and (max-width: 1220px) {
+    div.col-md-4.col-sm-6 {
+      width:50%;
+      height:30%;
+    }
+   }
+
+   @media screen and (min-width: 780px)  and (max-width: 790px) {
+    .directory-list{
+        margin-top: 46px; width:100%;        
+      }
+
+    .searchdiv {
+        display: none;
+    }
+   }
+
+   @media screen and  (max-width: 750px) {
+    .directory-list{
+        display: none;       
+      }
+
+    .searchdiv {
+        width:100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+   }
